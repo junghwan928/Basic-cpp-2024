@@ -66,7 +66,11 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 -------------- clang04_test--------------
 
 ## 3일차
-
+- Reference 함수(변수) = 계속
+- MALLOC & FREE => NEW & DELETE(대신)
+	= Malloc() -> free()반환 = 사용을 할려면 Malloc으로 할당을 받는다
+	-> HEAP : 사용자에게 할당된 영역
+	=> 사용을 할려면 Malloc()(C++: NEW)으로 할당을 받는다 => FREE(C++: DELETE로 반환)
 ## 4일차
 
 ## 5일차
