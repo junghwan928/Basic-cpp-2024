@@ -15,17 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang16_Racing.cpp">
+    <ClCompile Include="clang18_hong.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="clang16_2_racing.cpp">
+    <ClCompile Include="clang18_hong1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="clang16_3_racingccb.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clang18_hong.h">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="clang16_4_racing.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>
