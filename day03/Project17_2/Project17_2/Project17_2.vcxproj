@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dfefccc4-8815-40a3-8d6c-af4cecf5a037}</ProjectGuid>
-    <RootNamespace>Project171</RootNamespace>
+    <ProjectGuid>{de79cde3-d521-4155-983d-50930be50838}</ProjectGuid>
+    <RootNamespace>Project172</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,14 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Users\user\Documents\카카오톡 받은 파일\Car.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Users\user\Documents\카카오톡 받은 파일\Car.cpp" />
-    <ClCompile Include="..\..\..\..\..\Users\user\Documents\카카오톡 받은 파일\RacingMain.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="RacingMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Car.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
