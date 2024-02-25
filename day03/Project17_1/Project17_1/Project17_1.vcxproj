@@ -133,6 +133,9 @@
     <ClCompile Include="..\..\..\..\..\Users\user\Documents\카카오톡 받은 파일\Car.cpp" />
     <ClCompile Include="..\..\..\..\..\Users\user\Documents\카카오톡 받은 파일\RacingMain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
