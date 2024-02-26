@@ -101,6 +101,8 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 		=> SimpleClass *ptr은 SimpleClass 타입을 가리키는 포인터를 선언.
 		=> new SimpleClass()는 SimpleClass의 기본 생성자를 호출하여 객체를 생성. 이후 반환된 포인터는 ptr에 할당.
 		=> 따라서 ptr은 힙 메모리에 동적으로 생성된 SimpleClass 객체를 가리키는 포인터
+- strcpy, Private, Public
+
 ## 5일차
 
 ## 6일차
