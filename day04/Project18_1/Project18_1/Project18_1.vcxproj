@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bcc39077-3618-41af-ae27-925e8779bb4e}</ProjectGuid>
-    <RootNamespace>Project19</RootNamespace>
+    <ProjectGuid>{68db6611-7c5e-480d-8128-78a911ef875a}</ProjectGuid>
+    <RootNamespace>Project181</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clang19_RecFault.cpp" />
+    <ClCompile Include="clang18_1_1_class.cpp" />
+    <ClCompile Include="clang18_1_class.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

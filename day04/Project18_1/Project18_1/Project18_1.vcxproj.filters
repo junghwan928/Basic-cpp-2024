@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang19_RecFault.cpp">
+    <ClCompile Include="clang18_1_class.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="clang18_1_1_class.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
