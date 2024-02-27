@@ -4,51 +4,51 @@ using namespace std;
 class SoSimple
 {
 private:
-    int num1; // Á¤¼öÇü ¸â¹ö º¯¼ö num1 ¼±¾ð
-    int num2; // Á¤¼öÇü ¸â¹ö º¯¼ö num2 ¼±¾ð
+    int num1; // ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜ num1 ì„ ì–¸
+    int num2; // ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜ num2 ì„ ì–¸
 
 public:
-    // »ý¼ºÀÚ: µÎ °³ÀÇ Á¤¼ö¸¦ ¹Þ¾Æ ¸â¹ö º¯¼ö¸¦ ÃÊ±âÈ­
+    // ìƒì„±ìž: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”
     SoSimple(int n1, int n2) : num1(n1), num2(n2)
     {
         // empty
-        // »ý¼ºÀÚ¿¡¼­´Â ¸â¹ö ÀÌ´Ï¼È¶óÀÌÀú¸¦ »ç¿ëÇÏ¿© ¸â¹ö º¯¼ö¸¦ ÃÊ±âÈ­.
-        // »ý¼º ½Ã Ãâ·ÂÇÒ ³»¿ëÀÌ ¾øÀ¸¹Ç·Î ºñ¿öµÒ.
+        // ìƒì„±ìžì—ì„œëŠ” ë©¤ë²„ ì´ë‹ˆì…œë¼ì´ì €ë¥¼ ì‚¬ìš©í•˜ì—¬ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”.
+        // ìƒì„± ì‹œ ì¶œë ¥í•  ë‚´ìš©ì´ ì—†ìœ¼ë¯€ë¡œ ë¹„ì›Œë‘ .
     }
 
-    // º¹»ç »ý¼ºÀÚ: ´Ù¸¥ SoSimple °´Ã¼¸¦ ¹Þ¾Æ ¸â¹ö º¯¼ö¸¦ º¹»ç ÃÊ±âÈ­
+    // ë³µì‚¬ ìƒì„±ìž: ë‹¤ë¥¸ SoSimple ê°ì²´ë¥¼ ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ë³µì‚¬ ì´ˆê¸°í™”
     SoSimple(SoSimple& copy) : num1(copy.num1), num2(copy.num2)
     {
-        // º¹»ç »ý¼ºÀÚ°¡ È£ÃâµÇ¾úÀ» ¶§ ¸Þ½ÃÁö Ãâ·Â
+        // ë³µì‚¬ ìƒì„±ìžê°€ í˜¸ì¶œë˜ì—ˆì„ ë•Œ ë©”ì‹œì§€ ì¶œë ¥
         cout << "Called SoSimple(SoSimple &Copy)" << endl;
     }
 
-    // ¸â¹ö º¯¼ö¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowSimpleData()
     {
-        cout << num1 << endl; // num1 Ãâ·Â
-        cout << num2 << endl; // num2 Ãâ·Â
+        cout << num1 << endl; // num1 ì¶œë ¥
+        cout << num2 << endl; // num2 ì¶œë ¥
     }
 };
 
 int main(void)
 {
-    SoSimple sim1(5, 10); // SoSimple °´Ã¼ »ý¼º ¹× ÃÊ±âÈ­
-    cout << "»ý¼º ¹× ÃÊ±âÈ­ Á÷Àü" << endl;
-    SoSimple sim2 = sim1; // º¹»ç »ý¼ºÀÚ È£ÃâÀ» ÅëÇÑ °´Ã¼ »ý¼º ¹× ÃÊ±âÈ­
-    // À§ÀÇ ÄÚµå´Â SoSimple sim2(sim1)°ú µ¿ÀÏÇÑ ¿ªÇÒ.
-    cout << "»ý¼º ¹× ÃÊ±âÈ­ Á÷ÈÄ" << endl;
-    sim2.ShowSimpleData(); // sim2 °´Ã¼ÀÇ µ¥ÀÌÅÍ Ãâ·Â
+    SoSimple sim1(5, 10); // SoSimple ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+    cout << "ìƒì„± ë° ì´ˆê¸°í™” ì§ì „" << endl;
+    SoSimple sim2 = sim1; // ë³µì‚¬ ìƒì„±ìž í˜¸ì¶œì„ í†µí•œ ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+    // ìœ„ì˜ ì½”ë“œëŠ” SoSimple sim2(sim1)ê³¼ ë™ì¼í•œ ì—­í• .
+    cout << "ìƒì„± ë° ì´ˆê¸°í™” ì§í›„" << endl;
+    sim2.ShowSimpleData(); // sim2 ê°ì²´ì˜ ë°ì´í„° ì¶œë ¥
     return 0;
 }
 
-/* Ãß°¡ ¼³¸í
-1. SoSimple Å¬·¡½º
-    => num1°ú num2¶ó´Â µÎ °³ÀÇ Á¤¼öÇü ¸â¹ö º¯¼ö¸¦ °¡Áö°í ÀÖÀ½.
+/* ì¶”ê°€ ì„¤ëª…
+1. SoSimple í´ëž˜ìŠ¤
+    => num1ê³¼ num2ë¼ëŠ” ë‘ ê°œì˜ ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜ë¥¼ ê°€ì§€ê³  ìžˆìŒ.
 
-2. »ý¼ºÀÚ´Â µÎ °³ÀÇ Á¤¼ö¸¦ ¹Þ¾Æ¼­ ¸â¹ö º¯¼ö¸¦ ÃÊ±âÈ­. 
-    =>º¹»ç »ý¼ºÀÚ´Â ´Ù¸¥ SoSimple °´Ã¼¸¦ ¹Þ¾Æ¼­ ±× °´Ã¼ÀÇ ¸â¹ö º¯¼ö¸¦ º¹»çÇÏ¿© ÃÊ±âÈ­.
+2. ìƒì„±ìžëŠ” ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë°›ì•„ì„œ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”. 
+    =>ë³µì‚¬ ìƒì„±ìžëŠ” ë‹¤ë¥¸ SoSimple ê°ì²´ë¥¼ ë°›ì•„ì„œ ê·¸ ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ë³µì‚¬í•˜ì—¬ ì´ˆê¸°í™”.
 
-3. main ÇÔ¼ö¿¡¼­´Â ¸ÕÀú sim1 °´Ã¼¸¦ »ý¼ºÇÏ°í ÃÊ±âÈ­ÇÑ ÈÄ, º¹»ç »ý¼ºÀÚ¸¦ È£ÃâÇÏ¿© sim1 °´Ã¼ÀÇ ³»¿ëÀ» º¹»çÇÏ¿© sim2 °´Ã¼¸¦ »ý¼º. 
-    =>±×¸®°í sim2 °´Ã¼ÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·Â
+3. main í•¨ìˆ˜ì—ì„œëŠ” ë¨¼ì € sim1 ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”í•œ í›„, ë³µì‚¬ ìƒì„±ìžë¥¼ í˜¸ì¶œí•˜ì—¬ sim1 ê°ì²´ì˜ ë‚´ìš©ì„ ë³µì‚¬í•˜ì—¬ sim2 ê°ì²´ë¥¼ ìƒì„±. 
+    =>ê·¸ë¦¬ê³  sim2 ê°ì²´ì˜ ë°ì´í„°ë¥¼ ì¶œë ¥
 */

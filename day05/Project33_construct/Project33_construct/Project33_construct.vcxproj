@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a01ff172-6a2b-4cf5-9f0c-20f0e8ab3cd7}</ProjectGuid>
-    <RootNamespace>Project32ClassInit</RootNamespace>
+    <ProjectGuid>{93b1f062-fbe6-45c9-99fc-4e8e7c22d57b}</ProjectGuid>
+    <RootNamespace>Project33construct</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clang32_copystruct.cpp" />
+    <ClCompile Include="clang33_copyConst.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
