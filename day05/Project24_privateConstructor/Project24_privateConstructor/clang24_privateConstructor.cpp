@@ -1,41 +1,41 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º AAA Á¤ÀÇ
+// í´ëž˜ìŠ¤ AAA ì •ì˜
 class AAA {
 private:
-    int num;  // Á¤¼öÇü ¸â¹ö º¯¼ö
+    int num;  // ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜
 public:
-    // AAA Å¬·¡½ºÀÇ »ý¼ºÀÚ. °´Ã¼°¡ »ý¼ºµÉ ¶§ È£ÃâµÊ. ÀÌ´Ï¼È¶óÀÌÁî
+    // AAA í´ëž˜ìŠ¤ì˜ ìƒì„±ìž. ê°ì²´ê°€ ìƒì„±ë  ë•Œ í˜¸ì¶œë¨. ì´ë‹ˆì…œë¼ì´ì¦ˆ
     AAA() : num(0) {}
 
-    // »õ·Î¿î AAA °´Ã¼¸¦ »ý¼ºÇÏ°í ÃÊ±âÈ­ÇÑ ÈÄ¿¡ ÇØ´ç °´Ã¼¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö
+    // ìƒˆë¡œìš´ AAA ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”í•œ í›„ì— í•´ë‹¹ ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
     AAA& CreateInitObj(int n) const {
-        AAA* ptr = new AAA(n);  // »õ·Î¿î AAA °´Ã¼¸¦ µ¿ÀûÀ¸·Î ÇÒ´çÇÏ°í ÃÊ±âÈ­ÇÔ
-        return *ptr;             // ÇØ´ç °´Ã¼¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ ¹ÝÈ¯ÇÔ
+        AAA* ptr = new AAA(n);  // ìƒˆë¡œìš´ AAA ê°ì²´ë¥¼ ë™ì ìœ¼ë¡œ í• ë‹¹í•˜ê³  ì´ˆê¸°í™”í•¨
+        return *ptr;             // í•´ë‹¹ ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ë°˜í™˜í•¨
     }
 
-    // ¸â¹ö º¯¼ö numÀÇ °ªÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ë©¤ë²„ ë³€ìˆ˜ numì˜ ê°’ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowNum() const { cout << num << endl; }
 
 private:
-    // AAA Å¬·¡½ºÀÇ »ý¼ºÀÚ. Á¤¼öÇü ¸Å°³º¯¼ö¸¦ ¹Þ¾Æ ¸â¹ö º¯¼ö numÀ» ÃÊ±âÈ­ÇÔ.
+    // AAA í´ëž˜ìŠ¤ì˜ ìƒì„±ìž. ì •ìˆ˜í˜• ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ numì„ ì´ˆê¸°í™”í•¨.
     AAA(int n) : num(n) {}
 };
 
 int main(void) {
-    AAA base;  // ±âº» AAA °´Ã¼ »ý¼º
-    base.ShowNum();  // ±âº» °´Ã¼ÀÇ num °ªÀ» Ãâ·Â
+    AAA base;  // ê¸°ë³¸ AAA ê°ì²´ ìƒì„±
+    base.ShowNum();  // ê¸°ë³¸ ê°ì²´ì˜ num ê°’ì„ ì¶œë ¥
 
-    // CreateInitObj ÇÔ¼ö¸¦ ÅëÇØ »õ·Î¿î AAA °´Ã¼¸¦ »ý¼ºÇÏ°í ÇØ´ç °´Ã¼ÀÇ num °ªÀ» Ãâ·Â
+    // CreateInitObj í•¨ìˆ˜ë¥¼ í†µí•´ ìƒˆë¡œìš´ AAA ê°ì²´ë¥¼ ìƒì„±í•˜ê³  í•´ë‹¹ ê°ì²´ì˜ num ê°’ì„ ì¶œë ¥
     AAA& obj1 = base.CreateInitObj(3);
     obj1.ShowNum();
 
-    // CreateInitObj ÇÔ¼ö¸¦ ÅëÇØ ¶Ç ´Ù¸¥ »õ·Î¿î AAA °´Ã¼¸¦ »ý¼ºÇÏ°í ÇØ´ç °´Ã¼ÀÇ num °ªÀ» Ãâ·Â
+    // CreateInitObj í•¨ìˆ˜ë¥¼ í†µí•´ ë˜ ë‹¤ë¥¸ ìƒˆë¡œìš´ AAA ê°ì²´ë¥¼ ìƒì„±í•˜ê³  í•´ë‹¹ ê°ì²´ì˜ num ê°’ì„ ì¶œë ¥
     AAA& obj2 = base.CreateInitObj(12);
     obj2.ShowNum();
 
-    // µ¿ÀûÀ¸·Î ÇÒ´çµÈ °´Ã¼µéÀ» ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦ÇÔ
+    // ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ê°ì²´ë“¤ì„ ë©”ëª¨ë¦¬ì—ì„œ í•´ì œí•¨
     delete& obj1;
     delete& obj2;
 
@@ -43,16 +43,16 @@ int main(void) {
 }
 
 /*
-1. AAA Å¬·¡½º¸¦ Á¤ÀÇ
--> ÇØ´ç Å¬·¡½º ³»¿¡ ±âº» »ý¼ºÀÚ¿Í ¸Å°³º¯¼ö¸¦ ¹Þ´Â »ý¼ºÀÚ¸¦ Á¤ÀÇ
+1. AAA í´ëž˜ìŠ¤ë¥¼ ì •ì˜
+-> í•´ë‹¹ í´ëž˜ìŠ¤ ë‚´ì— ê¸°ë³¸ ìƒì„±ìžì™€ ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ëŠ” ìƒì„±ìžë¥¼ ì •ì˜
 
-2. CreateInitObj ÇÔ¼ö¸¦ Á¤ÀÇ 
--> »õ·Î¿î AAA °´Ã¼¸¦ µ¿ÀûÀ¸·Î ÇÒ´çÇÏ°í ÃÊ±âÈ­ÇÑ ÈÄ 
--> ÇØ´ç °´Ã¼¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ ¹ÝÈ¯
+2. CreateInitObj í•¨ìˆ˜ë¥¼ ì •ì˜ 
+-> ìƒˆë¡œìš´ AAA ê°ì²´ë¥¼ ë™ì ìœ¼ë¡œ í• ë‹¹í•˜ê³  ì´ˆê¸°í™”í•œ í›„ 
+-> í•´ë‹¹ ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ë°˜í™˜
 
-3. main ÇÔ¼ö¿¡¼­´Â ±âº» AAA °´Ã¼¸¦ »ý¼ºÇÑ ÈÄ 
--> CreateInitObj ÇÔ¼ö¸¦ ÅëÇØ »õ·Î¿î °´Ã¼¸¦ »ý¼ºÇÏ°í 
--> ±× °ªÀ» Ãâ·Â
+3. main í•¨ìˆ˜ì—ì„œëŠ” ê¸°ë³¸ AAA ê°ì²´ë¥¼ ìƒì„±í•œ í›„ 
+-> CreateInitObj í•¨ìˆ˜ë¥¼ í†µí•´ ìƒˆë¡œìš´ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  
+-> ê·¸ ê°’ì„ ì¶œë ¥
 
-4. µ¿ÀûÀ¸·Î ÇÒ´çµÈ °´Ã¼µéÀ» ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦
+4. ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ê°ì²´ë“¤ì„ ë©”ëª¨ë¦¬ì—ì„œ í•´ì œ
 */

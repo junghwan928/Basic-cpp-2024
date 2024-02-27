@@ -1,55 +1,55 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º AAA Á¤ÀÇ
+// í´ëž˜ìŠ¤ AAA ì •ì˜
 class AAA {
 public:
-    // AAA Å¬·¡½ºÀÇ »ý¼ºÀÚ. °´Ã¼°¡ »ý¼ºµÉ ¶§ È£ÃâµÊ.
+    // AAA í´ëž˜ìŠ¤ì˜ ìƒì„±ìž. ê°ì²´ê°€ ìƒì„±ë  ë•Œ í˜¸ì¶œë¨.
     AAA() {
         cout << "empty object" << endl;
     }
 
-    // AAA Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö. °´Ã¼ÀÇ ÀÌ¸§À» Ãâ·ÂÇÔ.
+    // AAA í´ëž˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜. ê°ì²´ì˜ ì´ë¦„ì„ ì¶œë ¥í•¨.
     void ShowYourName() {
         cout << "I am class AAA" << endl;
     }
 };
 
-// Å¬·¡½º BBB Á¤ÀÇ
+// í´ëž˜ìŠ¤ BBB ì •ì˜
 class BBB {
 private:
-    AAA& ref;      // AAA Å¬·¡½º °´Ã¼¿¡ ´ëÇÑ ÂüÁ¶ÀÚ
-    const int& num;  // Á¤¼öÇü º¯¼ö¿¡ ´ëÇÑ »ó¼ö ÂüÁ¶ÀÚ
+    AAA& ref;      // AAA í´ëž˜ìŠ¤ ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°ìž
+    const int& num;  // ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ìƒìˆ˜ ì°¸ì¡°ìž
 
 public:
-    // BBB Å¬·¡½ºÀÇ »ý¼ºÀÚ. AAA °´Ã¼¿Í Á¤¼öÇü º¯¼ö¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ ¸Å°³º¯¼ö·Î ¹ÞÀ½.
+    // BBB í´ëž˜ìŠ¤ì˜ ìƒì„±ìž. AAA ê°ì²´ì™€ ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ìŒ.
     BBB(AAA& r, const int& n) : ref(r), num(n) {
-        // »ý¼ºÀÚÀÇ ÃÊ±âÈ­ ¸ñ·ÏÀ» »ç¿ëÇÏ¿© ref¿Í numÀ» ÃÊ±âÈ­ÇÔ.
-        // »ý¼ºÀÚÀÇ ¸öÃ¼´Â ºñ¾î ÀÖÀ½.
+        // ìƒì„±ìžì˜ ì´ˆê¸°í™” ëª©ë¡ì„ ì‚¬ìš©í•˜ì—¬ refì™€ numì„ ì´ˆê¸°í™”í•¨.
+        // ìƒì„±ìžì˜ ëª¸ì²´ëŠ” ë¹„ì–´ ìžˆìŒ.
     }
 
-    // BBB Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö. AAA °´Ã¼ÀÇ ÀÌ¸§°ú Á¤¼öÇü º¯¼öÀÇ °ªÀ» Ãâ·ÂÇÔ.
+    // BBB í´ëž˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜. AAA ê°ì²´ì˜ ì´ë¦„ê³¼ ì •ìˆ˜í˜• ë³€ìˆ˜ì˜ ê°’ì„ ì¶œë ¥í•¨.
     void ShowYourName() {
-        ref.ShowYourName();     // AAA °´Ã¼ÀÇ ÀÌ¸§ Ãâ·Â
+        ref.ShowYourName();     // AAA ê°ì²´ì˜ ì´ë¦„ ì¶œë ¥
         cout << "and" << endl;
-        cout << "I ref num " << num << endl;   // Á¤¼öÇü º¯¼öÀÇ °ªÀ» Ãâ·Â
+        cout << "I ref num " << num << endl;   // ì •ìˆ˜í˜• ë³€ìˆ˜ì˜ ê°’ì„ ì¶œë ¥
     }
 };
 
 int main(void) {
-    AAA obj1;          // AAA Å¬·¡½ºÀÇ °´Ã¼ »ý¼º
-    BBB obj2(obj1, 20);   // BBB Å¬·¡½ºÀÇ °´Ã¼ »ý¼º, AAA °´Ã¼ obj1°ú Á¤¼öÇü º¯¼ö 20¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ ÀÎ¼ö·Î Àü´Þ
-    obj2.ShowYourName();   // BBB °´Ã¼ÀÇ ShowYourName() ÇÔ¼ö È£ÃâÇÏ¿© AAA °´Ã¼ÀÇ ÀÌ¸§°ú Á¤¼öÇü º¯¼öÀÇ °ªÀ» Ãâ·Â
+    AAA obj1;          // AAA í´ëž˜ìŠ¤ì˜ ê°ì²´ ìƒì„±
+    BBB obj2(obj1, 20);   // BBB í´ëž˜ìŠ¤ì˜ ê°ì²´ ìƒì„±, AAA ê°ì²´ obj1ê³¼ ì •ìˆ˜í˜• ë³€ìˆ˜ 20ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ì¸ìˆ˜ë¡œ ì „ë‹¬
+    obj2.ShowYourName();   // BBB ê°ì²´ì˜ ShowYourName() í•¨ìˆ˜ í˜¸ì¶œí•˜ì—¬ AAA ê°ì²´ì˜ ì´ë¦„ê³¼ ì •ìˆ˜í˜• ë³€ìˆ˜ì˜ ê°’ì„ ì¶œë ¥
     return 0;
 }
 
 /*
-1. AAA Å¬·¡½º¿Í BBB Å¬·¡½º¸¦ Á¤ÀÇÇÏ°í 
--> BBB Å¬·¡½º°¡ AAA Å¬·¡½º °´Ã¼¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¿Í Á¤¼öÇü º¯¼ö¿¡ ´ëÇÑ »ó¼ö ÂüÁ¶ÀÚ¸¦ ¸â¹ö·Î °®À½.
+1. AAA í´ëž˜ìŠ¤ì™€ BBB í´ëž˜ìŠ¤ë¥¼ ì •ì˜í•˜ê³  
+-> BBB í´ëž˜ìŠ¤ê°€ AAA í´ëž˜ìŠ¤ ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°ìžì™€ ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ìƒìˆ˜ ì°¸ì¡°ìžë¥¼ ë©¤ë²„ë¡œ ê°–ìŒ.
 
-2. AAA Å¬·¡½º °´Ã¼¸¦ »ý¼ºÇÑ ÈÄ¿¡ BBB Å¬·¡½º °´Ã¼¸¦ »ý¼ºÇÒ ¶§ 
--> AAA °´Ã¼¿Í Á¤¼öÇü º¯¼ö¿¡ ´ëÇÑ ÂüÁ¶ÀÚ¸¦ Àü´Þ
+2. AAA í´ëž˜ìŠ¤ ê°ì²´ë¥¼ ìƒì„±í•œ í›„ì— BBB í´ëž˜ìŠ¤ ê°ì²´ë¥¼ ìƒì„±í•  ë•Œ 
+-> AAA ê°ì²´ì™€ ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ì°¸ì¡°ìžë¥¼ ì „ë‹¬
 
-3. BBB °´Ã¼ÀÇ ¸â¹ö ÇÔ¼ö¸¦ È£ÃâÇÏ¿© 
--> AAA °´Ã¼ÀÇ ÀÌ¸§°ú Á¤¼öÇü º¯¼öÀÇ °ªÀ» Ãâ·Â
+3. BBB ê°ì²´ì˜ ë©¤ë²„ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ì—¬ 
+-> AAA ê°ì²´ì˜ ì´ë¦„ê³¼ ì •ìˆ˜í˜• ë³€ìˆ˜ì˜ ê°’ì„ ì¶œë ¥
  */
