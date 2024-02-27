@@ -68,9 +68,9 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 ## 3일차
 - Reference 함수(변수) = 계속
 - MALLOC & FREE => NEW & DELETE(대신)
-	= Malloc() -> free()반환 = 사용을 할려면 Malloc으로 할당을 받는다
-	-> HEAP : 사용자에게 할당된 영역
-	=> 사용을 할려면 Malloc()(C++: NEW)으로 할당을 받는다 => FREE(C++: DELETE로 반환)
+	- Malloc() -> free()반환 = 사용을 할려면 Malloc으로 할당을 받는다
+	- HEAP : 사용자에게 할당된 영역
+	- 사용을 할려면 Malloc()(C++: NEW)으로 할당을 받는다 => FREE(C++: DELETE로 반환)
 
 - 접근제어 지시자
 	- Public
@@ -92,15 +92,15 @@ IoT 시스템개발자 심화 프로그래밍 언어 학습리포지토리
 - 정보은닉
 - 생성자와 소멸자
 	a. SimpleClass sc(20);  
-		=> 주어진 코드는 SimpleClass라는 클래스의 객체 sc를 생성. 
-		=> 이 객체는 생성자에 정수 값 20을 전달하여 초기화
+		- 주어진 코드는 SimpleClass라는 클래스의 객체 sc를 생성. 
+		- 이 객체는 생성자에 정수 값 20을 전달하여 초기화
 		
 	b. SimpleClass *ptr = new SimpleClass();
-		=> SimpleClass 클래스의 포인터를 생성하고, 동적으로 메모리를 할당하여 객체를 초기화.
-		=> 여기서 new 연산자는 힙(heap) 메모리에서 동적으로 객체를 생성하고, 해당 객체에 대한 포인터를 반환.
-		=> SimpleClass *ptr은 SimpleClass 타입을 가리키는 포인터를 선언.
-		=> new SimpleClass()는 SimpleClass의 기본 생성자를 호출하여 객체를 생성. 이후 반환된 포인터는 ptr에 할당.
-		=> 따라서 ptr은 힙 메모리에 동적으로 생성된 SimpleClass 객체를 가리키는 포인터
+		- SimpleClass 클래스의 포인터를 생성하고, 동적으로 메모리를 할당하여 객체를 초기화.
+		- 여기서 new 연산자는 힙(heap) 메모리에서 동적으로 객체를 생성하고, 해당 객체에 대한 포인터를 반환.
+		- SimpleClass *ptr은 SimpleClass 타입을 가리키는 포인터를 선언.
+		- new SimpleClass()는 SimpleClass의 기본 생성자를 호출하여 객체를 생성. 이후 반환된 포인터는 ptr에 할당.
+		- 따라서 ptr은 힙 메모리에 동적으로 생성된 SimpleClass 객체를 가리키는 포인터
 - strcpy, Private, Public
 
 
