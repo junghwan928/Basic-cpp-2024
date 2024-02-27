@@ -4,7 +4,7 @@ using namespace std;
 
 bool Rectangle::InitMembers(const Point& ul, const Point& lr) {
     if (ul.GetX() > lr.GetX() || ul.GetY() > lr.GetY()) {
-        cout << "Àß¸øµÈ À§Ä¡Á¤º¸ Àü´Ş" << endl;
+        cout << "ì˜ëª»ëœ ìœ„ì¹˜ì •ë³´ ì „ë‹¬" << endl;
         return false;
     }
     upLeft = ul;
@@ -13,8 +13,8 @@ bool Rectangle::InitMembers(const Point& ul, const Point& lr) {
 }
 
 void Rectangle::ShowRecInfo() const {
-    cout << "ÁÂ »ó´Ü : " << '[' << upLeft.GetX() << ",";
+    cout << "ì¢Œ ìƒë‹¨ : " << '[' << upLeft.GetX() << ",";
         cout << upLeft.GetY() << ']' << endl;
-        cout << "¿ì »ó´Ü : " << '[' << lowRight.GetX() << ",";
+        cout << "ìš° ìƒë‹¨ : " << '[' << lowRight.GetX() << ",";
         cout << lowRight.GetY() << ']' << endl << endl;
 }

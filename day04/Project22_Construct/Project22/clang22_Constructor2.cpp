@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
 
-// SimpleClass Å¬·¡½º Á¤ÀÇ
+// SimpleClass í´ë˜ìŠ¤ ì •ì˜
 class SimpleClass {
 private:
-    int num1; // Ã¹ ¹øÂ° Á¤¼ö ¸â¹ö º¯¼ö
-    int num2; // µÎ ¹øÂ° Á¤¼ö ¸â¹ö º¯¼ö
+    int num1; // ì²« ë²ˆì§¸ ì •ìˆ˜ ë©¤ë²„ ë³€ìˆ˜
+    int num2; // ë‘ ë²ˆì§¸ ì •ìˆ˜ ë©¤ë²„ ë³€ìˆ˜
 
 public:
-    // »ı¼ºÀÚ Á¤ÀÇ
+    // ìƒì„±ì ì •ì˜
     SimpleClass(int n1 = 0, int n2 = 0)
     {
-        num1 = n1; // Ã¹ ¹øÂ° ¸Å°³º¯¼ö·Î ¹ŞÀº °ªÀ» num1¿¡ ÇÒ´çÇÕ´Ï´Ù.
-        num2 = n2; // µÎ ¹øÂ° ¸Å°³º¯¼ö·Î ¹ŞÀº °ªÀ» num2¿¡ ÇÒ´çÇÕ´Ï´Ù.
+        num1 = n1; // ì²« ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ê°’ì„ num1ì— í• ë‹¹í•©ë‹ˆë‹¤.
+        num2 = n2; // ë‘ ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ê°’ì„ num2ì— í• ë‹¹í•©ë‹ˆë‹¤.
     }
 
-    // ¸â¹ö º¯¼öµéÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ë©¤ë²„ ë³€ìˆ˜ë“¤ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowData() const
     {
         cout << num1 << ' ' << num2 << endl;
@@ -23,16 +23,16 @@ public:
 };
 
 int main(void) {
-    // °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­ ÈÄ Ãâ·Â
-    SimpleClass sc1; // ±âº» »ı¼ºÀÚ È£Ãâ -> ÇÔ¼öÀÇ ¼±¾ğ
-    SimpleClass mysc = sc1; // my°´Ã¼ º¹»ç
+    // ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™” í›„ ì¶œë ¥
+    SimpleClass sc1; // ê¸°ë³¸ ìƒì„±ì í˜¸ì¶œ -> í•¨ìˆ˜ì˜ ì„ ì–¸
+    SimpleClass mysc = sc1; // myê°ì²´ ë³µì‚¬
     mysc.ShowData();
     return 0;
 }
 
 
 SimpleClass sc1() {
-    SimpleClass sc(20, 30); // SimpleClass Å¸ÀÔÀÇ °´Ã¼¸¦ »ı¼ºÇÏ°í ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    SimpleClass sc(20, 30); // SimpleClass íƒ€ì…ì˜ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     return sc;
 }
 

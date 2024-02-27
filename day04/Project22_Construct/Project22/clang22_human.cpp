@@ -3,24 +3,24 @@
 
 using namespace std;
 
-// human ±¸Á¶Ã¼ Á¤ÀÇ
+// human êµ¬ì¡°ì²´ ì •ì˜
 struct Human {
     string name;
     int age;
     string job;
-    string residentNumber; // ÁÖ¹Îµî·Ï¹øÈ£ Ãß°¡
+    string residentNumber; // ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ ì¶”ê°€
 };
 
-// Human ±¸Á¶Ã¼¸¦ ¸Å°³º¯¼ö·Î ¹Ş´Â ÇÔ¼ö Á¤ÀÇ
+// Human êµ¬ì¡°ì²´ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” í•¨ìˆ˜ ì •ì˜
 void showHuman(const Human& h1) {
     cout << "name: " << h1.name << ", age: " << h1.age << ", job: " << h1.job << ", resident number: " << h1.residentNumber << endl;
 }
 
 int main() {
-    // human ±¸Á¶Ã¼ º¯¼ö »ı¼º ¹× ÃÊ±âÈ­
-    Human h1 = { "È«±æµ¿", 30, "°³¹ßÀÚ", "123456-1234567" }; // ÁÖ¹Îµî·Ï¹øÈ£ Ãß°¡
+    // human êµ¬ì¡°ì²´ ë³€ìˆ˜ ìƒì„± ë° ì´ˆê¸°í™”
+    Human h1 = { "í™ê¸¸ë™", 30, "ê°œë°œì", "123456-1234567" }; // ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ ì¶”ê°€
 
-    // showHuman ÇÔ¼ö È£ÃâÇÏ¿© ±¸Á¶Ã¼ Á¤º¸ Ãâ·Â
+    // showHuman í•¨ìˆ˜ í˜¸ì¶œí•˜ì—¬ êµ¬ì¡°ì²´ ì •ë³´ ì¶œë ¥
     showHuman(h1);
 
     return 0;

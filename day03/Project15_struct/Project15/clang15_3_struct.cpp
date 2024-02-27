@@ -1,9 +1,9 @@
 #include <iostream>
 /*
-* c++ Å¸ÀÔÀÇ ±¸Á¶Ã¼: ±¸Á¶Ã¼
+* c++ íƒ€ì…ì˜ êµ¬ì¡°ì²´: êµ¬ì¡°ì²´
 */
-typedef struct human { //human ±¸Á¶Ã¼ => ³»°¡ ¸¸µç »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü
-	char name[20]; // ¼Ó¼º ¸â¹öº¯¼ö(name, age, job)
+typedef struct human { //human êµ¬ì¡°ì²´ => ë‚´ê°€ ë§Œë“  ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•
+	char name[20]; // ì†ì„± ë©¤ë²„ë³€ìˆ˜(name, age, job)
 	int age;
 	char job[20];
 
@@ -11,11 +11,11 @@ typedef struct human { //human ±¸Á¶Ã¼ => ³»°¡ ¸¸µç »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü
 		printf("name: %s, age: %d, job: %s\n", name, age, job);
 	}
 
-} Human; // ¾ÕÀ¸·Î human ±¸Á¶Ã¼¸¦ HumanÀ¸·Î »ç¿ë
+} Human; // ì•ìœ¼ë¡œ human êµ¬ì¡°ì²´ë¥¼ Humanìœ¼ë¡œ ì‚¬ìš©
 
 int main() {
 	int a = 10;
-	human h1 = { "Hong", 50, "ÀÇÀû" }; //HumanÅ¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ğÇÏ°í ÃÊ±âÈ­¸¦ ½ÃÅ²´Ù
+	human h1 = { "Hong", 50, "ì˜ì " }; //Humaníƒ€ì…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°í™”ë¥¼ ì‹œí‚¨ë‹¤
 	h1.showHuman();
 	return 0;
 

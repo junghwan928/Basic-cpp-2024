@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// °úÀÏ ÆÇ¸ÅÀÚ Å¬·¡½º
+// ê³¼ì¼ íŒë§¤ì í´ë˜ìŠ¤
 class FruitSeller {
 private:
-    int Apple_Price;    // »ç°ú °¡°İ
-    int numOfApples;    // º¸À¯ÇÑ »ç°ú °³¼ö
-    int myMoney;        // º¸À¯ÇÑ µ·
+    int Apple_Price;    // ì‚¬ê³¼ ê°€ê²©
+    int numOfApples;    // ë³´ìœ í•œ ì‚¬ê³¼ ê°œìˆ˜
+    int myMoney;        // ë³´ìœ í•œ ëˆ
 
 public:
-    // »ı¼ºÀÚ: ÃÊ±â °¡°İ, »ç°ú °³¼ö, º¸À¯ÇÑ µ·À» ¸Å°³º¯¼ö·Î ¹Ş¾Æ ÃÊ±âÈ­.
+    // ìƒì„±ì: ì´ˆê¸° ê°€ê²©, ì‚¬ê³¼ ê°œìˆ˜, ë³´ìœ í•œ ëˆì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ ì´ˆê¸°í™”.
     FruitSeller(int price, int num, int money)
     {
         Apple_Price = price;
@@ -17,27 +17,27 @@ public:
         myMoney = money;
     }
 
-    // »ç°ú¸¦ ÆÇ¸ÅÇÏ´Â ÇÔ¼ö
+    // ì‚¬ê³¼ë¥¼ íŒë§¤í•˜ëŠ” í•¨ìˆ˜
     int SaleApples(int money)
     {
-        int num = money / Apple_Price;  // »ç°úÀÇ °³¼ö °è»ê
-        numOfApples -= num;             // º¸À¯ÇÑ »ç°ú °³¼ö °¨¼Ò
-        myMoney += money;               // ÆÇ¸Å ¼öÀÍ Áõ°¡
-        return num;                     // ÆÇ¸ÅÇÑ »ç°ú °³¼ö ¹İÈ¯
+        int num = money / Apple_Price;  // ì‚¬ê³¼ì˜ ê°œìˆ˜ ê³„ì‚°
+        numOfApples -= num;             // ë³´ìœ í•œ ì‚¬ê³¼ ê°œìˆ˜ ê°ì†Œ
+        myMoney += money;               // íŒë§¤ ìˆ˜ìµ ì¦ê°€
+        return num;                     // íŒë§¤í•œ ì‚¬ê³¼ ê°œìˆ˜ ë°˜í™˜
     }
 
-    // ÇöÀç »óÅÂ¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // í˜„ì¬ ìƒíƒœë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowSalesResult() const
     {
-        cout << "³²Àº »ç°ú: " << numOfApples << endl;
-        cout << "ÆÇ¸Å ¼öÀÍ: " << myMoney << endl;
+        cout << "ë‚¨ì€ ì‚¬ê³¼: " << numOfApples << endl;
+        cout << "íŒë§¤ ìˆ˜ìµ: " << myMoney << endl;
     }
 };
 
-// °úÀÏ ±¸¸ÅÀÚ Å¬·¡½º
+// ê³¼ì¼ êµ¬ë§¤ì í´ë˜ìŠ¤
 class FruitBuyer {
 public:
-    // »ı¼ºÀÚ: ÃÊ±â µ·À» ¸Å°³º¯¼ö·Î ¹Ş¾Æ ÃÊ±âÈ­.
+    // ìƒì„±ì: ì´ˆê¸° ëˆì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ ì´ˆê¸°í™”.
     FruitBuyer(int money)
     {
         myMoney = money;
@@ -45,34 +45,34 @@ public:
     }
 
 private:
-    int myMoney;        // º¸À¯ÇÑ µ·
-    int numOfApples;    // º¸À¯ÇÑ »ç°ú °³¼ö
+    int myMoney;        // ë³´ìœ í•œ ëˆ
+    int numOfApples;    // ë³´ìœ í•œ ì‚¬ê³¼ ê°œìˆ˜
 
-    // »ç°ú¸¦ ±¸¸ÅÇÏ´Â ÇÔ¼ö
+    // ì‚¬ê³¼ë¥¼ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
     void BuyApples(FruitSeller& seller, int money)
     {
-        numOfApples += seller.SaleApples(money); // ÆÇ¸ÅÀÚ·ÎºÎÅÍ »ç°ú¸¦ ±¸¸Å.
-        myMoney -= money;                         // º¸À¯ÇÑ µ·À» °¨¼Ò.
+        numOfApples += seller.SaleApples(money); // íŒë§¤ìë¡œë¶€í„° ì‚¬ê³¼ë¥¼ êµ¬ë§¤.
+        myMoney -= money;                         // ë³´ìœ í•œ ëˆì„ ê°ì†Œ.
     }
 
-    // ÇöÀç »óÅÂ¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // í˜„ì¬ ìƒíƒœë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowBuyResult() const
     {
-        cout << "ÇöÀç ÀÜ¾×: " << myMoney << endl;
-        cout << "»ç°ú °³¼ö: " << numOfApples << endl;
+        cout << "í˜„ì¬ ì”ì•¡: " << myMoney << endl;
+        cout << "ì‚¬ê³¼ ê°œìˆ˜: " << numOfApples << endl;
     }
 
-    friend int main(); // main ÇÔ¼ö¿¡¼­ private ¸â¹ö¿¡ Á¢±ÙÇÒ ¼ö ÀÖµµ·Ï friend ¼±¾ğ
+    friend int main(); // main í•¨ìˆ˜ì—ì„œ private ë©¤ë²„ì— ì ‘ê·¼í•  ìˆ˜ ìˆë„ë¡ friend ì„ ì–¸
 };
 
 int main(void) {
-    FruitSeller seller(1000, 20, 0);   // °úÀÏ ÆÇ¸ÅÀÚ °´Ã¼ »ı¼º
-    FruitBuyer buyer(5000);             // °úÀÏ ±¸¸ÅÀÚ °´Ã¼ »ı¼º
-    buyer.BuyApples(seller, 2000);      // »ç°ú¸¦ ±¸¸Å.
+    FruitSeller seller(1000, 20, 0);   // ê³¼ì¼ íŒë§¤ì ê°ì²´ ìƒì„±
+    FruitBuyer buyer(5000);             // ê³¼ì¼ êµ¬ë§¤ì ê°ì²´ ìƒì„±
+    buyer.BuyApples(seller, 2000);      // ì‚¬ê³¼ë¥¼ êµ¬ë§¤.
 
-    cout << "°úÀÏ ÆÇ¸ÅÀÚÀÇ ÇöÈ²:" << endl;
-    seller.ShowSalesResult();           // ÆÇ¸ÅÀÚÀÇ ÇöÈ² Ãâ·Â
-    cout << "°úÀÏ ±¸¸ÅÀÚÀÇ ÇöÈ²:" << endl;
-    buyer.ShowBuyResult();              // ±¸¸ÅÀÚÀÇ ÇöÈ² Ãâ·Â
+    cout << "ê³¼ì¼ íŒë§¤ìì˜ í˜„í™©:" << endl;
+    seller.ShowSalesResult();           // íŒë§¤ìì˜ í˜„í™© ì¶œë ¥
+    cout << "ê³¼ì¼ êµ¬ë§¤ìì˜ í˜„í™©:" << endl;
+    buyer.ShowBuyResult();              // êµ¬ë§¤ìì˜ í˜„í™© ì¶œë ¥
     return 0;
 }

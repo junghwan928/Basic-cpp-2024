@@ -1,67 +1,67 @@
 #include <iostream>
 using namespace std;
 
-// ÀçÃ¼±â¸¦ ¸·´Â ¾à Å¬·¡½º
+// ì¬ì²´ê¸°ë¥¼ ë§‰ëŠ” ì•½ í´ë˜ìŠ¤
 class Sneezcap
 {
 public:
-    void Take() const { cout << "ÀçÃ¼±â°¡ ¸Ü½À´Ï´Ù" << endl; }
+    void Take() const { cout << "ì¬ì²´ê¸°ê°€ ë©ìŠµë‹ˆë‹¤" << endl; }
 };
 
-// Äà¹°À» ¸ØÃß´Â ¾à Å¬·¡½º
+// ì½§ë¬¼ì„ ë©ˆì¶”ëŠ” ì•½ í´ë˜ìŠ¤
 class SinivelCap
 {
 public:
-    void Take() const { cout << "Äà¹°ÀÌ ¸ØÃä´Ï´Ù" << endl; }
+    void Take() const { cout << "ì½§ë¬¼ì´ ë©ˆì¶¥ë‹ˆë‹¤" << endl; }
 };
 
-// ÀçÃ¤±â¸¦ ¸ØÃß´Â ¾à Å¬·¡½º
+// ì¬ì±„ê¸°ë¥¼ ë©ˆì¶”ëŠ” ì•½ í´ë˜ìŠ¤
 class Snufflecap
 {
 public:
-    void Take() const { cout << "ÀçÃ¤±â°¡ ¸ØÃä´Ï´Ù" << endl; }
+    void Take() const { cout << "ì¬ì±„ê¸°ê°€ ë©ˆì¶¥ë‹ˆë‹¤" << endl; }
 };
 
-// Contac600 ¾à Å¬·¡½º
+// Contac600 ì•½ í´ë˜ìŠ¤
 class Contac600
 {
 public:
-    void Take() const { cout << "Contac600À» º¹¿ëÇÕ´Ï´Ù." << endl; }
+    void Take() const { cout << "Contac600ì„ ë³µìš©í•©ë‹ˆë‹¤." << endl; }
 };
 
-// °¨±â È¯ÀÚ Å¬·¡½º
+// ê°ê¸° í™˜ì í´ë˜ìŠ¤
 class ColdPatient
 {
 public:
-    // Äà¹° ¾àÀ» º¹¿ëÇÏ´Â ÇÔ¼ö
+    // ì½§ë¬¼ ì•½ì„ ë³µìš©í•˜ëŠ” í•¨ìˆ˜
     void TakeSinivelCap(const SinivelCap& cap) const { cap.Take(); }
 
-    // ÀçÃ¤±â ¾àÀ» º¹¿ëÇÏ´Â ÇÔ¼ö
+    // ì¬ì±„ê¸° ì•½ì„ ë³µìš©í•˜ëŠ” í•¨ìˆ˜
     void TakeSneezcap(const Sneezcap& cap) const { cap.Take(); }
 
-    // ÀçÃ¤±â ¾àÀ» º¹¿ëÇÏ´Â ÇÔ¼ö
+    // ì¬ì±„ê¸° ì•½ì„ ë³µìš©í•˜ëŠ” í•¨ìˆ˜
     void TakeSnufflecap(const Snufflecap& cap) const { cap.Take(); }
 
-    // Contac600 ¾àÀ» º¹¿ëÇÏ´Â ÇÔ¼ö
+    // Contac600 ì•½ì„ ë³µìš©í•˜ëŠ” í•¨ìˆ˜
     void TakeContac600(const Contac600& cap) const { cap.Take(); }
 };
 
 int main(void)
 {
-    // ¾à °´Ã¼ »ı¼º
-    SinivelCap scap;        // Äà¹° ¾à
-    Sneezcap zcap;          // ÀçÃ¤±â ¾à
-    Snufflecap ncap;        // ÀçÃ¤±â ¾à
-    Contac600 contac600;    // Contac600 ¾à
+    // ì•½ ê°ì²´ ìƒì„±
+    SinivelCap scap;        // ì½§ë¬¼ ì•½
+    Sneezcap zcap;          // ì¬ì±„ê¸° ì•½
+    Snufflecap ncap;        // ì¬ì±„ê¸° ì•½
+    Contac600 contac600;    // Contac600 ì•½
 
-    // °¨±â È¯ÀÚ °´Ã¼ »ı¼º
+    // ê°ê¸° í™˜ì ê°ì²´ ìƒì„±
     ColdPatient sufferer;
 
-    // È¯ÀÚ°¡ ¾àÀ» º¹¿ë
-    sufferer.TakeSinivelCap(scap);     // Äà¹° ¾à º¹¿ë
-    sufferer.TakeSneezcap(zcap);       // ÀçÃ¤±â ¾à º¹¿ë
-    sufferer.TakeSnufflecap(ncap);     // ÀçÃ¤±â ¾à º¹¿ë
-    sufferer.TakeContac600(contac600); // Contac600 ¾à º¹¿ë
+    // í™˜ìê°€ ì•½ì„ ë³µìš©
+    sufferer.TakeSinivelCap(scap);     // ì½§ë¬¼ ì•½ ë³µìš©
+    sufferer.TakeSneezcap(zcap);       // ì¬ì±„ê¸° ì•½ ë³µìš©
+    sufferer.TakeSnufflecap(ncap);     // ì¬ì±„ê¸° ì•½ ë³µìš©
+    sufferer.TakeContac600(contac600); // Contac600 ì•½ ë³µìš©
 
     return 0;
 }

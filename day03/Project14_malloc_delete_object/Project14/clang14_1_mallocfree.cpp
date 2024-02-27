@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include <cstdlib> // <stdlib.h> ´ë½Å <cstdlib> Çì´õ¸¦ »ç
+#include <cstdlib> // <stdlib.h> ëŒ€ì‹  <cstdlib> í—¤ë”ë¥¼ ì‚¬
 
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -10,14 +10,14 @@ using namespace std;
 
 char* MakeStrAdr(int len)
 {
-    char* str = (char*)malloc(sizeof(char) * len); // C: HEAP¿µ¿ª¿¡ ¸Þ¸ð¸® ÇÒ´ç => 20byte Å©±â
+    char* str = (char*)malloc(sizeof(char) * len); // C: HEAPì˜ì—­ì— ë©”ëª¨ë¦¬ í• ë‹¹ => 20byte í¬ê¸°
     printf("char size : %llu\n", sizeof(char));
     return str;
 }
 /* 
-1. MakeStrAdr ÇÔ¼ö => Á¤¼ö lenÀ» ¸Å°³º¯¼ö·Î ¹Þ¾Æ¼­ ±æÀÌ°¡ lenÀÎ ¹®ÀÚ¿­À» µ¿ÀûÀ¸·Î ÇÒ´ç.
-2. malloc ÇÔ¼ö => »ç¿ëÇÏ¿© len¸¸Å­ÀÇ ¸Þ¸ð¸®¸¦ µ¿ÀûÀ¸·Î ÇÒ´çÇÏ°í, 
-               => ±× ¸Þ¸ð¸®ÀÇ ½ÃÀÛ ÁÖ¼Ò¸¦ °¡¸®Å°´Â Æ÷ÀÎÅÍ strÀ» ¹ÝÈ¯.
+1. MakeStrAdr í•¨ìˆ˜ => ì •ìˆ˜ lenì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ì„œ ê¸¸ì´ê°€ lenì¸ ë¬¸ìžì—´ì„ ë™ì ìœ¼ë¡œ í• ë‹¹.
+2. malloc í•¨ìˆ˜ => ì‚¬ìš©í•˜ì—¬ lenë§Œí¼ì˜ ë©”ëª¨ë¦¬ë¥¼ ë™ì ìœ¼ë¡œ í• ë‹¹í•˜ê³ , 
+               => ê·¸ ë©”ëª¨ë¦¬ì˜ ì‹œìž‘ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„° strì„ ë°˜í™˜.
 */
 
 
@@ -32,7 +32,7 @@ int main(void) {
 
 
 	/* 
-    1. main ÇÔ¼ö => ¸ÕÀú MakeStrAdr ÇÔ¼ö¸¦ È£ÃâÇÏ¿© ±æÀÌ°¡ 20ÀÎ ¹®ÀÚ¿­À» ÇÒ´çÇÏ°í ÀÌ¿¡ ´ëÇÑ Æ÷ÀÎÅÍ¸¦ str¿¡ ÀúÀå.
-	2. strcpy ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© "I am So Happy~"¶ó´Â ¹®ÀÚ¿­À» strÀÌ °¡¸®Å°´Â ¸Þ¸ð¸®¿¡ º¹»ç.
-	3. coutÀ» »ç¿ëÇÏ¿© strÀÌ °¡¸®Å°´Â ¹®ÀÚ¿­À» Ãâ·Â.
-    4. ¸¶Áö¸·À¸·Î free ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© strÀÌ °¡¸®Å°´Â ¸Þ¸ð¸®¸¦ ÇØÁ¦.*/
+    1. main í•¨ìˆ˜ => ë¨¼ì € MakeStrAdr í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ì—¬ ê¸¸ì´ê°€ 20ì¸ ë¬¸ìžì—´ì„ í• ë‹¹í•˜ê³  ì´ì— ëŒ€í•œ í¬ì¸í„°ë¥¼ strì— ì €ìž¥.
+	2. strcpy í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ "I am So Happy~"ë¼ëŠ” ë¬¸ìžì—´ì„ strì´ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬ì— ë³µì‚¬.
+	3. coutì„ ì‚¬ìš©í•˜ì—¬ strì´ ê°€ë¦¬í‚¤ëŠ” ë¬¸ìžì—´ì„ ì¶œë ¥.
+    4. ë§ˆì§€ë§‰ìœ¼ë¡œ free í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ strì´ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬ë¥¼ í•´ì œ.*/
