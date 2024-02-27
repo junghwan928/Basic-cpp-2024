@@ -30,14 +30,16 @@ public:
 
 int main(void)
 {
-    SelfRef obj(3); // SelfRef 객체 생성 및 초기화
-    SelfRef& ref = obj.Adder(2); // obj 객체에 정수를 더하고, 반환된 객체의 참조를 ref에 저장
+    SelfRef obj(3); // SelfRef 객체 생성 및 초기화, 객체 생성 (num = 3)
+    SelfRef& ref = obj.Adder(2); // obj 객체에 정수를 더하고, 반환된 객체의 참조를 ref에 저장, obj에 2를 더하고, 반환된 객체의 참조를 ref에 저장 (num = 5)
 
-    obj.ShowTwoNumber(); // obj 객체의 정수 출력
-    ref.ShowTwoNumber(); // ref가 참조하는 객체의 정수 출력
+    obj.ShowTwoNumber(); // obj 객체의 정수 출력, num 출력 (5)
+    ref.ShowTwoNumber(); // ref가 참조하는 객체의 정수 출력, ref가 참조하는 객체의 num 출력 (5)
 
     // 메서드 체이닝을 통한 연속된 함수 호출
     ref.Adder(1).ShowTwoNumber().Adder(2).ShowTwoNumber();
+    // ref가 참조하는 객체에 1을 더한 후 num 출력 (6)
+    // 그 다음, 2를 더한 후 num 출력 (8)
 
     return 0;
 }
