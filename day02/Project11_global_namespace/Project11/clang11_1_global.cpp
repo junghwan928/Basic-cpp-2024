@@ -3,21 +3,21 @@ using namespace std;
 
 int main() {
 
-	// numº¯¼ö¸¦ »ó¼öÈ­
+	// numë³€ìˆ˜ë¥¼ ìƒìˆ˜í™”
 	const int num = 10;
 
-	// numÀÌ »ó¼öÀÌ¹Ç·Î º¯°æ ¾ÈµÊ
+	// numì´ ìƒìˆ˜ì´ë¯€ë¡œ ë³€ê²½ ì•ˆë¨
 	// num = 100;
 
 	int num1 = 10;
-	int* pnum1;  // Æ÷ÀÎÅÍº¯¼ö pnum1 ¼±¾ð => * : ±×³É ¾Æ¹«·± ÀÇ¹Ì ¾ø´Â ±âÈ£
-	pnum1 = &num1; // -> º¯¼ö NUM1ÀÇ ÁÖ¼Ò°ªÀ» Æ÷ÀÎÅÍ º¯¼ö PNUM1¿¡ ÀúÀåÇÔ
+	int* pnum1;  // í¬ì¸í„°ë³€ìˆ˜ pnum1 ì„ ì–¸ => * : ê·¸ëƒ¥ ì•„ë¬´ëŸ° ì˜ë¯¸ ì—†ëŠ” ê¸°í˜¸
+	pnum1 = &num1; // -> ë³€ìˆ˜ NUM1ì˜ ì£¼ì†Œê°’ì„ í¬ì¸í„° ë³€ìˆ˜ PNUM1ì— ì €ìž¥í•¨
 
-	cout << "num¿¡ ÀúÀåµÈ °ª: " << num << endl;
-	cout << "num1¿¡ ÀúÀåµÈ °ª: " << num1 << endl;
-	cout << "num1ÀÇ ÁÖ¼Ò°ª: " << &num << endl;
-	cout << "pnum1¿¡ ÀúÀåµÈ °ª: " << pnum1 << endl;
-	cout << "Pnum1¿¡ ÀúÀåµÈ ³ðÀÇ µ¥ÀÌÅÍ: " << *pnum1 << endl; //numÀÇ °ªÀÌ¶û °°À½
+	cout << "numì— ì €ìž¥ëœ ê°’: " << num << endl;
+	cout << "num1ì— ì €ìž¥ëœ ê°’: " << num1 << endl;
+	cout << "num1ì˜ ì£¼ì†Œê°’: " << &num << endl;
+	cout << "pnum1ì— ì €ìž¥ëœ ê°’: " << pnum1 << endl;
+	cout << "Pnum1ì— ì €ìž¥ëœ ë†ˆì˜ ë°ì´í„°: " << *pnum1 << endl; //numì˜ ê°’ì´ëž‘ ê°™ìŒ
 
 	return 0;
 }

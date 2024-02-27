@@ -11,37 +11,37 @@ int main(void) {
 	std::cout << "What is your name? => ";
 	std::cin >> name;
 
-	std::cout << "ÁÁ¾ÆÇÏ´Â Program => ";
+	std::cout << "ì¢‹ì•„í•˜ëŠ” Program => ";
 	std::cin >> lang;
 
-	std::cout << "My name is " <<name<<"ÀÔ´Ï´Ù \n";
-	std::cout << "ÁÁ¾ÆÇÏ´Â Program is " << lang << "ÀÔ´Ï´Ù"<< std::endl;
-	return 0; // ÇÁ·Î±×·¥ÀÇ Á¤»ó Á¾·á¸¦ ³ªÅ¸³¿.
+	std::cout << "My name is " <<name<<"ìž…ë‹ˆë‹¤ \n";
+	std::cout << "ì¢‹ì•„í•˜ëŠ” Program is " << lang << "ìž…ë‹ˆë‹¤"<< std::endl;
+	return 0; // í”„ë¡œê·¸ëž¨ì˜ ì •ìƒ ì¢…ë£Œë¥¼ ë‚˜íƒ€ëƒ„.
 }
 
-// ÀÚ·áÇü
-// ¹®ÀÚ : ¹®ÀÚ(char),¹®ÀÚ¿­
-// ¼ýÀÚ : Á¤¼ö(int),½Ç¼ö
+// ìžë£Œí˜•
+// ë¬¸ìž : ë¬¸ìž(char),ë¬¸ìžì—´
+// ìˆ«ìž : ì •ìˆ˜(int),ì‹¤ìˆ˜
 
-// 1.charºÎºÐ:
-// -> Å©±â°¡ °¢°¢ 100, 200ÀÎ ¹®ÀÚ ¹è¿­ name°ú langÀ» ¼±¾ð. 
-// --> ÀÌ ¹è¿­µéÀº »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·ÂÀ» ¹ÞÀ» ¶§ »ç¿ë.
+// 1.charë¶€ë¶„:
+// -> í¬ê¸°ê°€ ê°ê° 100, 200ì¸ ë¬¸ìž ë°°ì—´ nameê³¼ langì„ ì„ ì–¸. 
+// --> ì´ ë°°ì—´ë“¤ì€ ì‚¬ìš©ìžë¡œë¶€í„° ìž…ë ¥ì„ ë°›ì„ ë•Œ ì‚¬ìš©.
 
-// 2. std  cout << name ºÎºÐ: 
-// -> »ç¿ëÀÚ¿¡°Ô ÀÌ¸§À» ¹¯´Â ÇÁ·ÒÇÁÆ®¸¦ Ãâ·Â
+// 2. std  cout << name ë¶€ë¶„: 
+// -> ì‚¬ìš©ìžì—ê²Œ ì´ë¦„ì„ ë¬»ëŠ” í”„ë¡¬í”„íŠ¸ë¥¼ ì¶œë ¥
 
-// 2 - 1. std cin << name ºÎºÐ: 
-// -> »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ÀÌ¸§À» name ¹è¿­¿¡ ÀúÀå
+// 2 - 1. std cin << name ë¶€ë¶„: 
+// -> ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì´ë¦„ì„ name ë°°ì—´ì— ì €ìž¥
 
-// 3. std  cout << program ºÎºÐ:
-// -> »ç¿ëÀÚ¿¡°Ô ¾î¶² ÇÁ·Î±×·¡¹Ö ¾ð¾î¸¦ ÁÁ¾ÆÇÏ´ÂÁö ¹¯´Â ÇÁ·ÒÇÁÆ®¸¦ Ãâ·Â
+// 3. std  cout << program ë¶€ë¶„:
+// -> ì‚¬ìš©ìžì—ê²Œ ì–´ë–¤ í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ë¥¼ ì¢‹ì•„í•˜ëŠ”ì§€ ë¬»ëŠ” í”„ë¡¬í”„íŠ¸ë¥¼ ì¶œë ¥
 
-// 3 - 1. std cin << lang ºÎºÐ:
-// -> »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ÁÁ¾ÆÇÏ´Â ÇÁ·Î±×·¡¹Ö ¾ð¾î¸¦ lang ¹è¿­¿¡ ÀúÀå 
+// 3 - 1. std cin << lang ë¶€ë¶„:
+// -> ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì¢‹ì•„í•˜ëŠ” í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ë¥¼ lang ë°°ì—´ì— ì €ìž¥ 
 
-// 4. std::cout << "My name is " <<name<<"ÀÔ´Ï´Ù \n" : 
-// -> »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ÀÌ¸§À» Ãâ·Â 
+// 4. std::cout << "My name is " <<name<<"ìž…ë‹ˆë‹¤ \n" : 
+// -> ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì´ë¦„ì„ ì¶œë ¥ 
 
-// 5. std::cout << "ÁÁ¾ÆÇÏ´Â Program is " << lang << "ÀÔ´Ï´Ù" << std::endl : 
-// -> »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ÁÁ¾ÆÇÏ´Â ÇÁ·Î±×·¡¹Ö ¾ð¾î¸¦ Ãâ·Â
+// 5. std::cout << "ì¢‹ì•„í•˜ëŠ” Program is " << lang << "ìž…ë‹ˆë‹¤" << std::endl : 
+// -> ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì¢‹ì•„í•˜ëŠ” í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ë¥¼ ì¶œë ¥
 

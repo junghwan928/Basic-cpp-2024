@@ -15,26 +15,26 @@ int main(void) {
     return 0;
 }
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º 
-// -> SimpleFunc ÇÔ¼ö°¡ Á¤ÀÇ.
-// -->ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" Ãâ·Â.
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ 
+// -> SimpleFunc í•¨ìˆ˜ê°€ ì •ì˜.
+// -->ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜" ì¶œë ¥.
 
-// ProgComImpl ³×ÀÓ½ºÆäÀÌ½º
-// -> SimpleFunc ÇÔ¼ö°¡ Á¤ÀÇ.
-// --> ÀÌ ÇÔ¼ö´Â "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â.
-
-
+// ProgComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤
+// -> SimpleFunc í•¨ìˆ˜ê°€ ì •ì˜.
+// --> ì´ í•¨ìˆ˜ëŠ” "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥.
 
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö¸¦ ±¸Çö. 
-// --> ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â.
+
+
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜ë¥¼ êµ¬í˜„. 
+// --> ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥.
 void BestComImpl::SimpleFunc(void){
-    std::cout << "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" << std::endl;;
+    std::cout << "BestComì´ ì •ì˜í•œ í•¨ìˆ˜" << std::endl;;
 }
 
 
-// ProgComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö¸¦ ±¸Çö. 
-// --> ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â.
+// ProgComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜ë¥¼ êµ¬í˜„. 
+// --> ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥.
 void ProgComImpl::SimpleFunc(void) {
-    std::cout << "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" << std::endl;;
+    std::cout << "BestComì´ ì •ì˜í•œ í•¨ìˆ˜" << std::endl;;
 }

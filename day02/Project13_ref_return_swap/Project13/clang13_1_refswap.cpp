@@ -2,12 +2,12 @@
 using namespace std;
 
 /*
-    reference swap ÇÔ¼ö ±¸ÇöÇÏ±â
+    reference swap í•¨ìˆ˜ êµ¬í˜„í•˜ê¸°
 */
 
-// swap ÇÔ¼ö´Â µÎ °³ÀÇ Á¤¼öÇü ÂüÁ¶ ¸Å°³º¯¼ö x¿Í y¸¦ ¹ÞÀ½.
-// ÇÔ¼ö ³»ºÎ¿¡¼­´Â ÀÓ½Ã º¯¼ö temp¸¦ »ç¿ëÇÏ¿© xÀÇ °ªÀ» ÀúÀå ÈÄ 
-// x¿¡ yÀÇ °ªÀ» ´ëÀÔÇÑ ÈÄ¿¡ y¿¡ tempÀÇ °ªÀ» ´ëÀÔÇÏ¿© µÎ º¯¼öÀÇ °ªÀ» ±³È¯ÇÔ.
+// swap í•¨ìˆ˜ëŠ” ë‘ ê°œì˜ ì •ìˆ˜í˜• ì°¸ì¡° ë§¤ê°œë³€ìˆ˜ xì™€ yë¥¼ ë°›ìŒ.
+// í•¨ìˆ˜ ë‚´ë¶€ì—ì„œëŠ” ìž„ì‹œ ë³€ìˆ˜ tempë¥¼ ì‚¬ìš©í•˜ì—¬ xì˜ ê°’ì„ ì €ìž¥ í›„ 
+// xì— yì˜ ê°’ì„ ëŒ€ìž…í•œ í›„ì— yì— tempì˜ ê°’ì„ ëŒ€ìž…í•˜ì—¬ ë‘ ë³€ìˆ˜ì˜ ê°’ì„ êµí™˜í•¨.
 
 void swap(int &ref1, int &ref2) {
     int temp = ref1;

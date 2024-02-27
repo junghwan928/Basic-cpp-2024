@@ -1,12 +1,12 @@
 #include <iostream>
 
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º ³»¿¡ SimpleFunc ÇÔ¼öÀÇ ¼±¾ğ.
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ë‚´ì— SimpleFunc í•¨ìˆ˜ì˜ ì„ ì–¸.
 // void PrettyFunc(void);
-// -> BestComImpl ³×ÀÓ½ºÆäÀÌ½º ³»¿¡ PrettyFunc ÇÔ¼öÀÇ ¼±¾ğ.
+// -> BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ë‚´ì— PrettyFunc í•¨ìˆ˜ì˜ ì„ ì–¸.
 namespace BestComImpl {
     void SimpleFunc(void);
-    void PrettyFunc(void); // PrettyFuncÀÇ ¼±¾ğ Ãß°¡
+    void PrettyFunc(void); // PrettyFuncì˜ ì„ ì–¸ ì¶”ê°€
 }
 
 namespace ProgComImpl {
@@ -14,31 +14,31 @@ namespace ProgComImpl {
 }
 
 
-// ÀÌ ÄÚµå´Â BestComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö¸¦ È£Ãâ. 
+// ì´ ì½”ë“œëŠ” BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜ë¥¼ í˜¸ì¶œ. 
 int main(void) {
     BestComImpl::SimpleFunc();
     return 0;
 }
 
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö¸¦ ±¸Çö. 
-// -> ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â, 
-// --> PrettyFunc() ÇÔ¼ö¸¦ È£Ãâ, 
-// ---> ProgComImpl::SimpleFunc() ÇÔ¼ö¸¦ È£Ãâ.
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜ë¥¼ êµ¬í˜„. 
+// -> ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥, 
+// --> PrettyFunc() í•¨ìˆ˜ë¥¼ í˜¸ì¶œ, 
+// ---> ProgComImpl::SimpleFunc() í•¨ìˆ˜ë¥¼ í˜¸ì¶œ.
 void BestComImpl::SimpleFunc(void) {
-    std::cout << "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" << std::endl;
-    PrettyFunc(); // PrettyFunc È£Ãâ
+    std::cout << "BestComì´ ì •ì˜í•œ í•¨ìˆ˜" << std::endl;
+    PrettyFunc(); // PrettyFunc í˜¸ì¶œ
     ProgComImpl::SimpleFunc();
 }
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ PrettyFunc ÇÔ¼ö¸¦ ±¸Çö.
-// -> ÀÌ ÇÔ¼ö´Â "So Pretty."¸¦ Ãâ·Â
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ PrettyFunc í•¨ìˆ˜ë¥¼ êµ¬í˜„.
+// -> ì´ í•¨ìˆ˜ëŠ” "So Pretty."ë¥¼ ì¶œë ¥
 void BestComImpl::PrettyFunc(void) {
     std::cout << "So Pretty" << std::endl;
 }
 
-// ProgComImpl ³×ÀÓ½ºÆäÀÌ½º¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö¸¦ ±¸Çö. 
-// -> ÀÌ ÇÔ¼ö´Â "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·ÂÇÔ.
+// ProgComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜ë¥¼ êµ¬í˜„. 
+// -> ì´ í•¨ìˆ˜ëŠ” "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥í•¨.
 void ProgComImpl::SimpleFunc(void) {
-    std::cout << "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" << std::endl;
+    std::cout << "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜" << std::endl;
 }

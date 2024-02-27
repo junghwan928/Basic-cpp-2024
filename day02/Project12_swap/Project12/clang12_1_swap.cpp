@@ -2,17 +2,17 @@
 using namespace std;
 
 /*
-    swap ÇÔ¼ö ±¸ÇöÇÏ±â
+    swap í•¨ìˆ˜ êµ¬í˜„í•˜ê¸°
 */
-void swap(int *aa, int *bb) { // ÁÖ¼Ò¹ÞÀ»¼ö ÀÖ´Â Æ÷ÀÎÅÍ º¯¼ö¸¦ ¼±¾ð
+void swap(int *aa, int *bb) { // ì£¼ì†Œë°›ì„ìˆ˜ ìžˆëŠ” í¬ì¸í„° ë³€ìˆ˜ë¥¼ ì„ ì–¸
     int temp = *aa;
-    *aa = *bb; // ÁÖ¼ÒÀÇ µ¥ÀÌÅÍ¸¦ ÂüÁ¶
+    *aa = *bb; // ì£¼ì†Œì˜ ë°ì´í„°ë¥¼ ì°¸ì¡°
     *bb = temp;
 
-    // swap ÇÔ¼ö¸¦ Á¤ÀÇ. ÀÌ ÇÔ¼ö´Â µÎ °³ÀÇ ÂüÁ¶ ¸Å°³º¯¼ö a¿Í b¸¦ ¹Þ¾Æ¼­, ÀÌµéÀÇ °ªÀ» ±³È¯.
-    // int temp = x; -> ÀÓ½Ã º¯¼ö temp¸¦ ¼±¾ðÇÏ°í, xÀÇ °ªÀ» ÀúÀå.
-    // x = y; ->  x¿¡ yÀÇ °ªÀ» ´ëÀÔ.
-    // y = temp; -> y¿¡ ÀÓ½Ã º¯¼ö tempÀÇ °ªÀ» ´ëÀÔÇÏ¿© ±³È¯ÇÕ´Ï´Ù.
+    // swap í•¨ìˆ˜ë¥¼ ì •ì˜. ì´ í•¨ìˆ˜ëŠ” ë‘ ê°œì˜ ì°¸ì¡° ë§¤ê°œë³€ìˆ˜ aì™€ bë¥¼ ë°›ì•„ì„œ, ì´ë“¤ì˜ ê°’ì„ êµí™˜.
+    // int temp = x; -> ìž„ì‹œ ë³€ìˆ˜ tempë¥¼ ì„ ì–¸í•˜ê³ , xì˜ ê°’ì„ ì €ìž¥.
+    // x = y; ->  xì— yì˜ ê°’ì„ ëŒ€ìž….
+    // y = temp; -> yì— ìž„ì‹œ ë³€ìˆ˜ tempì˜ ê°’ì„ ëŒ€ìž…í•˜ì—¬ êµí™˜í•©ë‹ˆë‹¤.
 
     
     
@@ -37,11 +37,11 @@ int main() {
 
     return 0;
 }
-int& num2 = num1; // num2 -> num1ÀÇ ÂüÁ¶
-int& num2 = 100; // c++ÀÇ ¸®ÅÍ·² °ª
+int& num2 = num1; // num2 -> num1ì˜ ì°¸ì¡°
+int& num2 = 100; // c++ì˜ ë¦¬í„°ëŸ´ ê°’
 
-int num = 10;   // ÀÏ¹ÝÀûÀÎ º¯¼ö ¼±¾ð
-int* ptr = &num1; // ptr -> num1 Æ÷ÀÎÅÍ
-int& num2 = num1; //ÀÌ¹Ì À§¿¡¼­ num2 -> num1ÀÇ ÂüÁ¶·Î ¼±¾ð
+int num = 10;   // ì¼ë°˜ì ì¸ ë³€ìˆ˜ ì„ ì–¸
+int* ptr = &num1; // ptr -> num1 í¬ì¸í„°
+int& num2 = num1; //ì´ë¯¸ ìœ„ì—ì„œ num2 -> num1ì˜ ì°¸ì¡°ë¡œ ì„ ì–¸
 
 

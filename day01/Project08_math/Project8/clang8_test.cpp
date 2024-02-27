@@ -5,24 +5,24 @@ using namespace std;
 int main() {
     int num1, num2;
 
-    // »ç¿ëÀÚ·ÎºÎÅÍ µÎ °³ÀÇ ¼ıÀÚ ÀÔ·Â ¹Ş±â
-    cout << "Ã¹ ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
-    cin >> num1; // cin¿¡ num1 ÀúÀå
+    // ì‚¬ìš©ìë¡œë¶€í„° ë‘ ê°œì˜ ìˆ«ì ì…ë ¥ ë°›ê¸°
+    cout << "ì²« ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
+    cin >> num1; // cinì— num1 ì €ì¥
 
-    cout << "µÎ ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
-    cin >> num2; // cin¿¡ num2 ÀúÀå
+    cout << "ë‘ ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
+    cin >> num2; // cinì— num2 ì €ì¥
 
-    // ÀÔ·Â¹ŞÀº µÎ ¼ıÀÚÀÇ(num1, num2) ÇÕ °è»ê
+    // ì…ë ¥ë°›ì€ ë‘ ìˆ«ìì˜(num1, num2) í•© ê³„ì‚°
     int sum = num1 + num2;
     int sub = num1 - num2;
     int multi = num1 * num2;
     int div = num1 / num2;
 
-    // °á°ú Ãâ·Â
-    cout << "µÎ ¼ıÀÚÀÇ ÇÕ: " << sum << endl;
-    cout << "µÎ ¼ıÀÚÀÇ »©±â: " << sub << endl;
-    cout << "µÎ ¼ıÀÚÀÇ °ö: " << multi << endl;
-    cout << "µÎ ¼ıÀÚÀÇ °ö: " << div << endl;
+    // ê²°ê³¼ ì¶œë ¥
+    cout << "ë‘ ìˆ«ìì˜ í•©: " << sum << endl;
+    cout << "ë‘ ìˆ«ìì˜ ë¹¼ê¸°: " << sub << endl;
+    cout << "ë‘ ìˆ«ìì˜ ê³±: " << multi << endl;
+    cout << "ë‘ ìˆ«ìì˜ ê³±: " << div << endl;
 
     return 0;
 }

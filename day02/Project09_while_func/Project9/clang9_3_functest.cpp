@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Adder(int num1 = 1, int num2 = 2);   // ÇÔ¼ö ¼±¾ð
+int Adder(int num1 = 1, int num2 = 2);   // í•¨ìˆ˜ ì„ ì–¸
 
 void func() {
     cout << "Hi" << endl;
@@ -10,14 +10,14 @@ void func() {
 
 int main(void)
 {
-    cout << Adder() << endl;      // ÇÔ¼ö È£Ãâ :  Adder(), 3
+    cout << Adder() << endl;      // í•¨ìˆ˜ í˜¸ì¶œ :  Adder(), 3
     cout << Adder(5) << endl;      // 7
     cout << Adder(3, 5) << endl;   // 8
-    func(); // func() È£Ãâ: ¹ÝÈ¯°ªÀÌ ¾øÀ¸¹Ç·Î Ãâ·ÂÇÏÁö ¾ÊÀ½
+    func(); // func() í˜¸ì¶œ: ë°˜í™˜ê°’ì´ ì—†ìœ¼ë¯€ë¡œ ì¶œë ¥í•˜ì§€ ì•ŠìŒ
     return 0;
 }
 
-int Adder(int num1, int num2)   // ÇÔ¼ö Á¤ÀÇ
+int Adder(int num1, int num2)   // í•¨ìˆ˜ ì •ì˜
 {
     return num1 + num2;
 }
@@ -25,7 +25,7 @@ int Adder(int num1, int num2)   // ÇÔ¼ö Á¤ÀÇ
 
 using namespace std;
 
-int Adder(int num1 = 1, int num2 = 2);   // ÇÔ¼ö ¼±¾ð
+int Adder(int num1 = 1, int num2 = 2);   // í•¨ìˆ˜ ì„ ì–¸
 
 void func() {
     cout << "Hi" << endl;
@@ -33,21 +33,21 @@ void func() {
 
 int main(void)
 {
-    cout << Adder() << endl;      // ÇÔ¼ö È£Ãâ :  Adder(), 3
+    cout << Adder() << endl;      // í•¨ìˆ˜ í˜¸ì¶œ :  Adder(), 3
     cout << Adder(5) << endl;      // 7
     cout << Adder(3, 5) << endl;   // 8
-    func(); // func() È£Ãâ: ¹ÝÈ¯°ªÀÌ ¾øÀ¸¹Ç·Î Ãâ·ÂÇÏÁö ¾ÊÀ½
+    func(); // func() í˜¸ì¶œ: ë°˜í™˜ê°’ì´ ì—†ìœ¼ë¯€ë¡œ ì¶œë ¥í•˜ì§€ ì•ŠìŒ
     return 0;
 }
 
-int Adder(int num1, int num2)   // ÇÔ¼ö Á¤ÀÇ
+int Adder(int num1, int num2)   // í•¨ìˆ˜ ì •ì˜
 {
     return num1 + num2;
 }
 
 /*
-¸Å°³º¯¼ö¿¡ µðÆúÆ® °ªÀÌ ¼³Á¤µÇ¾î ÀÖÀ¸¸é, ¼±¾ðµÈ ¸Å°³º¯¼öÀÇ ¼öº¸´Ù ÀûÀº ¼öÀÇ ÀÎÀÚÀü´ÞÀÌ °¡´ÉÇÏ´Ù.
-±×¸®°í Àü´ÞµÇ´Â ÀÎÀÚ´Â ¿ÞÂÊ¿¡¼­ºÎÅÍ Ã¤¿öÁ® ³ª°¡°í, ºÎÁ·ºÐÀº µðÆúÆ® °ªÀ¸·Î Ã¤¿öÁø´Ù.
+ë§¤ê°œë³€ìˆ˜ì— ë””í´íŠ¸ ê°’ì´ ì„¤ì •ë˜ì–´ ìžˆìœ¼ë©´, ì„ ì–¸ëœ ë§¤ê°œë³€ìˆ˜ì˜ ìˆ˜ë³´ë‹¤ ì ì€ ìˆ˜ì˜ ì¸ìžì „ë‹¬ì´ ê°€ëŠ¥í•˜ë‹¤.
+ê·¸ë¦¬ê³  ì „ë‹¬ë˜ëŠ” ì¸ìžëŠ” ì™¼ìª½ì—ì„œë¶€í„° ì±„ì›Œì ¸ ë‚˜ê°€ê³ , ë¶€ì¡±ë¶„ì€ ë””í´íŠ¸ ê°’ìœ¼ë¡œ ì±„ì›Œì§„ë‹¤.
 */
 
-//Å¬·¡½º ¾È¿¡ µé¾î°¡´Â ÇÔ¼ö : ¸Þ¼­µå Æ²¸°ºÎºÐ Ã£¾ÆÁà
+//í´ëž˜ìŠ¤ ì•ˆì— ë“¤ì–´ê°€ëŠ” í•¨ìˆ˜ : ë©”ì„œë“œ í‹€ë¦°ë¶€ë¶„ ì°¾ì•„ì¤˜

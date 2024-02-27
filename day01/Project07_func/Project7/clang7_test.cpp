@@ -19,16 +19,16 @@ void MyFunc(int a, int b)
 
 int main() 
 {
-	// ¸Å°³º¯¼ö°¡ ¾ø´Â MyFunc(void) ÇÔ¼ö¸¦ È£Ãâ.
-	// ÀÌ´Â void MyFunc(void)°¡ È£Ãâ.
+	// ë§¤ê°œë³€ìˆ˜ê°€ ì—†ëŠ” MyFunc(void) í•¨ìˆ˜ë¥¼ í˜¸ì¶œ.
+	// ì´ëŠ” void MyFunc(void)ê°€ í˜¸ì¶œ.
 	MyFunc();
 
-	// ¹®ÀÚ 'A'¸¦ ¸Å°³º¯¼ö·Î °®´Â MyFunc(char c) ÇÔ¼ö¸¦ È£Ãâ. 
-	// -> ÀÌ´Â void MyFunc(char c)°¡ È£Ãâ.
+	// ë¬¸ì 'A'ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ê°–ëŠ” MyFunc(char c) í•¨ìˆ˜ë¥¼ í˜¸ì¶œ. 
+	// -> ì´ëŠ” void MyFunc(char c)ê°€ í˜¸ì¶œ.
 	MyFunc('A');
 
-	// µÎ °³ÀÇ Á¤¼ö 12¿Í 13À» ¸Å°³º¯¼ö·Î °®´Â MyFunc(int a, int b) ÇÔ¼ö¸¦ È£Ãâ.
-	// ÀÌ´Â void MyFunc(int a, int b)°¡ È£Ãâ.
+	// ë‘ ê°œì˜ ì •ìˆ˜ 12ì™€ 13ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ê°–ëŠ” MyFunc(int a, int b) í•¨ìˆ˜ë¥¼ í˜¸ì¶œ.
+	// ì´ëŠ” void MyFunc(int a, int b)ê°€ í˜¸ì¶œ.
 	MyFunc(12,13);
 	return 0;
 }

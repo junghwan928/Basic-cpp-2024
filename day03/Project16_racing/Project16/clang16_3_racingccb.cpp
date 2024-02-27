@@ -14,13 +14,13 @@ namespace Car_CONST {
 
 class Car {
 
-// ¸â¹öº¯¼ö, ÇÊµå, ¼Ó¼º
+// ë©¤ë²„ë³€ìˆ˜, í•„ë“œ, ì†ì„±
 private:
     char gamerID[Car_CONST::ID_LEN];
     int fuelGauge;
     int curSpeed;
 
-    // ¸â¹öÇÔ¼ö, ¸Ş¼­µå, ±â´É
+    // ë©¤ë²„í•¨ìˆ˜, ë©”ì„œë“œ, ê¸°ëŠ¥
 public:
     void InitMembers(const char* ID, int fuel);
     void ShowCarState();
@@ -28,17 +28,17 @@ public:
     void Accel();
 };
 
-// Å¬·¡½º ³»ºÎÀÇ ÇÔ¼ö ¼±¾ğ¸¸ ³²±â°í Á¤ÀÇ´Â Å¬·¡½º ¿ÜºÎ¿¡¼­ ÇÔ
+// í´ë˜ìŠ¤ ë‚´ë¶€ì˜ í•¨ìˆ˜ ì„ ì–¸ë§Œ ë‚¨ê¸°ê³  ì •ì˜ëŠ” í´ë˜ìŠ¤ ì™¸ë¶€ì—ì„œ í•¨
 void Car::InitMembers(const char* ID, int fuel) {
-    strcpy(gamerID, ID); //Àü´ŞµÈ IDÀÇ ¹®ÀÚ¿­À» gameIDÀúÀå
+    strcpy(gamerID, ID); //ì „ë‹¬ëœ IDì˜ ë¬¸ìì—´ì„ gameIDì €ì¥
     fuelGauge = fuel;
     curSpeed = 0;
 }
 
 void Car::ShowCarState() {
-    cout << "¼ÒÀ¯ÀÚ ID: " << gamerID << endl;
-    cout << "¿¬·á·®: " << fuelGauge << "%" << endl;
-    cout << "ÇöÀç¼Óµµ: " << curSpeed << "km/s" << endl;
+    cout << "ì†Œìœ ì ID: " << gamerID << endl;
+    cout << "ì—°ë£ŒëŸ‰: " << fuelGauge << "%" << endl;
+    cout << "í˜„ì¬ì†ë„: " << curSpeed << "km/s" << endl;
 }
 
 void Car::Accel() {
@@ -62,8 +62,8 @@ void Car::Break() {
 }
 
 int main(void) {
-    Car run99; // class car Å¸ÀÔÀÇ °´Ã¼ run 99 »ı¼º
-    run99.InitMembers("run99", 100); //run99°´Ã¼ÀÇ InitMembers() ¸Ş¼­µå È£Ãâ
+    Car run99; // class car íƒ€ì…ì˜ ê°ì²´ run 99 ìƒì„±
+    run99.InitMembers("run99", 100); //run99ê°ì²´ì˜ InitMembers() ë©”ì„œë“œ í˜¸ì¶œ
     run99.Accel();
     run99.Accel();
     run99.ShowCarState();

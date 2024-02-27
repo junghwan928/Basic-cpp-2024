@@ -1,11 +1,11 @@
 #include <iostream>
 
-// adder ÇÔ¼öÀÇ ¼±¾ğ: µÎ °³ÀÇ Á¤¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Ş°í, ±âº»°ªÀ¸·Î °¢°¢ num1 = 1°ú num2 = 2¸¦ °¡Áü
+// adder í•¨ìˆ˜ì˜ ì„ ì–¸: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ê³ , ê¸°ë³¸ê°’ìœ¼ë¡œ ê°ê° num1 = 1ê³¼ num2 = 2ë¥¼ ê°€ì§
 int adder(int num1 = 1, int num2 = 2);
 
 int main(void)
 {
-    // adder ÇÔ¼ö È£Ãâ ¹× °á°ú Ãâ·Â
+    // adder í•¨ìˆ˜ í˜¸ì¶œ ë° ê²°ê³¼ ì¶œë ¥
     std::cout << adder() << std::endl;     // 1 + 2 = 3
     std::cout << adder(5) << std::endl;    // 5 + 2 = 7
     std::cout << adder(3, 5) << std::endl; // 3 + 5 = 8
@@ -13,7 +13,7 @@ int main(void)
     return 0;
 }
 
-// adder ÇÔ¼öÀÇ Á¤ÀÇ: µÎ °³ÀÇ Á¤¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Ş¾Æ¼­ ÇÕÀ» ¹İÈ¯
+// adder í•¨ìˆ˜ì˜ ì •ì˜: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ì„œ í•©ì„ ë°˜í™˜
 int adder(int num1, int num2) {
     return num1 + num2;
 }

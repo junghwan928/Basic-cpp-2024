@@ -3,11 +3,11 @@
 int main(void) 
 {
 	int val1;
-	std::cout << "Ã¹¹øÂ° ¼ıÀÚ ÀÔ·Â:";
+	std::cout << "ì²«ë²ˆì§¸ ìˆ«ì ì…ë ¥:";
 	std::cin >> val1;
 
 	int val2;
-	std::cout << "µÎ¹øÂ° ¼ıÀÚ ÀÔ·Â:";
+	std::cout << "ë‘ë²ˆì§¸ ìˆ«ì ì…ë ¥:";
 	std::cin >> val2;
 
 	int result = val1 + val2;

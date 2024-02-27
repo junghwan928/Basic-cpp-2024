@@ -2,29 +2,29 @@
 
 
 // namespace BestComImpl { ... } 
-// -> BestComImplÀÌ¶ó´Â ³×ÀÓ½ºÆäÀÌ½º¸¦ Á¤ÀÇ. 
-// --> ³×ÀÓ½ºÆäÀÌ½º´Â º¯¼ö, ÇÔ¼ö, Å¬·¡½º µîÀ» ±×·ìÈ­ÇÏ¿©, 
-// --->Àü¿ª ¹üÀ§¿¡¼­ÀÇ ÀÌ¸§ Ãæµ¹À» ¹æÁö.
+// -> BestComImplì´ë¼ëŠ” ë„¤ì„ìŠ¤í˜ì´ìŠ¤ë¥¼ ì •ì˜. 
+// --> ë„¤ì„ìŠ¤í˜ì´ìŠ¤ëŠ” ë³€ìˆ˜, í•¨ìˆ˜, í´ë˜ìŠ¤ ë“±ì„ ê·¸ë£¹í™”í•˜ì—¬, 
+// --->ì „ì—­ ë²”ìœ„ì—ì„œì˜ ì´ë¦„ ì¶©ëŒì„ ë°©ì§€.
 
 // void SimpleFunc(void) { ... }
-// -> BestComImpl ³×ÀÓ½ºÆäÀÌ½º ³»¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö.
-// --> ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â
+// -> BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ë‚´ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜.
+// --> ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥
 namespace BestComImpl {
     void SimpleFunc(void) {
-        std::cout << "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö " << std::endl;
+        std::cout << "BestComì´ ì •ì˜í•œ í•¨ìˆ˜ " << std::endl;
     }
 }
 
 
 // namespace ProgComImpl { ... }
-// -> ProgComImplÀÌ¶ó´Â ³×ÀÓ½ºÆäÀÌ½º¸¦ Á¤ÀÇ.
+// -> ProgComImplì´ë¼ëŠ” ë„¤ì„ìŠ¤í˜ì´ìŠ¤ë¥¼ ì •ì˜.
 
 // void SimpleFunc(void) { ... } 
-// -> ProgComImpl ³×ÀÓ½ºÆäÀÌ½º ³»¿¡ Á¤ÀÇµÈ SimpleFunc ÇÔ¼ö.
-// --> ÀÌ ÇÔ¼ö´Â "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·ÂÇÕ´Ï´Ù.
+// -> ProgComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ë‚´ì— ì •ì˜ëœ SimpleFunc í•¨ìˆ˜.
+// --> ì´ í•¨ìˆ˜ëŠ” "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
 namespace ProgComImpl {
     void SimpleFunc(void) {
-        std::cout << "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö " << std::endl;
+        std::cout << "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜ " << std::endl;
     }
 }
 int main(void) {
@@ -33,10 +33,10 @@ int main(void) {
     return 0;
 }
 
-// BestComImpl ³×ÀÓ½ºÆäÀÌ½º 
-// -> SimpleFunc ÇÔ¼ö°¡ Á¤ÀÇ.
-// -->ÀÌ ÇÔ¼ö´Â "BestComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" Ãâ·Â.
+// BestComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤ 
+// -> SimpleFunc í•¨ìˆ˜ê°€ ì •ì˜.
+// -->ì´ í•¨ìˆ˜ëŠ” "BestComì´ ì •ì˜í•œ í•¨ìˆ˜" ì¶œë ¥.
 
-// ProgComImpl ³×ÀÓ½ºÆäÀÌ½º
-// -> SimpleFunc ÇÔ¼ö°¡ Á¤ÀÇ.
-// --> ÀÌ ÇÔ¼ö´Â "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö"¸¦ Ãâ·Â.
+// ProgComImpl ë„¤ì„ìŠ¤í˜ì´ìŠ¤
+// -> SimpleFunc í•¨ìˆ˜ê°€ ì •ì˜.
+// --> ì´ í•¨ìˆ˜ëŠ” "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜"ë¥¼ ì¶œë ¥.

@@ -13,21 +13,21 @@ namespace Car_CONST {
 }
 
 struct Car {
-    //=========Member ÇÔ¼ö=========
+    //=========Member í•¨ìˆ˜=========
     char gamerID[Car_CONST::ID_LEN];
     int fuelGauge;
     int curSpeed;
 
-    //=========Member ÇÔ¼ö=========
-    void ShowCarState(); // »óÅÂÁ¤º¸ Ãâ·Â
-    void Accel(); // ¿¢¼¿, ¼ÓµµÁõ°¡
-    void Break(); // ºê·¹ÀÌÅ©, ¼Óµµ °¨¼Ò
+    //=========Member í•¨ìˆ˜=========
+    void ShowCarState(); // ìƒíƒœì •ë³´ ì¶œë ¥
+    void Accel(); // ì—‘ì…€, ì†ë„ì¦ê°€
+    void Break(); // ë¸Œë ˆì´í¬, ì†ë„ ê°ì†Œ
 };
 
 void Car :: ShowCarState() {
-	cout << "¼ÒÀ¯ÀÚ ID" << gamerID << endl;
-	cout << "¿¬·á·®" << fuelGauge << "%" << endl;
-	cout << "ÇöÀç¼Óµµ" << curSpeed << "km/s" << endl;
+	cout << "ì†Œìœ ì ID" << gamerID << endl;
+	cout << "ì—°ë£ŒëŸ‰" << fuelGauge << "%" << endl;
+	cout << "í˜„ì¬ì†ë„" << curSpeed << "km/s" << endl;
 
 }
 
