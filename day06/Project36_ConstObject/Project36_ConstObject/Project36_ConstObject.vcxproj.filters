@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang35_ReturnObjDeadTim.cpp">
+    <ClCompile Include="clang36_ConstObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

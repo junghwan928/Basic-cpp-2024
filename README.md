@@ -150,7 +150,16 @@ SoSimple *ptrArr = new SoSimple[10]
 	1. 기존에 생성된 객체 => 새로운 객체를 초기화
 	2. Call-By-Value 방식의 함수호출 과정에서 객체를 인자로 전달
 	3. 객체를 반환 -> 참조형으로는 반환 X
+	
+- Return Object Dead Time
 
+- friend
+
+- static
+
+- const
+	1. 객체와 객체의 특성들
+	2. 함수 오버 로딩
 ## 7일차
 
 ## 8일차

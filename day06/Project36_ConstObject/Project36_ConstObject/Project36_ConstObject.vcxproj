@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0e07806b-6752-412c-9088-887e75d9bba6}</ProjectGuid>
-    <RootNamespace>Project35return</RootNamespace>
+    <ProjectGuid>{3332fc00-e977-4583-bef7-0f89631448f5}</ProjectGuid>
+    <RootNamespace>Project36ConstObject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clang35_ReturnObjDeadTim.cpp" />
+    <ClCompile Include="clang36_ConstObject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
