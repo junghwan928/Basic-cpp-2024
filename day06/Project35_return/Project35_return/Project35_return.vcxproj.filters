@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang34_PassObjCopycon.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="clang34_ReturnObjCopyCon.cpp">
+    <ClCompile Include="clang35_IKnowTempobj.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

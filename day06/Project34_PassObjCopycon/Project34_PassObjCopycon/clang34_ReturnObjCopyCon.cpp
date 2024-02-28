@@ -20,7 +20,7 @@ public:
     // 멤버 변수에 값을 더하는 함수
     SoSimple& AddNum(int n)
     {
-        num += n;
+        num += n; // num = num + n;
         return *this;
     }
 

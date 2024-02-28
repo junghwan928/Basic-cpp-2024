@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{67198cd2-dc8f-43e0-8b8d-969a693f685d}</ProjectGuid>
-    <RootNamespace>Project34PassObjCopycon</RootNamespace>
+    <ProjectGuid>{0e07806b-6752-412c-9088-887e75d9bba6}</ProjectGuid>
+    <RootNamespace>Project35return</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,8 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clang34_PassObjCopycon.cpp" />
-    <ClCompile Include="clang34_ReturnObjCopyCon.cpp" />
+    <ClCompile Include="clang35_IKnowTempobj.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

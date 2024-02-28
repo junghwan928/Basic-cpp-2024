@@ -18,14 +18,14 @@ public:
     }
 
     // 데이터를 출력하는 멤버 함수
-    void ShowData()
+    void ShowData()                 // 멤버 함수 --> 객체생성 후 사용 가능
     {
         cout << "Num: " << num << endl;
     }
 };
 
 // 객체를 매개변수로 받는 함수
-void SimpleFuncObj(SoSimple ob)
+void SimpleFuncObj(SoSimple ob)     // 전역함수 --> 개나 소나 바로 접근가능
 {
     ob.ShowData();
 }
