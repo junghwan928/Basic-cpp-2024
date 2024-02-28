@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang34_PassObjCopycon.cpp">
+    <ClCompile Include="clang34_ReturnObjCopyCon.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
