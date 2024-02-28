@@ -145,6 +145,7 @@ SoSimple *ptrArr = new SoSimple[10]
 - 복사 생성자, 디폴트 생성자
 
 ## 6일차
+- 깊은 복사와 얕은 복사
 
 ## 7일차
 
