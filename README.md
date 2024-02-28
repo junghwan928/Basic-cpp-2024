@@ -160,6 +160,10 @@ SoSimple *ptrArr = new SoSimple[10]
 - const
 	1. 객체와 객체의 특성들
 	2. 함수 오버 로딩
+	3. 함수의 Friend 선언
+
+- C++ 에서의 Static
+
 ## 7일차
 
 ## 8일차
