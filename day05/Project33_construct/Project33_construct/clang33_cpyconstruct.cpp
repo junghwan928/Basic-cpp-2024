@@ -6,13 +6,13 @@ class AA {
     int b;
 
 public:
-    // »ý¼ºÀÚ: a¿Í b¸¦ ÃÊ±âÈ­ÇÏ´Â »ý¼ºÀÚ
+    // ìƒì„±ìž: aì™€ bë¥¼ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ìž
     AA(int a, int b) {
         this->a = a;
         this->b = b;
     }
 
-    // °´Ã¼ÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ê°ì²´ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void AAInfo() {
         cout << a << " " << b << endl;
     }
@@ -20,25 +20,25 @@ public:
 
 int main()
 {
-    // AA °´Ã¼ obj1 »ý¼º ¹× ÃÊ±âÈ­
+    // AA ê°ì²´ obj1 ìƒì„± ë° ì´ˆê¸°í™”
     AA obj1(10, 20);
-    obj1.AAInfo(); // obj1ÀÇ Á¤º¸ Ãâ·Â
+    obj1.AAInfo(); // obj1ì˜ ì •ë³´ ì¶œë ¥
 
-    // obj1À» º¹»çÇÏ¿© obj2 »ý¼º
+    // obj1ì„ ë³µì‚¬í•˜ì—¬ obj2 ìƒì„±
     AA obj2(obj1);
-    obj2.AAInfo(); // obj2ÀÇ Á¤º¸ Ãâ·Â
+    obj2.AAInfo(); // obj2ì˜ ì •ë³´ ì¶œë ¥
 
     return 0;
 }
 
-/* Ãß°¡ ¼³¸í
+/* ì¶”ê°€ ì„¤ëª…
 
-1. AA(int a, int b): µÎ Á¤¼öÇü ¸Å°³º¯¼ö¸¦ ¹Þ¾Æ ¸â¹ö º¯¼ö a¿Í b¸¦ ÃÊ±âÈ­.
-2. void AAInfo(): °´Ã¼ÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
-3. main ÇÔ¼ö¿¡¼­´Â ´ÙÀ½°ú °°Àº ÀÛ¾÷À» ¼öÇà
-4. AA Å¬·¡½ºÀÇ °´Ã¼ obj1À» »ý¼ºÇÏ°í, 10°ú 20À¸·Î ÃÊ±âÈ­.
-5. obj1ÀÇ Á¤º¸¸¦ Ãâ·Â.
-6. obj1À» º¹»çÇÏ¿© obj2¸¦ »ý¼º.
-7. obj2ÀÇ Á¤º¸¸¦ Ãâ·Â.
+1. AA(int a, int b): ë‘ ì •ìˆ˜í˜• ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ aì™€ bë¥¼ ì´ˆê¸°í™”.
+2. void AAInfo(): ê°ì²´ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
+3. main í•¨ìˆ˜ì—ì„œëŠ” ë‹¤ìŒê³¼ ê°™ì€ ìž‘ì—…ì„ ìˆ˜í–‰
+4. AA í´ëž˜ìŠ¤ì˜ ê°ì²´ obj1ì„ ìƒì„±í•˜ê³ , 10ê³¼ 20ìœ¼ë¡œ ì´ˆê¸°í™”.
+5. obj1ì˜ ì •ë³´ë¥¼ ì¶œë ¥.
+6. obj1ì„ ë³µì‚¬í•˜ì—¬ obj2ë¥¼ ìƒì„±.
+7. obj2ì˜ ì •ë³´ë¥¼ ì¶œë ¥.
 
 */
