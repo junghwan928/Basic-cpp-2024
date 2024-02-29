@@ -165,7 +165,27 @@ SoSimple *ptrArr = new SoSimple[10]
 - C++ 에서의 Static
 
 ## 7일차
+```c++
+Person class
+	char *name; // 이름을 저장하는 동적 할당된 문자열 포인터
+	int age; // 나이를 저장하는 정수
 
+int main()
+{
+    Person p("Hong", 30); // "Hong" 문자열을 가지고 30이라는 나이로 Person 객체 생성
+    p.personInfo(); // Person 객체의 정보 출력
+
+    Person copyp(p); // p 객체를 복사하여 새로운 객체 copyp 생성
+    copyp.personInfo(); // 복사된 객체 copyp의 정보 출력
+
+    return 0;
+}
+	```
+	
+		- name 필드는 힙영역에 메모리를 할당하여 저장
+		- 자기 객체를 생성하고 객체 복사를 하시오
+
+- 상속(INHERITANCE)
 ## 8일차
 
 ## 9일차 
