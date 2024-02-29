@@ -1,28 +1,28 @@
 #include <iostream>
-#include <cstring> // strcpy ÇÔ¼ö »ç¿ëÀ» À§ÇÑ Çì´õ ÆÄÀÏ Ãß°¡
+#include <cstring> // strcpy í•¨ìˆ˜ ì‚¬ìš©ì„ ìœ„í•œ í—¤ë” íŒŒì¼ ì¶”ê°€
 using namespace std;
 
-// PermanentWorker Å¬·¡½º Á¤ÀÇ
+// PermanentWorker í´ëž˜ìŠ¤ ì •ì˜
 class PermanentWorker
 {
 private:
-    char name[100]; // ÀÌ¸§À» ÀúÀåÇÏ´Â ¹®ÀÚ¿­ ¹è¿­
-    int salary;     // ±Þ¿©¸¦ ÀúÀåÇÏ´Â º¯¼ö
+    char name[100]; // ì´ë¦„ì„ ì €ìž¥í•˜ëŠ” ë¬¸ìžì—´ ë°°ì—´
+    int salary;     // ê¸‰ì—¬ë¥¼ ì €ìž¥í•˜ëŠ” ë³€ìˆ˜
 
 public:
-    // »ý¼ºÀÚ: ÀÌ¸§°ú ±Þ¿©¸¦ ¹Þ¾Æ ÃÊ±âÈ­
+    // ìƒì„±ìž: ì´ë¦„ê³¼ ê¸‰ì—¬ë¥¼ ë°›ì•„ ì´ˆê¸°í™”
     PermanentWorker(const char* name, int money) : salary(money)
     {
-        strcpy(this->name, name); // name ¹è¿­¿¡ ÀÌ¸§ º¹»ç
+        strcpy(this->name, name); // name ë°°ì—´ì— ì´ë¦„ ë³µì‚¬
     }
 
-    // ±Þ¿©¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö
+    // ê¸‰ì—¬ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
     int GetPay() const
     {
         return salary;
     }
 
-    // ÀÌ¸§°ú ±Þ¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ì´ë¦„ê³¼ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowSalaryInfo() const
     {
         cout << "name: " << name << endl;
@@ -30,32 +30,32 @@ public:
     }
 };
 
-// EmployeeHandler Å¬·¡½º Á¤ÀÇ
+// EmployeeHandler í´ëž˜ìŠ¤ ì •ì˜
 class EmployeeHandler
 {
 private:
-    PermanentWorker* empList[50]; // PermanentWorker °´Ã¼ Æ÷ÀÎÅÍ ¹è¿­
-    int empNum; // µî·ÏµÈ Á÷¿ø ¼ö
+    PermanentWorker* empList[50]; // PermanentWorker ê°ì²´ í¬ì¸í„° ë°°ì—´
+    int empNum; // ë“±ë¡ëœ ì§ì› ìˆ˜
 
 public:
-    // »ý¼ºÀÚ: µî·ÏµÈ Á÷¿ø ¼ö ÃÊ±âÈ­
+    // ìƒì„±ìž: ë“±ë¡ëœ ì§ì› ìˆ˜ ì´ˆê¸°í™”
     EmployeeHandler() : empNum(0)
     { }
 
-    // Á÷¿øÀ» ¹è¿­¿¡ Ãß°¡ÇÏ´Â ÇÔ¼ö
-    void AddEmployee(PermanentWorker* emp) // Á¤±ÔÁ÷ °´Ã¼¸¦ Æ÷ÀÎÅÍ·Î ¹Þ¾Æ¼­ -> EMPLIST¹è¿­¿¡ Áý¾î ³Ö±â
+    // ì§ì›ì„ ë°°ì—´ì— ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
+    void AddEmployee(PermanentWorker* emp) // ì •ê·œì§ ê°ì²´ë¥¼ í¬ì¸í„°ë¡œ ë°›ì•„ì„œ -> EMPLISTë°°ì—´ì— ì§‘ì–´ ë„£ê¸°
     {
         empList[empNum++] = emp;
     }
 
-    // µî·ÏµÈ ¸ðµç Á÷¿øÀÇ ±Þ¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowAllSalaryInfo() const
     {
         for (int i = 0; i < empNum; i++)
-            empList[i]->ShowSalaryInfo(); // °¢ Á÷¿øÀÇ °´Ã¼ÀÇ SHOWSALARYINFO ÇÔ¼ö È£ÃâÇÏ¿© Á¤º¸ Ãâ·Â
+            empList[i]->ShowSalaryInfo(); // ê° ì§ì›ì˜ ê°ì²´ì˜ SHOWSALARYINFO í•¨ìˆ˜ í˜¸ì¶œí•˜ì—¬ ì •ë³´ ì¶œë ¥
     }
 
-    // ¸ðµç Á÷¿øÀÇ ±Þ¿© ÃÑÇÕÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+    // ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì´í•©ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
     void ShowTotalSalary() const
     {
         int sum = 0;
@@ -64,7 +64,7 @@ public:
         cout << "salary sum: " << sum << endl;
     }
 
-    // ¼Ò¸êÀÚ: µ¿Àû ÇÒ´çµÈ PermanentWorker °´Ã¼µéÀ» ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦
+    // ì†Œë©¸ìž: ë™ì  í• ë‹¹ëœ PermanentWorker ê°ì²´ë“¤ì„ ë©”ëª¨ë¦¬ì—ì„œ í•´ì œ
     ~EmployeeHandler()
     {
         for (int i = 0; i < empNum; i++)
@@ -74,36 +74,36 @@ public:
 
 int main()
 {
-    // EmployeeHandler °´Ã¼ »ý¼º
+    // EmployeeHandler ê°ì²´ ìƒì„±
     EmployeeHandler handler;
 
-    // PermanentWorker °´Ã¼ »ý¼º ¹× µî·Ï
+    // PermanentWorker ê°ì²´ ìƒì„± ë° ë“±ë¡
     handler.AddEmployee(new PermanentWorker("LEE", 3000));
     handler.AddEmployee(new PermanentWorker("KIM", 4000));
     handler.AddEmployee(new PermanentWorker("CHOI", 3500));
 
-    // µî·ÏµÈ ¸ðµç Á÷¿øÀÇ ±Þ¿© Á¤º¸ Ãâ·Â
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ ì¶œë ¥
     handler.ShowAllSalaryInfo();
 
-    // ¸ðµç Á÷¿øÀÇ ±Þ¿© ÃÑÇÕ Ãâ·Â
+    // ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì´í•© ì¶œë ¥
     handler.ShowTotalSalary();
 
     return 0;
 }
 
-/* Ãß°¡ ¼³¸í
-1. PermanentWorker Å¬·¡½º¿¡¼­ »ý¼ºÀÚ¿Í ¸â¹ö ÇÔ¼öµé¿¡ const Å°¿öµå¸¦ Ãß°¡ÇÏ¿© ¸â¹ö º¯¼öµéÀÌ º¯°æµÇÁö ¾ÊÀ½À» º¸ÀåÇÔ.
+/* ì¶”ê°€ ì„¤ëª…
+1. PermanentWorker í´ëž˜ìŠ¤ì—ì„œ ìƒì„±ìžì™€ ë©¤ë²„ í•¨ìˆ˜ë“¤ì— const í‚¤ì›Œë“œë¥¼ ì¶”ê°€í•˜ì—¬ ë©¤ë²„ ë³€ìˆ˜ë“¤ì´ ë³€ê²½ë˜ì§€ ì•ŠìŒì„ ë³´ìž¥í•¨.
 
-2. EmployeeHandler Å¬·¡½º¿¡¼­´Â µî·ÏµÈ Á÷¿ø ¼ö¸¦ ÃßÀûÇÏ±â À§ÇØ empNum ¸â¹ö º¯¼ö¸¦ »ç¿ëÇÔ.
+2. EmployeeHandler í´ëž˜ìŠ¤ì—ì„œëŠ” ë“±ë¡ëœ ì§ì› ìˆ˜ë¥¼ ì¶”ì í•˜ê¸° ìœ„í•´ empNum ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•¨.
 
-3. EmployeeHandler Å¬·¡½ºÀÇ AddEmployee ÇÔ¼ö´Â µî·ÏµÈ Á÷¿ø ¼ö¸¦ Áõ°¡½ÃÅ°°í, ÇØ´ç ÀÎµ¦½º¿¡ Á÷¿ø °´Ã¼¸¦ ÀúÀå.
+3. EmployeeHandler í´ëž˜ìŠ¤ì˜ AddEmployee í•¨ìˆ˜ëŠ” ë“±ë¡ëœ ì§ì› ìˆ˜ë¥¼ ì¦ê°€ì‹œí‚¤ê³ , í•´ë‹¹ ì¸ë±ìŠ¤ì— ì§ì› ê°ì²´ë¥¼ ì €ìž¥.
 
-4. ShowAllSalaryInfo ÇÔ¼ö´Â µî·ÏµÈ ¸ðµç Á÷¿øÀÇ ±Þ¿© Á¤º¸¸¦ Ãâ·Â.
+4. ShowAllSalaryInfo í•¨ìˆ˜ëŠ” ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥.
 
-5. ShowTotalSalary ÇÔ¼ö´Â ¸ðµç Á÷¿øÀÇ ±Þ¿© ÃÑÇÕÀ» °è»êÇÏ¿© Ãâ·Â.
+5. ShowTotalSalary í•¨ìˆ˜ëŠ” ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì´í•©ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥.
 
-6. ¼Ò¸êÀÚ¸¦ ÅëÇØ µ¿Àû ÇÒ´çµÈ PermanentWorker °´Ã¼µéÀ» ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦.
+6. ì†Œë©¸ìžë¥¼ í†µí•´ ë™ì  í• ë‹¹ëœ PermanentWorker ê°ì²´ë“¤ì„ ë©”ëª¨ë¦¬ì—ì„œ í•´ì œ.
 
-7. main ÇÔ¼ö¿¡¼­´Â EmployeeHandler °´Ã¼¸¦ »ý¼ºÇÏ°í, ¼¼ ¸íÀÇ PermanentWorker °´Ã¼¸¦ »ý¼ºÇÏ¿© µî·Ï. 
-    -> ±×·± ´ÙÀ½ µî·ÏµÈ ¸ðµç Á÷¿øÀÇ ±Þ¿© Á¤º¸¸¦ Ãâ·ÂÇÏ°í, ¸ðµç Á÷¿øÀÇ ±Þ¿© ÃÑÇÕÀ» Ãâ·Â
+7. main í•¨ìˆ˜ì—ì„œëŠ” EmployeeHandler ê°ì²´ë¥¼ ìƒì„±í•˜ê³ , ì„¸ ëª…ì˜ PermanentWorker ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ë“±ë¡. 
+    -> ê·¸ëŸ° ë‹¤ìŒ ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ê³ , ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì´í•©ì„ ì¶œë ¥
 */
