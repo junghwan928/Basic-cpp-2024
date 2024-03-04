@@ -171,9 +171,10 @@ Person class
 	int age; // 나이를 저장하는 정수
 ```
 
+``` C++
 int main()
 { 
-``` C++
+
     Person p("Hong", 30); // "Hong" 문자열을 가지고 30이라는 나이로 Person 객체 생성
     p.personInfo(); // Person 객체의 정보 출력
 
@@ -181,8 +182,8 @@ int main()
     copyp.personInfo(); // 복사된 객체 copyp의 정보 출력
 
     return 0;
-```
 }
+```
 	
 - name 필드는 힙영역에 메모리를 할당하여 저장
 - 자기 객체를 생성하고 객체 복사!
