@@ -7,7 +7,7 @@ public:
 	virtual bool operator()(int num1, int num2) const =0;
 };
 
-class AscendingSort : public SortRule   // ¿À¸§Â÷¼ø
+class AscendingSort : public SortRule   // ì˜¤ë¦„ì°¨ìˆœ
 {
 public:
 	bool operator()(int num1, int num2) const
@@ -19,7 +19,7 @@ public:
 	}
 };
 
-class DescendingSort : public SortRule    // ³»¸²Â÷¼ø
+class DescendingSort : public SortRule    // ë‚´ë¦¼ì°¨ìˆœ
 {
 public:
 	bool operator()(int num1, int num2) const
@@ -46,7 +46,7 @@ public:
 	{
 		if(MAX_LEN<=idx)
 		{
-			cout<<"´õ ÀÌ»ó ÀúÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù."<<endl;
+			cout<<"ë” ì´ìƒ ì €ìž¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤."<<endl;
 			return;
 		}
 		arr[idx++]=num;

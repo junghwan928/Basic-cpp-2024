@@ -6,25 +6,25 @@ void Divide(int num1, int num2)
 	if(num2==0)
 		throw num2;
 	
-	cout<<"³ª´°¼ÀÀÇ ¸ò: "<< num1/num2 <<endl;
-	cout<<"³ª´°¼ÀÀÇ ³ª¸ÓÁö: "<< num1%num2 <<endl;
+	cout<<"ë‚˜ëˆ—ì…ˆì˜ ëª«: "<< num1/num2 <<endl;
+	cout<<"ë‚˜ëˆ—ì…ˆì˜ ë‚˜ë¨¸ì§€: "<< num1%num2 <<endl;
 }
 
 int main(void)
 {
 	int num1, num2;	
-	cout<<"µÎ °³ÀÇ ¼ýÀÚ ÀÔ·Â: ";
+	cout<<"ë‘ ê°œì˜ ìˆ«ìž ìž…ë ¥: ";
 	cin>>num1>>num2;
 
 	try
 	{
 		Divide(num1, num2);
-		cout<<"³ª´°¼ÀÀ» ¸¶ÃÆ½À´Ï´Ù."<<endl;
+		cout<<"ë‚˜ëˆ—ì…ˆì„ ë§ˆì³¤ìŠµë‹ˆë‹¤."<<endl;
 	}
 	catch(int expn)
 	{
-		cout<<"Á¦¼ö´Â "<<expn<<"ÀÌ µÉ ¼ö ¾ø½À´Ï´Ù."<<endl;
-		cout<<"ÇÁ·Î±×·¥À» ´Ù½Ã ½ÇÇàÇÏ¼¼¿ä."<<endl;
+		cout<<"ì œìˆ˜ëŠ” "<<expn<<"ì´ ë  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."<<endl;
+		cout<<"í”„ë¡œê·¸ëž¨ì„ ë‹¤ì‹œ ì‹¤í–‰í•˜ì„¸ìš”."<<endl;
 	}
 
 	return 0;

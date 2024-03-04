@@ -8,11 +8,11 @@ private:
 public:
 	Point(int x=0, int y=0) : xpos(x), ypos(y) 
 	{
-		cout<<"Point 按眉 积己"<<endl;
+		cout<<"Point 鎸夌湁 绉繁"<<endl;
 	}
 	~Point()
 	{
-		cout<<"Point 按眉 家戈"<<endl;
+		cout<<"Point 鎸夌湁 瀹舵垐"<<endl;
 	}
 	void SetPos(int x, int y)
 	{

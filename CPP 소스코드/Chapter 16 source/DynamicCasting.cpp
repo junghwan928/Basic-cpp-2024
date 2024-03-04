@@ -10,7 +10,7 @@ public:
 	{  }
 	void ShowCarState()
 	{
-		cout<<"ÀÜ¿© ¿¬·á·®: "<<fuelGauge<<endl;
+		cout<<"ì”ì—¬ ì—°ë£ŒëŸ‰: "<<fuelGauge<<endl;
 	}
 };
 
@@ -26,20 +26,20 @@ public:
 	void ShowTruckState()
 	{
 		ShowCarState();
-		cout<<"È­¹°ÀÇ ¹«°Ô: "<<freightWeight<<endl;
+		cout<<"í™”ë¬¼ì˜ ë¬´ê²Œ: "<<freightWeight<<endl;
 	}
 };
 
 int main(void)
 {
 	Car * pcar1=new Truck(80, 200);
-	Truck * ptruck1=dynamic_cast<Truck*>(pcar1);     // ÄÄÆÄÀÏ ¿¡·¯
+	Truck * ptruck1=dynamic_cast<Truck*>(pcar1);     // ì»´íŒŒì¼ ì—ëŸ¬
 
 	Car * pcar2=new Car(120);
-	Truck * ptruck2=dynamic_cast<Truck*>(pcar2);     // ÄÄÆÄÀÏ ¿¡·¯
+	Truck * ptruck2=dynamic_cast<Truck*>(pcar2);     // ì»´íŒŒì¼ ì—ëŸ¬
 
 	Truck * ptruck3=new Truck(70, 150);
-	Car * pcar3=dynamic_cast<Car*>(ptruck3);     // ÄÄÆÄÀÏ OK!
+	Car * pcar3=dynamic_cast<Car*>(ptruck3);     // ì»´íŒŒì¼ OK!
 
 	return 0;
 }

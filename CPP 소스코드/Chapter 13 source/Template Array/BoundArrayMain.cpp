@@ -5,7 +5,7 @@ using namespace std;
 
 int main(void)
 {
-	/*** intÇü Á¤¼ö ÀúÀå ***/
+	/*** intí˜• ì •ìˆ˜ ì €ì¥ ***/
 	BoundCheckArray<int> iarr(5);
 
 	for(int i=0; i<5; i++)
@@ -15,7 +15,7 @@ int main(void)
 		cout<<iarr[i]<<endl;
 
 
-	/*** Point °´Ã¼ ÀúÀå ***/
+	/*** Point ê°ì²´ ì €ì¥ ***/
 	BoundCheckArray<Point> oarr(3);
 	oarr[0]=Point(3, 4);
 	oarr[1]=Point(5, 6);
@@ -24,7 +24,7 @@ int main(void)
 	for(int i=0; i<oarr.GetArrLen(); i++)
 		cout<<oarr[i];
 
-	/*** Point °´Ã¼ÀÇ ÁÖ¼Ò °ª ÀúÀå ***/
+	/*** Point ê°ì²´ì˜ ì£¼ì†Œ ê°’ ì €ì¥ ***/
 	typedef Point * POINT_PTR;
 	BoundCheckArray<POINT_PTR> parr(3);
 	parr[0]=new Point(3, 4);

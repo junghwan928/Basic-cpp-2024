@@ -6,9 +6,9 @@ using std::endl;
 using std::cout;
 using std::cin;
 
-char* account="1234-5678";  //°èÁÂ¹øÈ£
-int sid=1122;    //ºñ¹Ð¹øÈ£
-int balance=1000;  //ÀÜ¾×.
+char* account="1234-5678";  //ê³„ì¢Œë²ˆí˜¸
+int sid=1122;    //ë¹„ë°€ë²ˆí˜¸
+int balance=1000;  //ìž”ì•¡.
 
 class AccountExpt
 {
@@ -20,8 +20,8 @@ public:
 		sid=id;
 	}
 	void What(){
-		cout<<"°èÁÂ¹øÈ£: "<<acc<<endl;
-		cout<<"ºñ¹Ð¹øÈ£: "<<sid<<endl;
+		cout<<"ê³„ì¢Œë²ˆí˜¸: "<<acc<<endl;
+		cout<<"ë¹„ë°€ë²ˆí˜¸: "<<sid<<endl;
 	}
 };
 
@@ -32,29 +32,29 @@ int main(void)
 	int money;
 
 	try{
-		cout<<"°èÁÂ¹øÈ£ ÀÔ·Â: ";
+		cout<<"ê³„ì¢Œë²ˆí˜¸ ìž…ë ¥: ";
 		cin>>acc;
-		cout<<"ºñ¹Ð¹øÈ£ 4ÀÚ¸® ÀÔ·Â: ";
+		cout<<"ë¹„ë°€ë²ˆí˜¸ 4ìžë¦¬ ìž…ë ¥: ";
 		cin>>id;
 		if(strcmp(account, acc) || sid!=id)
 			throw AccountExpt(acc, id);
 	}
 	catch(AccountExpt& expt){
-		cout<<"´ÙÀ½ ÀÔ·ÂÀ» ´Ù½Ã ÇÑ¹ø È®ÀÎ ÇÏ¼¼¿ä"<<endl;
+		cout<<"ë‹¤ìŒ ìž…ë ¥ì„ ë‹¤ì‹œ í•œë²ˆ í™•ì¸ í•˜ì„¸ìš”"<<endl;
 		expt.What();
 	}
 
 	try{
-		cout<<"Ãâ±Ý¾× ÀÔ·Â: ";
+		cout<<"ì¶œê¸ˆì•¡ ìž…ë ¥: ";
 		cin>>money;
 		if(balance<money)
 			throw money;
 		
 		balance-=money;
-		cout<<"ÀÜ¾×: "<<balance<<endl;
+		cout<<"ìž”ì•¡: "<<balance<<endl;
 	}
 	catch(int money){
-		cout<<"ºÎÁ· ±Ý¾×: "<<money-balance<<endl;
+		cout<<"ë¶€ì¡± ê¸ˆì•¡: "<<money-balance<<endl;
 	}
 	return 0;
 }

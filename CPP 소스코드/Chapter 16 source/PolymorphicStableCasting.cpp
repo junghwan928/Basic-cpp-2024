@@ -24,7 +24,7 @@ int main(void)
 	SoSimple * simPtr=new SoSimple;
 	SoComplex * comPtr=dynamic_cast<SoComplex*>(simPtr);
 	if(comPtr==NULL)
-		cout<<"Çü º¯È¯ ½ÇÆÐ"<<endl;
+		cout<<"í˜• ë³€í™˜ ì‹¤íŒ¨"<<endl;
 	else
 		comPtr->ShowSimpleInfo();
 	return 0;

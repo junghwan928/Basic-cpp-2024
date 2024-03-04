@@ -14,13 +14,13 @@ int main(void)
 
 	str1+=str2;
 	if(str1==str3) 	
-		cout<<"µ¿ÀÏ ¹®ÀÚ¿­!"<<endl;
+		cout<<"ë™ì¼ ë¬¸ìì—´!"<<endl;
 	else
-		cout<<"µ¿ÀÏÇÏÁö ¾ÊÀº ¹®ÀÚ¿­!"<<endl;
+		cout<<"ë™ì¼í•˜ì§€ ì•Šì€ ë¬¸ìì—´!"<<endl;
 
 	string str4;
-	cout<<"¹®ÀÚ¿­ ÀÔ·Â: ";
+	cout<<"ë¬¸ìì—´ ì…ë ¥: ";
 	cin>>str4;
-	cout<<"ÀÔ·ÂÇÑ ¹®ÀÚ¿­: "<<str4<<endl;
+	cout<<"ì…ë ¥í•œ ë¬¸ìì—´: "<<str4<<endl;
 	return 0;
 }

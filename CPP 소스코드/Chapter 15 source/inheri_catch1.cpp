@@ -10,7 +10,7 @@ class ExceptA
 {
 public:
 	void What(){
-		cout<<"ExceptA ¿¹¿Ü"<<endl;
+		cout<<"ExceptA ì˜ˆì™¸"<<endl;
 	}
 };
 
@@ -18,7 +18,7 @@ class ExceptB : public ExceptA
 {
 public:
 	void What(){
-		cout<<"ExceptB ¿¹¿Ü"<<endl;
+		cout<<"ExceptB ì˜ˆì™¸"<<endl;
 	}
 };
 
@@ -26,7 +26,7 @@ class ExceptC : public ExceptB
 {
 public:
 	void What(){
-		cout<<"ExceptC ¿¹¿Ü"<<endl;
+		cout<<"ExceptC ì˜ˆì™¸"<<endl;
 	}
 };
 
@@ -44,22 +44,22 @@ int main(void)
 {
 
 	int exID;
-	cout<<"¹ß»ý½ÃÅ³ ¿¹¿ÜÀÇ ¼ýÀÚ: ";
+	cout<<"ë°œìƒì‹œí‚¬ ì˜ˆì™¸ì˜ ìˆ«ìž: ";
 	cin>>exID;
 
 	try{
 		ExcepFunction(exID);
 	}
 	catch(ExceptA& ex){
-		cout<<"catch(ExceptA& ex)¿¡ ÀÇÇÑ Ã³¸®"<<endl;
+		cout<<"catch(ExceptA& ex)ì— ì˜í•œ ì²˜ë¦¬"<<endl;
 		ex.What();
 	}	
 	catch(ExceptB& ex){
-		cout<<"catch(ExceptB& ex)¿¡ ÀÇÇÑ Ã³¸®"<<endl;
+		cout<<"catch(ExceptB& ex)ì— ì˜í•œ ì²˜ë¦¬"<<endl;
 		ex.What();
 	}
 	catch(ExceptC& ex){
-		cout<<"catch(ExceptC& ex)¿¡ ÀÇÇÑ Ã³¸®"<<endl;
+		cout<<"catch(ExceptC& ex)ì— ì˜í•œ ì²˜ë¦¬"<<endl;
 		ex.What();
 	}
 

@@ -6,20 +6,20 @@ using std::endl;
 using std::cout;
 using std::cin;
 
-int divide(int a, int b); // a/bÀÇ ¸ò¸¸ ¹İÈ¯
+int divide(int a, int b); // a/bì˜ ëª«ë§Œ ë°˜í™˜
 
 int main(void)
 {
 	int a, b;
 	
-	cout<<"µÎ°³ÀÇ ¼ıÀÚ ÀÔ·Â : ";
+	cout<<"ë‘ê°œì˜ ìˆ«ì ì…ë ¥ : ";
 	cin>>a>>b;
 	try{
-		cout<<"a/bÀÇ ¸ò : "<<divide(a, b)<<endl;
+		cout<<"a/bì˜ ëª« : "<<divide(a, b)<<endl;
 	}
 	catch(char exception){
-		cout<<exception<<" ÀÔ·Â."<<endl; 
-		cout<<"ÀÔ·Â¿À·ù! ´Ù½Ã ½ÇÇà ÇÏ¼¼¿ä."<<endl;
+		cout<<exception<<" ì…ë ¥."<<endl; 
+		cout<<"ì…ë ¥ì˜¤ë¥˜! ë‹¤ì‹œ ì‹¤í–‰ í•˜ì„¸ìš”."<<endl;
 	}
 
 	return 0;

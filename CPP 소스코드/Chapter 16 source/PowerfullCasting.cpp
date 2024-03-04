@@ -10,7 +10,7 @@ public:
 	{  }
 	void ShowCarState()
 	{
-		cout<<"ÀÜ¿© ¿¬·á·®: "<<fuelGauge<<endl;
+		cout<<"ìž”ì—¬ ì—°ë£ŒëŸ‰: "<<fuelGauge<<endl;
 	}
 };
 
@@ -26,7 +26,7 @@ public:
 	void ShowTruckState()
 	{
 		ShowCarState();
-		cout<<"È­¹°ÀÇ ¹«°Ô: "<<freightWeight<<endl;
+		cout<<"í™”ë¬¼ì˜ ë¬´ê²Œ: "<<freightWeight<<endl;
 	}
 };
 

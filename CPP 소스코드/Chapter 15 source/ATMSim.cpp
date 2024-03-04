@@ -5,34 +5,34 @@ using namespace std;
 class DepositException
 {
 private:
-	int reqDep;		// ¿äÃ» ÀÔ±Ý¾×
+	int reqDep;		// ìš”ì²­ ìž…ê¸ˆì•¡
 public:
 	DepositException(int money) : reqDep(money)
 	{ }
 	void ShowExceptionReason()
 	{
-		cout<<"[¿¹¿Ü ¸Þ½ÃÁö: "<<reqDep<<"´Â ÀÔ±ÝºÒ°¡]"<<endl;
+		cout<<"[ì˜ˆì™¸ ë©”ì‹œì§€: "<<reqDep<<"ëŠ” ìž…ê¸ˆë¶ˆê°€]"<<endl;
 	}
 };
 
 class WithdrawException
 {
 private:
-	int	balance;	// ÀÜ°í
+	int	balance;	// ìž”ê³ 
 public:
 	WithdrawException(int money) : balance(money)
 	{ }
 	void ShowExceptionReason()
 	{
-		cout<<"[¿¹¿Ü ¸Þ½ÃÁö: ÀÜ¾× "<<balance<<", ÀÜ¾×ºÎÁ·]"<<endl;
+		cout<<"[ì˜ˆì™¸ ë©”ì‹œì§€: ìž”ì•¡ "<<balance<<", ìž”ì•¡ë¶€ì¡±]"<<endl;
 	}
 };
 
 class Account
 {
 private:
-	char accNum[50];	// °èÁÂ¹øÈ£
-	int	balance;		// ÀÜ°í
+	char accNum[50];	// ê³„ì¢Œë²ˆí˜¸
+	int	balance;		// ìž”ê³ 
 public:
 	Account(char * acc, int money) : balance(money)
 	{
@@ -55,7 +55,7 @@ public:
 	}
 	void ShowMyMoney()
 	{
-		cout<<"ÀÜ°í: "<<balance<<endl<<endl;
+		cout<<"ìž”ê³ : "<<balance<<endl<<endl;
 	}
 };
 

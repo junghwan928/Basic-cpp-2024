@@ -10,18 +10,18 @@ int main(void)
 {
 	int a, b;
 	
-	cout<<"µÎ°³ÀÇ ¼ýÀÚ ÀÔ·Â : ";
+	cout<<"ë‘ê°œì˜ ìˆ«ìž ìž…ë ¥ : ";
 	cin>>a>>b;
 
 	try{
 		if(b==0)
 			throw b;
-		cout<<"a/bÀÇ ¸ò : "<<a/b<<endl;
-		cout<<"a/bÀÇ ³ª¸ÓÁö : "<<a%b<<endl;
+		cout<<"a/bì˜ ëª« : "<<a/b<<endl;
+		cout<<"a/bì˜ ë‚˜ë¨¸ì§€ : "<<a%b<<endl;
 	}
 	catch(int exception){
-		cout<<exception<<" ÀÔ·Â."<<endl; 
-		cout<<"ÀÔ·Â¿À·ù! ´Ù½Ã ½ÇÇà ÇÏ¼¼¿ä."<<endl;
+		cout<<exception<<" ìž…ë ¥."<<endl; 
+		cout<<"ìž…ë ¥ì˜¤ë¥˜! ë‹¤ì‹œ ì‹¤í–‰ í•˜ì„¸ìš”."<<endl;
 	}
 
 	return 0;

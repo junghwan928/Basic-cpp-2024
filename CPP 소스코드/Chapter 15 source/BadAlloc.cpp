@@ -12,14 +12,14 @@ int main(void)
 		while(1)
 		{
 			num++;
-			cout<<num<<"¹øÂ° ÇÒ´ç"<<endl;
+			cout<<num<<"ë²ˆì§¸ í• ë‹¹"<<endl;
 			new int[10000][10000];
 		}
 	}
 	catch(bad_alloc &bad)
 	{
 		cout<<bad.what()<<endl;
-		cout<<"´õ ÀÌ»ó ÇÒ´ç ºÒ°¡!"<<endl;
+		cout<<"ë” ì´ìƒ í• ë‹¹ ë¶ˆê°€!"<<endl;
 	}
 	return 0;
 }

@@ -4,18 +4,18 @@ using namespace std;
 int main(void)
 {
 	int num1, num2;
-	cout<<"µÎ °³ÀÇ ¼ıÀÚ ÀÔ·Â: ";
+	cout<<"ë‘ ê°œì˜ ìˆ«ì ì…ë ¥: ";
 	cin>>num1>>num2;
 
 	if(num2==0)
 	{
-		cout<<"Á¦¼ö´Â 0ÀÌ µÉ ¼ö ¾ø½À´Ï´Ù."<<endl;
-		cout<<"ÇÁ·Î±×·¥À» ´Ù½Ã ½ÇÇàÇÏ¼¼¿ä."<<endl;
+		cout<<"ì œìˆ˜ëŠ” 0ì´ ë  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."<<endl;
+		cout<<"í”„ë¡œê·¸ë¨ì„ ë‹¤ì‹œ ì‹¤í–‰í•˜ì„¸ìš”."<<endl;
 	}
 	else
 	{
-		cout<<"³ª´°¼ÀÀÇ ¸ò: "<< num1/num2 <<endl;
-		cout<<"³ª´°¼ÀÀÇ ³ª¸ÓÁö: "<< num1%num2 <<endl;
+		cout<<"ë‚˜ëˆ—ì…ˆì˜ ëª«: "<< num1/num2 <<endl;
+		cout<<"ë‚˜ëˆ—ì…ˆì˜ ë‚˜ë¨¸ì§€: "<< num1%num2 <<endl;
 	}
 	return 0;
 }
