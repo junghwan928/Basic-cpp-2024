@@ -35,14 +35,20 @@ public:
 };
 int main()
 {
-	Base b; // Base Å¸ÀÔÀÇ °´Ã¼º¯¼ö
+	Base b;
 	Derived d;
-	Base* pb = new Derived(); // Base Å¸ÀÔÀÇ °´Ã¼ Æ÷ÀÎÅÍ
+	Base* pb = new Derived();
 
-	pb->func1(); // Derived::func1() È£Ãâ
-	pb->func2(); // Base::func2() È£Ãâ
-	pb->func3(); // Derived::func3() È£Ãâ
-	
+	pb->func1(); // Derived::func1() í˜¸ì¶œ
+	pb->func2(); // Base::func2() í˜¸ì¶œ
+	pb->func3(); // Derived::func3() í˜¸ì¶œ
+
+
+	cout << endl;
+	Derived* pd = &d;
+	pb->func1(); 
+	pb->func2(); 
+	pb->func3();
 
 	delete pb;
 

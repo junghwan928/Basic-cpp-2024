@@ -3,59 +3,59 @@
 
 using namespace std;
 
-// TV Å¬·¡½º Á¤ÀÇ
+// TV í´ëž˜ìŠ¤ ì •ì˜
 class TV {
 public:
     virtual void on() = 0;
 };
 
-// ¸®¸ðÄÁ Å¬·¡½º Á¤ÀÇ
+// ë¦¬ëª¨ì»¨ í´ëž˜ìŠ¤ ì •ì˜
 class RemoteControl {
 protected:
-    TV* tv; // ¿¬°áµÈ TV °´Ã¼¿¡ ´ëÇÑ Æ÷ÀÎÅÍ
+    TV* tv; // ì—°ê²°ëœ TV ê°ì²´ì— ëŒ€í•œ í¬ì¸í„°
 public:
-    // »ý¼ºÀÚ: TV °´Ã¼¸¦ ¿¬°á
+    // ìƒì„±ìž: TV ê°ì²´ë¥¼ ì—°ê²°
     RemoteControl(TV* tv) : tv(tv) {}
 
-    // TV¸¦ ÄÑ´Â ÇÔ¼ö
+    // TVë¥¼ ì¼œëŠ” í•¨ìˆ˜
     virtual void on() {
         if (tv != nullptr) {
             tv->on();
         }
         else {
-            cout << "TV°¡ ¿¬°áµÇÁö ¾Ê¾Ò½À´Ï´Ù." << endl;
+            cout << "TVê°€ ì—°ê²°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤." << endl;
         }
     }
 };
 
-// »ï¼º TV Å¬·¡½º Á¤ÀÇ
+// ì‚¼ì„± TV í´ëž˜ìŠ¤ ì •ì˜
 class SamsungTV : public RemoteControl {
 public:
-    SamsungTV() : RemoteControl(this) {} // »ï¼º TV¿Í ¸®¸ðÄÁ ¿¬°á
+    SamsungTV() : RemoteControl(this) {} // ì‚¼ì„± TVì™€ ë¦¬ëª¨ì»¨ ì—°ê²°
     void on() override {
-        cout << "»ï¼º TV°¡ ÄÑÁ³½À´Ï´Ù." << endl;
+        cout << "ì‚¼ì„± TVê°€ ì¼œì¡ŒìŠµë‹ˆë‹¤." << endl;
     }
 };
 
-// LG TV Å¬·¡½º Á¤ÀÇ
+// LG TV í´ëž˜ìŠ¤ ì •ì˜
 class LGTV : public RemoteControl {
 public:
-    LGTV() : RemoteControl(this) {} // LG TV¿Í ¸®¸ðÄÁ ¿¬°á
+    LGTV() : RemoteControl(this) {} // LG TVì™€ ë¦¬ëª¨ì»¨ ì—°ê²°
     void on() override {
-        cout << "LG TV°¡ ÄÑÁ³½À´Ï´Ù." << endl;
+        cout << "LG TVê°€ ì¼œì¡ŒìŠµë‹ˆë‹¤." << endl;
     }
 };
 
 int main() {
-    // »ï¼º TV °´Ã¼ »ý¼º
+    // ì‚¼ì„± TV ê°ì²´ ìƒì„±
     SamsungTV samsungTV;
-    // ¸®¸ðÄÁÀ¸·Î TV¸¦ ÄÔ
-    samsungTV.on(); // »ï¼º TV ÄÑÁü Ãâ·Â
+    // ë¦¬ëª¨ì»¨ìœ¼ë¡œ TVë¥¼ ì¼¬
+    samsungTV.on(); // ì‚¼ì„± TV ì¼œì§ ì¶œë ¥
 
-    // LG TV °´Ã¼ »ý¼º
+    // LG TV ê°ì²´ ìƒì„±
     LGTV lgTV;
-    // ¸®¸ðÄÁÀ¸·Î TV¸¦ ÄÔ
-    lgTV.on(); // LG TV ÄÑÁü Ãâ·Â
+    // ë¦¬ëª¨ì»¨ìœ¼ë¡œ TVë¥¼ ì¼¬
+    lgTV.on(); // LG TV ì¼œì§ ì¶œë ¥
 
     return 0;
 }

@@ -63,8 +63,8 @@ public:
 class SalesWorker : public PermanentWorker
 {
 private:
-	int salesResult;    // ¿ù ÆÇ¸Å½ÇÀû
-	double bonusRatio;    // »ó¿©±İ ºñÀ² 
+	int salesResult;    // ì›” íŒë§¤ì‹¤ì 
+	double bonusRatio;    // ìƒì—¬ê¸ˆ ë¹„ìœ¨ 
 public:
 	SalesWorker(char * name, int money, double ratio)
 		: PermanentWorker(name, money), salesResult(0), bonusRatio(ratio)
@@ -75,7 +75,7 @@ public:
 	}
 	int GetPay() const
 	{
-		return PermanentWorker::GetPay()       // PermanentWorkerÀÇ GetPay ÇÔ¼ö È£Ãâ
+		return PermanentWorker::GetPay()       // PermanentWorkerì˜ GetPay í•¨ìˆ˜ í˜¸ì¶œ
 					+ (int)(salesResult*bonusRatio);
 	}
 	void ShowSalaryInfo() const
@@ -122,27 +122,27 @@ public:
 
 int main(void)
 {
-	// Á÷¿ø°ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½ºÀÇ °´Ã¼»ı¼º
+	// ì§ì›ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ì˜ ê°ì²´ìƒì„±
 	EmployeeHandler handler;
 
-	// Á¤±ÔÁ÷ µî·Ï
+	// ì •ê·œì§ ë“±ë¡
 	handler.AddEmployee(new PermanentWorker("KIM", 1000));
 	handler.AddEmployee(new PermanentWorker("LEE", 1500));
 
-	// ÀÓ½ÃÁ÷ µî·Ï
+	// ì„ì‹œì§ ë“±ë¡
 	TemporaryWorker * alba=new TemporaryWorker("Jung", 700);
-	alba->AddWorkTime(5);	// 5½Ã°£ ÀÏÇÑ°á°ú µî·Ï
+	alba->AddWorkTime(5);	// 5ì‹œê°„ ì¼í•œê²°ê³¼ ë“±ë¡
 	handler.AddEmployee(alba);
 
-	// ¿µ¾÷Á÷ µî·Ï
+	// ì˜ì—…ì§ ë“±ë¡
 	SalesWorker * seller=new SalesWorker("Hong", 1000, 0.1);
-	seller->AddSalesResult(7000);	// ¿µ¾÷½ÇÀû 7000
+	seller->AddSalesResult(7000);	// ì˜ì—…ì‹¤ì  7000
 	handler.AddEmployee(seller);
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ Á¤º¸
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´
 	handler.ShowAllSalaryInfo();	
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ ÃÑÇÕ
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì´í•©
 	handler.ShowTotalSalary();
 	return 0;
 }

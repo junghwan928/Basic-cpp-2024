@@ -5,7 +5,7 @@ using namespace std;
 class Gun
 {
 private:
-	int bullet;    	// ÀåÀüµÈ ÃÑ¾ËÀÇ ¼ö
+	int bullet;    	// ì¥ì „ëœ ì´ì•Œì˜ ìˆ˜
 public:
 	Gun(int bnum) : bullet(bnum)
 	{ }
@@ -19,8 +19,8 @@ public:
 class Police
 {
 private:
-	int handcuffs;    // ¼ÒÀ¯ÇÑ ¼ö°©ÀÇ ¼ö
-	Gun * pistol;     // ¼ÒÀ¯ÇÏ°í ÀÖ´Â ±ÇÃÑ
+	int handcuffs;    // ì†Œìœ í•œ ìˆ˜ê°‘ì˜ ìˆ˜
+	Gun * pistol;     // ì†Œìœ í•˜ê³  ìˆëŠ” ê¶Œì´
 public:
 	Police(int bnum, int bcuff)
 		: handcuffs(bcuff)
@@ -55,7 +55,7 @@ int main(void)
 	pman1.Shut();
 	pman1.PutHandcuff();
 
-	Police pman2(0, 3);     // ±ÇÃÑ¼ÒÀ¯ÇÏÁö ¾ÊÀº °æÂû
+	Police pman2(0, 3);     // ê¶Œì´ì†Œìœ í•˜ì§€ ì•Šì€ ê²½ì°°
 	pman2.Shut();
 	pman2.PutHandcuff();
 	return 0;

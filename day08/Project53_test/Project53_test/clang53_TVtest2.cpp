@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
-#include <cstdlib> // srand, rand ÇÔ¼ö¸¦ »ç¿ëÇÏ±â À§ÇØ Æ÷ÇÔ
-#include <ctime>   // time ÇÔ¼ö¸¦ »ç¿ëÇÏ±â À§ÇØ Æ÷ÇÔ
+#include <cstdlib> // srand, rand í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í¬í•¨
+#include <ctime>   // time í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í¬í•¨
 
 using namespace std;
 
-// TV Å¬·¡½º Á¤ÀÇ
+// TV í´ë˜ìŠ¤ ì •ì˜
 class TV {
 public:
     virtual void on() = 0;
 };
 
-// »ï¼º TV Å¬·¡½º Á¤ÀÇ
+// ì‚¼ì„± TV í´ë˜ìŠ¤ ì •ì˜
 class SamsungTV : public TV {
 public:
     void on() override {
@@ -19,7 +19,7 @@ public:
     }
 };
 
-// LG TV Å¬·¡½º Á¤ÀÇ
+// LG TV í´ë˜ìŠ¤ ì •ì˜
 class LGTV : public TV {
 public:
     void on() override {
@@ -27,15 +27,15 @@ public:
     }
 };
 
-// ¸®¸ğÄÁ Å¬·¡½º Á¤ÀÇ
+// ë¦¬ëª¨ì»¨ í´ë˜ìŠ¤ ì •ì˜
 class RemoteControl {
 private:
-    TV* tv; // ¿¬°áµÈ TV °´Ã¼¿¡ ´ëÇÑ Æ÷ÀÎÅÍ
+    TV* tv; // ì—°ê²°ëœ TV ê°ì²´ì— ëŒ€í•œ í¬ì¸í„°
 public:
-    // »ı¼ºÀÚ: TV °´Ã¼¸¦ ¿¬°á
+    // ìƒì„±ì: TV ê°ì²´ë¥¼ ì—°ê²°
     RemoteControl(TV* tv) : tv(tv) {}
 
-    // TV¸¦ ÄÑ´Â ÇÔ¼ö
+    // TVë¥¼ ì¼œëŠ” í•¨ìˆ˜
     void on() {
         if (tv != nullptr) {
             tv->on();
@@ -47,21 +47,21 @@ public:
 };
 
 int main() {
-    // »ï¼º TV °´Ã¼ »ı¼º
+    // ì‚¼ì„± TV ê°ì²´ ìƒì„±
     SamsungTV samsungTV;
-    // LG TV °´Ã¼ »ı¼º
+    // LG TV ê°ì²´ ìƒì„±
     LGTV lgTV;
 
-    // TV °´Ã¼µéÀ» ¹è¿­¿¡ ÀúÀå
+    // TV ê°ì²´ë“¤ì„ ë°°ì—´ì— ì €ì¥
     TV* tvs[] = { &samsungTV, &lgTV };
 
-    // ³­¼ö »ı¼º±â ÃÊ±âÈ­
+    // ë‚œìˆ˜ ìƒì„±ê¸° ì´ˆê¸°í™”
     srand(time(nullptr));
 
-    // 0 ¶Ç´Â 1ÀÇ ·£´ıÇÑ °ªÀ» »ı¼ºÇÏ¿© ÇØ´çÇÏ´Â TV¸¦ ÄÔ
+    // 0 ë˜ëŠ” 1ì˜ ëœë¤í•œ ê°’ì„ ìƒì„±í•˜ì—¬ í•´ë‹¹í•˜ëŠ” TVë¥¼ ì¼¬
     int randomIndex = rand() % 2;
     RemoteControl remote(tvs[randomIndex]);
-    remote.on(); // ·£´ıÇÏ°Ô ¼±ÅÃµÈ TV ÄÑÁü Ãâ·Â
+    remote.on(); // ëœë¤í•˜ê²Œ ì„ íƒëœ TV ì¼œì§ ì¶œë ¥
 
     return 0;
 }

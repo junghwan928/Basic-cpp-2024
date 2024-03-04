@@ -198,6 +198,10 @@ int main()
 	
 - 가상함수
 
+=> remotecontrol 클래스, samsungTv클래스, lgTv클래스를 설계하고 remote->on() 호출하면 연결된 tv에 따라서 삼성TV on 또는 엘지 Tv on 출력 되도록 프로그램 완성
+
+- 순수 가상 함수
+- 가상 소멸자와 참조자의 참조 가능성
 ## 9일차 
 
 ## 10일차

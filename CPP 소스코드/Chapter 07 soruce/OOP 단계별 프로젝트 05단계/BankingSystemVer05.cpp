@@ -1,8 +1,8 @@
 /*
  * Banking System Ver 0.5
- * ÀÛ¼ºÀÚ: À±¼º¿ì
- * ³»  ¿ë: AccManager¶ó´Â ÀÌ¸§ÀÇ ÄÁÆ®·Ñ Å¬·¡½º Á¤ÀÇ
- *         ¸â¹öÇÔ¼ö¸¦ Å¬·¡½º ¿ÜºÎ¿¡ Á¤ÀÇ
+ * ì‘ì„±ì: ìœ¤ì„±ìš°
+ * ë‚´  ìš©: AccManagerë¼ëŠ” ì´ë¦„ì˜ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ ì •ì˜
+ *         ë©¤ë²„í•¨ìˆ˜ë¥¼ í´ë˜ìŠ¤ ì™¸ë¶€ì— ì •ì˜
  */
 
 #include <iostream>
@@ -15,8 +15,8 @@ enum {MAKE=1, DEPOSIT, WITHDRAW, INQUIRE, EXIT};
 
 
 /* 
- * Å¬·¡½º ÀÌ¸§: Account
- * Å¬·¡½º À¯Çü: Entity Å¬·¡½º
+ * í´ë˜ìŠ¤ ì´ë¦„: Account
+ * í´ë˜ìŠ¤ ìœ í˜•: Entity í´ë˜ìŠ¤
  */
 
 class Account
@@ -69,9 +69,9 @@ int Account::Withdraw(int money)
 
 void Account::ShowAccInfo() const 
 {
-	cout<<"°èÁÂID: "<<accID<<endl;
-	cout<<"ÀÌ  ¸§: "<<cusName<<endl;
-	cout<<"ÀÜ  ¾×: "<<balance<<endl;
+	cout<<"ê³„ì¢ŒID: "<<accID<<endl;
+	cout<<"ì´  ë¦„: "<<cusName<<endl;
+	cout<<"ì”  ì•¡: "<<balance<<endl;
 }
 
 Account::~Account()
@@ -81,8 +81,8 @@ Account::~Account()
 
 
 /* 
- * Å¬·¡½º ÀÌ¸§: AccountHandler
- * Å¬·¡½º À¯Çü: ÄÁÆ®·Ñ(Control) Å¬·¡½º
+ * í´ë˜ìŠ¤ ì´ë¦„: AccountHandler
+ * í´ë˜ìŠ¤ ìœ í˜•: ì»¨íŠ¸ë¡¤(Control) í´ë˜ìŠ¤
  */
 
 class AccountHandler
@@ -104,11 +104,11 @@ public:
 void AccountHandler::ShowMenu(void) const
 {
 	cout<<"-----Menu------"<<endl;
-	cout<<"1. °èÁÂ°³¼³"<<endl;
-	cout<<"2. ÀÔ    ±İ"<<endl;
-	cout<<"3. Ãâ    ±İ"<<endl;
-	cout<<"4. °èÁÂÁ¤º¸ ÀüÃ¼ Ãâ·Â"<<endl;
-	cout<<"5. ÇÁ·Î±×·¥ Á¾·á"<<endl;
+	cout<<"1. ê³„ì¢Œê°œì„¤"<<endl;
+	cout<<"2. ì…    ê¸ˆ"<<endl;
+	cout<<"3. ì¶œ    ê¸ˆ"<<endl;
+	cout<<"4. ê³„ì¢Œì •ë³´ ì „ì²´ ì¶œë ¥"<<endl;
+	cout<<"5. í”„ë¡œê·¸ë¨ ì¢…ë£Œ"<<endl;
 }
 
 void AccountHandler::MakeAccount(void)
@@ -117,10 +117,10 @@ void AccountHandler::MakeAccount(void)
 	char name[NAME_LEN];
 	int balance;
 	
-	cout<<"[°èÁÂ°³¼³]"<<endl;
-	cout<<"°èÁÂID: ";	cin>>id;
-	cout<<"ÀÌ  ¸§: ";	cin>>name;
-	cout<<"ÀÔ±İ¾×: ";	cin>>balance;
+	cout<<"[ê³„ì¢Œê°œì„¤]"<<endl;
+	cout<<"ê³„ì¢ŒID: ";	cin>>id;
+	cout<<"ì´  ë¦„: ";	cin>>name;
+	cout<<"ì…ê¸ˆì•¡: ";	cin>>balance;
 	cout<<endl;
 
 	accArr[accNum++]=new Account(id, balance, name);
@@ -130,29 +130,29 @@ void AccountHandler::DepositMoney(void)
 {
 	int money;
 	int id;
-	cout<<"[ÀÔ    ±İ]"<<endl;
-	cout<<"°èÁÂID: ";	cin>>id;
-	cout<<"ÀÔ±İ¾×: ";	cin>>money;
+	cout<<"[ì…    ê¸ˆ]"<<endl;
+	cout<<"ê³„ì¢ŒID: ";	cin>>id;
+	cout<<"ì…ê¸ˆì•¡: ";	cin>>money;
 	
 	for(int i=0; i<accNum; i++)
 	{
 		if(accArr[i]->GetAccID()==id)
 		{
 			accArr[i]->Deposit(money);
-			cout<<"ÀÔ±İ¿Ï·á"<<endl<<endl;
+			cout<<"ì…ê¸ˆì™„ë£Œ"<<endl<<endl;
 			return;
 		}
 	}
-	cout<<"À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù."<<endl<<endl;
+	cout<<"ìœ íš¨í•˜ì§€ ì•Šì€ ID ì…ë‹ˆë‹¤."<<endl<<endl;
 }
 
 void AccountHandler::WithdrawMoney(void)
 {
 	int money;
 	int id;
-	cout<<"[Ãâ    ±İ]"<<endl;
-	cout<<"°èÁÂID: ";	cin>>id;
-	cout<<"Ãâ±İ¾×: ";	cin>>money;
+	cout<<"[ì¶œ    ê¸ˆ]"<<endl;
+	cout<<"ê³„ì¢ŒID: ";	cin>>id;
+	cout<<"ì¶œê¸ˆì•¡: ";	cin>>money;
 	
 	for(int i=0; i<accNum; i++)
 	{
@@ -160,15 +160,15 @@ void AccountHandler::WithdrawMoney(void)
 		{
 			if(accArr[i]->Withdraw(money)==0)
 			{
-				cout<<"ÀÜ¾×ºÎÁ·"<<endl<<endl;
+				cout<<"ì”ì•¡ë¶€ì¡±"<<endl<<endl;
 				return;
 			}
 
-			cout<<"Ãâ±İ¿Ï·á"<<endl<<endl;
+			cout<<"ì¶œê¸ˆì™„ë£Œ"<<endl<<endl;
 			return;
 		}
 	}
-	cout<<"À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù."<<endl<<endl;
+	cout<<"ìœ íš¨í•˜ì§€ ì•Šì€ ID ì…ë‹ˆë‹¤."<<endl<<endl;
 }
 
 AccountHandler::AccountHandler() : accNum(0)
@@ -191,7 +191,7 @@ AccountHandler::~AccountHandler()
 
 
 /* 
- * ÄÁÆ®·Ñ Å¬·¡½º AccountHandler Áß½ÉÀ¸·Î º¯°æµÈ main ÇÔ¼ö
+ * ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ AccountHandler ì¤‘ì‹¬ìœ¼ë¡œ ë³€ê²½ëœ main í•¨ìˆ˜
  */
 
 int main(void)
@@ -202,7 +202,7 @@ int main(void)
 	while(1)
 	{
 		manager.ShowMenu();
-		cout<<"¼±ÅÃ: "; 
+		cout<<"ì„ íƒ: "; 
 		cin>>choice;
 		cout<<endl;
 		

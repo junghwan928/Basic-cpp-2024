@@ -12,9 +12,9 @@ public:
 
 int main(void)
 {
-	cout<<"·¯½Ã¾Æ ¸éÀû: "<<CountryArea::RUSSIA<<"§´"<<endl;
-	cout<<"Ä³³ª´Ù ¸éÀû: "<<CountryArea::CANADA<<"§´"<<endl;
-	cout<<"Áß±¹ ¸éÀû: "<<CountryArea::CHINA<<"§´"<<endl;
-	cout<<"ÇÑ±¹ ¸éÀû: "<<CountryArea::SOUTH_KOREA<<"§´"<<endl;
+	cout<<"ëŸ¬ì‹œì•„ ë©´ì : "<<CountryArea::RUSSIA<<"ã¢"<<endl;
+	cout<<"ìºë‚˜ë‹¤ ë©´ì : "<<CountryArea::CANADA<<"ã¢"<<endl;
+	cout<<"ì¤‘êµ­ ë©´ì : "<<CountryArea::CHINA<<"ã¢"<<endl;
+	cout<<"í•œêµ­ ë©´ì : "<<CountryArea::SOUTH_KOREA<<"ã¢"<<endl;
 	return 0;
 }

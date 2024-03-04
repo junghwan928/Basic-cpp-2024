@@ -53,9 +53,9 @@ public:
 
 int main(void)
 {
-	cout<<"°´Ã¼»ı¼º Àü ..... "<<endl;
+	cout<<"æŒ‰çœ‰ç§¯å·± å‚ˆ ..... "<<endl;
 	LastDerived ldr;
-	cout<<"°´Ã¼»ı¼º ÈÄ ..... "<<endl;
+	cout<<"æŒ‰çœ‰ç§¯å·± é¥¶ ..... "<<endl;
 	ldr.ComplexFunc();
 	return 0;
 }

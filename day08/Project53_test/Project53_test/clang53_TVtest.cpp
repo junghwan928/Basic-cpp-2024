@@ -3,13 +3,13 @@
 
 using namespace std;
 
-// TV Å¬·¡½º Á¤ÀÇ
+// TV í´ëž˜ìŠ¤ ì •ì˜
 class TV {
 public:
     virtual void on() = 0;
 };
 
-// »ï¼º TV Å¬·¡½º Á¤ÀÇ
+// ì‚¼ì„± TV í´ëž˜ìŠ¤ ì •ì˜
 class SamsungTV : public TV {
 public:
     void on() override {
@@ -18,7 +18,7 @@ public:
     }
 };
 
-// LG TV Å¬·¡½º Á¤ÀÇ
+// LG TV í´ëž˜ìŠ¤ ì •ì˜
 class LGTV : public TV {
 public:
     void on() override {
@@ -27,15 +27,15 @@ public:
     }
 };
 
-// ¸®¸ðÄÁ Å¬·¡½º Á¤ÀÇ
+// ë¦¬ëª¨ì»¨ í´ëž˜ìŠ¤ ì •ì˜
 class RemoteControl {
 private:
-    TV* Tv; // ¿¬°áµÈ TV °´Ã¼¿¡ ´ëÇÑ Æ÷ÀÎÅÍ
+    TV* Tv; // ì—°ê²°ëœ TV ê°ì²´ì— ëŒ€í•œ í¬ì¸í„°
 public:
-    // »ý¼ºÀÚ: TV °´Ã¼¸¦ ¿¬°á
+    // ìƒì„±ìž: TV ê°ì²´ë¥¼ ì—°ê²°
     RemoteControl(TV* Tv) : Tv(Tv) {}
 
-    // TV¸¦ ÄÑ´Â ÇÔ¼ö
+    // TVë¥¼ ì¼œëŠ” í•¨ìˆ˜
     void on() {
         if (Tv != nullptr) {
             Tv->on();
@@ -47,25 +47,25 @@ public:
 };
 
 int main() {
-    // »ï¼º TV °´Ã¼ »ý¼º
+    // ì‚¼ì„± TV ê°ì²´ ìƒì„±
     SamsungTV samsungTV;
-    // ¸®¸ðÄÁ °´Ã¼ »ý¼º ¹× »ï¼º TV¿Í ¿¬°á
+    // ë¦¬ëª¨ì»¨ ê°ì²´ ìƒì„± ë° ì‚¼ì„± TVì™€ ì—°ê²°
     RemoteControl remoteForSamsung(&samsungTV);
-    // ¸®¸ðÄÁÀ¸·Î TV¸¦ ÄÔ
-    remoteForSamsung.on(); // »ï¼º TV ÄÑÁü Ãâ·Â
+    // ë¦¬ëª¨ì»¨ìœ¼ë¡œ TVë¥¼ ì¼¬
+    remoteForSamsung.on(); // ì‚¼ì„± TV ì¼œì§ ì¶œë ¥
 
-    // LG TV °´Ã¼ »ý¼º
+    // LG TV ê°ì²´ ìƒì„±
     LGTV lgTV;
-    // ¸®¸ðÄÁ °´Ã¼ »ý¼º ¹× LG TV¿Í ¿¬°á
+    // ë¦¬ëª¨ì»¨ ê°ì²´ ìƒì„± ë° LG TVì™€ ì—°ê²°
     RemoteControl remoteForLG(&lgTV);
-    // ¸®¸ðÄÁÀ¸·Î TV¸¦ ÄÔ
-    remoteForLG.on(); // LG TV ÄÑÁü Ãâ·Â
+    // ë¦¬ëª¨ì»¨ìœ¼ë¡œ TVë¥¼ ì¼¬
+    remoteForLG.on(); // LG TV ì¼œì§ ì¶œë ¥
 
     return 0;
 }
 
 /*
-RemoteControl Å¬·¡½º, SamsungTv Å¬·¡½º, LgTvÅ¬·¡½º¸¦ ¼³°èÇÏ°í,
-remote->on() È£ÃâÇÏ¸é ¿¬°áµÈ TV¿¡ µû¶ó¼­
-"»ï¼ºtv on" or "¿¤Áötv on" ÀÌ Ãâ·Â µÇµµ·Ï ÇÁ·Î±×·¥ ¿Ï¼º
+RemoteControl í´ëž˜ìŠ¤, SamsungTv í´ëž˜ìŠ¤, LgTví´ëž˜ìŠ¤ë¥¼ ì„¤ê³„í•˜ê³ ,
+remote->on() í˜¸ì¶œí•˜ë©´ ì—°ê²°ëœ TVì— ë”°ë¼ì„œ
+"ì‚¼ì„±tv on" or "ì—˜ì§€tv on" ì´ ì¶œë ¥ ë˜ë„ë¡ í”„ë¡œê·¸ëž¨ ì™„ì„±
 */

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º Data¸¦ Èä³»³½ ¿µ¿ª
+// í´ë˜ìŠ¤ Dataë¥¼ í‰ë‚´ë‚¸ ì˜ì—­
 typedef struct Data
 {
 	int data;
@@ -19,7 +19,7 @@ void Add(Data* THIS, int num)
 }
 
 
-// ÀûÀıÈ÷ º¯°æµÈ main ÇÔ¼ö
+// ì ì ˆíˆ ë³€ê²½ëœ main í•¨ìˆ˜
 int main(void)
 {
 	Data obj1={15, ShowData, Add};

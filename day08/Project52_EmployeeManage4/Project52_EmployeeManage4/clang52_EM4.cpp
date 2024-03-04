@@ -1,57 +1,57 @@
 #include <iostream>
-#include <cstring> // strcpy_s ÇÔ¼ö¸¦ »ç¿ëÇÏ±â À§ÇØ ÇÊ¿äÇÑ Çì´õ ÆÄÀÏÀ» Æ÷ÇÔ.
+#include <cstring> // strcpy_s í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í•„ìš”í•œ í—¤ë” íŒŒì¼ì„ í¬í•¨.
 using namespace std;
 
-// Á÷¿øÀ» ³ªÅ¸³»´Â ±âº» Å¬·¡½º Employee Á¤ÀÇ
+// ì§ì›ì„ ë‚˜íƒ€ë‚´ëŠ” ê¸°ë³¸ í´ë˜ìŠ¤ Employee ì •ì˜
 class Employee
 {
 private:
-    char name[100]; // Á÷¿øÀÇ ÀÌ¸§À» ÀúÀåÇÏ´Â ¹®ÀÚ¿­ ¹è¿­.
+    char name[100]; // ì§ì›ì˜ ì´ë¦„ì„ ì €ì¥í•˜ëŠ” ë¬¸ìì—´ ë°°ì—´.
 public:
-    // »ı¼ºÀÚ: Á÷¿øÀÇ ÀÌ¸§À» ¹Ş¾Æ ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    // ìƒì„±ì: ì§ì›ì˜ ì´ë¦„ì„ ë°›ì•„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     Employee(const char* name)
     {
-        // strcpy_s ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© Á÷¿øÀÇ ÀÌ¸§À» º¹»çÇÕ´Ï´Ù. º¸¾È»ó ¾ÈÀüÇÑ ¹®ÀÚ¿­ º¹»ç¸¦ º¸ÀåÇÕ´Ï´Ù.
+        // strcpy_s í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì§ì›ì˜ ì´ë¦„ì„ ë³µì‚¬í•©ë‹ˆë‹¤. ë³´ì•ˆìƒ ì•ˆì „í•œ ë¬¸ìì—´ ë³µì‚¬ë¥¼ ë³´ì¥í•©ë‹ˆë‹¤.
         strcpy_s(this->name, sizeof(this->name), name);
     }
 
-    // Á÷¿øÀÇ ÀÌ¸§À» Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ì´ë¦„ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowYourName() const
     {
         cout << "name: " << name << endl;
     }
 
-    // °¡»ó ÇÔ¼ö·Î ¼±¾ğµÇ¾î ÀÖÀ¸¸ç, °¢°¢ÀÇ ÆÄ»ı Å¬·¡½º¿¡¼­ ±¸Çö.
+    // ê°€ìƒ í•¨ìˆ˜ë¡œ ì„ ì–¸ë˜ì–´ ìˆìœ¼ë©°, ê°ê°ì˜ íŒŒìƒ í´ë˜ìŠ¤ì—ì„œ êµ¬í˜„.
     virtual int GetPay() const
     {
         return 0;
     }
 
-    // °¡»ó ÇÔ¼ö·Î ¼±¾ğµÇ¾î ÀÖÀ¸¸ç, °¢°¢ÀÇ ÆÄ»ı Å¬·¡½º¿¡¼­ ±¸Çö.
+    // ê°€ìƒ í•¨ìˆ˜ë¡œ ì„ ì–¸ë˜ì–´ ìˆìœ¼ë©°, ê°ê°ì˜ íŒŒìƒ í´ë˜ìŠ¤ì—ì„œ êµ¬í˜„.
     virtual void ShowSalaryInfo() const
     {
-        // ¾Æ¹« µ¿ÀÛµµ ¼öÇàÇÏÁö ¾ÊÀ½. ±âº» ±¸ÇöÀº ÆÄ»ı Å¬·¡½º¿¡¼­ ÀçÁ¤ÀÇ.
+        // ì•„ë¬´ ë™ì‘ë„ ìˆ˜í–‰í•˜ì§€ ì•ŠìŒ. ê¸°ë³¸ êµ¬í˜„ì€ íŒŒìƒ í´ë˜ìŠ¤ì—ì„œ ì¬ì •ì˜.
     }
 };
 
-// Á¤±ÔÁ÷ Á÷¿øÀ» ³ªÅ¸³»´Â Å¬·¡½º PermanentWorker Á¤ÀÇ
+// ì •ê·œì§ ì§ì›ì„ ë‚˜íƒ€ë‚´ëŠ” í´ë˜ìŠ¤ PermanentWorker ì •ì˜
 class PermanentWorker : public Employee
 {
 private:
-    int salary; // Á÷¿øÀÇ ±âº» ±Ş¿©¸¦ ÀúÀåÇÏ´Â º¯¼ö.
+    int salary; // ì§ì›ì˜ ê¸°ë³¸ ê¸‰ì—¬ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
 public:
-    // »ı¼ºÀÚ: Á÷¿øÀÇ ÀÌ¸§°ú ±âº» ±Ş¿©¸¦ ¹Ş¾Æ ÃÊ±âÈ­.
+    // ìƒì„±ì: ì§ì›ì˜ ì´ë¦„ê³¼ ê¸°ë³¸ ê¸‰ì—¬ë¥¼ ë°›ì•„ ì´ˆê¸°í™”.
     PermanentWorker(const char* name, int money)
         : Employee(name), salary(money)
     { }
 
-    // Á÷¿øÀÇ ±âº» ±Ş¿©¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸°ë³¸ ê¸‰ì—¬ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
     int GetPay() const override
     {
         return salary;
     }
 
-    // Á÷¿øÀÇ ±Ş¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowSalaryInfo() const override
     {
         ShowYourName();
@@ -59,31 +59,31 @@ public:
     }
 };
 
-// ÀÓ½ÃÁ÷ Á÷¿øÀ» ³ªÅ¸³»´Â Å¬·¡½º TemporaryWorker Á¤ÀÇ
+// ì„ì‹œì§ ì§ì›ì„ ë‚˜íƒ€ë‚´ëŠ” í´ë˜ìŠ¤ TemporaryWorker ì •ì˜
 class TemporaryWorker : public Employee
 {
 private:
-    int workTime; // ÀÏÇÑ ½Ã°£À» ÀúÀåÇÏ´Â º¯¼ö.
-    int payPerHour; // ½Ã°£´ç ±Ş¿©¸¦ ÀúÀåÇÏ´Â º¯¼ö.
+    int workTime; // ì¼í•œ ì‹œê°„ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
+    int payPerHour; // ì‹œê°„ë‹¹ ê¸‰ì—¬ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
 public:
-    // »ı¼ºÀÚ: Á÷¿øÀÇ ÀÌ¸§°ú ½Ã°£´ç ±Ş¿©¸¦ ¹Ş¾Æ ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    // ìƒì„±ì: ì§ì›ì˜ ì´ë¦„ê³¼ ì‹œê°„ë‹¹ ê¸‰ì—¬ë¥¼ ë°›ì•„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     TemporaryWorker(const char* name, int pay)
         : Employee(name), workTime(0), payPerHour(pay)
     { }
 
-    // ÀÏÇÑ ½Ã°£À» Ãß°¡ÇÏ´Â ÇÔ¼ö.
+    // ì¼í•œ ì‹œê°„ì„ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜.
     void AddWorkTime(int time)
     {
         workTime += time;
     }
 
-    // Á÷¿øÀÇ ±Ş¿©¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸‰ì—¬ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
     int GetPay() const override
     {
         return workTime * payPerHour;
     }
 
-    // Á÷¿øÀÇ ±Ş¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowSalaryInfo() const override
     {
         ShowYourName();
@@ -91,31 +91,31 @@ public:
     }
 };
 
-// ¿µ¾÷Á÷ Á÷¿øÀ» ³ªÅ¸³»´Â Å¬·¡½º SalesWorker Á¤ÀÇ
+// ì˜ì—…ì§ ì§ì›ì„ ë‚˜íƒ€ë‚´ëŠ” í´ë˜ìŠ¤ SalesWorker ì •ì˜
 class SalesWorker : public PermanentWorker
 {
 private:
-    int salesResult; // ÆÇ¸Å ½ÇÀûÀ» ÀúÀåÇÏ´Â º¯¼ö.
-    double bonusRatio; // ÆÇ¸Å º¸³Ê½º ºñÀ²À» ÀúÀåÇÏ´Â º¯¼ö.
+    int salesResult; // íŒë§¤ ì‹¤ì ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
+    double bonusRatio; // íŒë§¤ ë³´ë„ˆìŠ¤ ë¹„ìœ¨ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
 public:
-    // »ı¼ºÀÚ: Á÷¿øÀÇ ÀÌ¸§, ±âº» ±Ş¿©, ÆÇ¸Å º¸³Ê½º ºñÀ²À» ¹Ş¾Æ ÃÊ±âÈ­.
+    // ìƒì„±ì: ì§ì›ì˜ ì´ë¦„, ê¸°ë³¸ ê¸‰ì—¬, íŒë§¤ ë³´ë„ˆìŠ¤ ë¹„ìœ¨ì„ ë°›ì•„ ì´ˆê¸°í™”.
     SalesWorker(const char* name, int money, double ratio)
         : PermanentWorker(name, money), salesResult(0), bonusRatio(ratio)
     { }
 
-    // ÆÇ¸Å ½ÇÀûÀ» Ãß°¡ÇÏ´Â ÇÔ¼ö.
+    // íŒë§¤ ì‹¤ì ì„ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜.
     void AddSalesResult(int value)
     {
         salesResult += value;
     }
 
-    // Á÷¿øÀÇ ±Ş¿©¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸‰ì—¬ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
     int GetPay() const override
     {
         return PermanentWorker::GetPay() + static_cast<int>(salesResult * bonusRatio);
     }
 
-    // Á÷¿øÀÇ ±Ş¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowSalaryInfo() const override
     {
         ShowYourName();
@@ -123,31 +123,31 @@ public:
     }
 };
 
-// Á÷¿øµéÀ» °ü¸®ÇÏ´Â Å¬·¡½º EmployeeHandler Á¤ÀÇ
+// ì§ì›ë“¤ì„ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤ EmployeeHandler ì •ì˜
 class EmployeeHandler
 {
 private:
-    Employee* empList[50]; // Á÷¿ø °´Ã¼ÀÇ Æ÷ÀÎÅÍ¸¦ ÀúÀåÇÏ´Â ¹è¿­.
-    int empNum; // µî·ÏµÈ Á÷¿ø ¼ö¸¦ ÀúÀåÇÏ´Â º¯¼ö.
+    Employee* empList[50]; // ì§ì› ê°ì²´ì˜ í¬ì¸í„°ë¥¼ ì €ì¥í•˜ëŠ” ë°°ì—´.
+    int empNum; // ë“±ë¡ëœ ì§ì› ìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜.
 public:
-    // »ı¼ºÀÚ: µî·ÏµÈ Á÷¿ø ¼ö¸¦ ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    // ìƒì„±ì: ë“±ë¡ëœ ì§ì› ìˆ˜ë¥¼ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     EmployeeHandler() : empNum(0)
     { }
 
-    // Á÷¿øÀ» Ãß°¡ÇÏ´Â ÇÔ¼ö.
+    // ì§ì›ì„ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜.
     void AddEmployee(Employee* emp)
     {
         empList[empNum++] = emp;
     }
 
-    // µî·ÏµÈ ¸ğµç Á÷¿øÀÇ ±Ş¿© Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowAllSalaryInfo() const
     {
         for (int i = 0; i < empNum; i++)
             empList[i]->ShowSalaryInfo();
     }
 
-    // µî·ÏµÈ ¸ğµç Á÷¿øÀÇ ÃÑ ±Ş¿©¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö.
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ì´ ê¸‰ì—¬ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜.
     void ShowTotalSalary() const
     {
         int sum = 0;
@@ -156,7 +156,7 @@ public:
         cout << "salary sum: " << sum << endl;
     }
 
-    // ¼Ò¸êÀÚ: µî·ÏµÈ ¸ğµç Á÷¿ø °´Ã¼¸¦ ¸Ş¸ğ¸®¿¡¼­ ÇØÁ¦.
+    // ì†Œë©¸ì: ë“±ë¡ëœ ëª¨ë“  ì§ì› ê°ì²´ë¥¼ ë©”ëª¨ë¦¬ì—ì„œ í•´ì œ.
     ~EmployeeHandler()
     {
         for (int i = 0; i < empNum; i++)
@@ -166,27 +166,27 @@ public:
 
 int main(void)
 {
-    // Á÷¿øÀ» °ü¸®ÇÏ´Â EmployeeHandler °´Ã¼ »ı¼º
+    // ì§ì›ì„ ê´€ë¦¬í•˜ëŠ” EmployeeHandler ê°ì²´ ìƒì„±
     EmployeeHandler handler;
 
-    // Á¤±ÔÁ÷ Á÷¿ø Ãß°¡
+    // ì •ê·œì§ ì§ì› ì¶”ê°€
     handler.AddEmployee(new PermanentWorker("KIM", 1000));
     handler.AddEmployee(new PermanentWorker("LEE", 1500));
 
-    // ÀÓ½ÃÁ÷ Á÷¿ø Ãß°¡
+    // ì„ì‹œì§ ì§ì› ì¶”ê°€
     TemporaryWorker* alba = new TemporaryWorker("Jung", 700);
-    alba->AddWorkTime(5);    // 5½Ã°£ ±Ù¹« Ãß°¡
+    alba->AddWorkTime(5);    // 5ì‹œê°„ ê·¼ë¬´ ì¶”ê°€
     handler.AddEmployee(alba);
 
-    // ¿µ¾÷Á÷ Á÷¿ø Ãß°¡
+    // ì˜ì—…ì§ ì§ì› ì¶”ê°€
     SalesWorker* seller = new SalesWorker("Hong", 1000, 0.1);
-    seller->AddSalesResult(7000);    // ÆÇ¸Å ½ÇÀû Ãß°¡
+    seller->AddSalesResult(7000);    // íŒë§¤ ì‹¤ì  ì¶”ê°€
     handler.AddEmployee(seller);
 
-    // µî·ÏµÈ ¸ğµç Á÷¿øÀÇ ±Ş¿© Á¤º¸ Ãâ·Â
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ê¸‰ì—¬ ì •ë³´ ì¶œë ¥
     handler.ShowAllSalaryInfo();
 
-    // µî·ÏµÈ ¸ğµç Á÷¿øÀÇ ÃÑ ±Ş¿© Ãâ·Â
+    // ë“±ë¡ëœ ëª¨ë“  ì§ì›ì˜ ì´ ê¸‰ì—¬ ì¶œë ¥
     handler.ShowTotalSalary();
 
     return 0;

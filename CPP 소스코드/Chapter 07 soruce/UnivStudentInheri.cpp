@@ -5,8 +5,8 @@ using namespace std;
 class Person
 {
 private:
-	int age;        // ³ªÀÌ
-	char name[50];     // ÀÌ¸§
+	int age;        // ë‚˜ì´
+	char name[50];     // ì´ë¦„
 public:
 	Person(int myage, char * myname) : age(myage)
 	{
@@ -25,7 +25,7 @@ public:
 class UnivStudent : public Person
 {
 private:
-	char major[50];     // Àü°ø°ú¸ñ
+	char major[50];     // ì „ê³µê³¼ëª©
 public:
 	UnivStudent(char * myname, int myage, char * mymajor)
 		: Person(myage, myname)

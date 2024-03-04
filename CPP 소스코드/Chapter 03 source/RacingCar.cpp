@@ -1,14 +1,14 @@
 struct Car
 {
-	char gamerID[ID_LEN];	// ¼ÒÀ¯ÀÚID
-	int fuelGauge;		// ¿¬·á·®
-	int curSpeed;		// ÇöÀç¼Óµµ
+	char gamerID[ID_LEN];	// ì†Œìœ ìID
+	int fuelGauge;		// ì—°ë£ŒëŸ‰
+	int curSpeed;		// í˜„ì¬ì†ë„
 
 	void ShowCarState()
 	{
-		cout<<"¼ÒÀ¯ÀÚID: "<<gamerID<<endl;
-		cout<<"¿¬·á·®: "<<fuelGauge<<"%"<<endl;
-		cout<<"ÇöÀç¼Óµµ: "<<curSpeed<<"km/s"<<endl<<endl;
+		cout<<"ì†Œìœ ìID: "<<gamerID<<endl;
+		cout<<"ì—°ë£ŒëŸ‰: "<<fuelGauge<<"%"<<endl;
+		cout<<"í˜„ì¬ì†ë„: "<<curSpeed<<"km/s"<<endl<<endl;
 	}
 	void Accel()
 	{
