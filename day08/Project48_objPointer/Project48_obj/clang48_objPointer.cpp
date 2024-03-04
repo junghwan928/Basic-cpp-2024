@@ -1,47 +1,53 @@
 #include <iostream>
 using namespace std;
 
-// ±âº» Å¬·¡½º Person Á¤ÀÇ
+// ê¸°ë³¸ í´ë˜ìŠ¤ Person ì •ì˜
 class Person
 {
 public:
-    // Sleep ÇÔ¼ö: ¸ğµç »ç¶÷ÀÌ ÇÒ ¼ö ÀÖ´Â ÇàÀ§
+    // Sleep í•¨ìˆ˜: ëª¨ë“  ì‚¬ëŒì´ í•  ìˆ˜ ìˆëŠ” í–‰ìœ„
     void Sleep() { cout << "Sleep" << endl; }
 };
 
-// Person Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â Student Å¬·¡½º Á¤ÀÇ
+// Person í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” Student í´ë˜ìŠ¤ ì •ì˜
 class Student : public Person
 {
 public:
-    // Study ÇÔ¼ö: ÇĞ»ıÀÌ ÇÒ ¼ö ÀÖ´Â Æ¯º°ÇÑ ÇàÀ§
+    // Study í•¨ìˆ˜: í•™ìƒì´ í•  ìˆ˜ ìˆëŠ” íŠ¹ë³„í•œ í–‰ìœ„
     void Study() { cout << "Study" << endl; }
 };
 
-// Student Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â PartTimeStudent Å¬·¡½º Á¤ÀÇ
+// Student í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” PartTimeStudent í´ë˜ìŠ¤ ì •ì˜
 class PartTimeStudent : public Student
 {
 public:
-    // Work ÇÔ¼ö: ÆÄÆ®Å¸ÀÓ ÇĞ»ıÀÌ ÇÒ ¼ö ÀÖ´Â Ãß°¡ÀûÀÎ ÇàÀ§
+    // Work í•¨ìˆ˜: íŒŒíŠ¸íƒ€ì„ í•™ìƒì´ í•  ìˆ˜ ìˆëŠ” ì¶”ê°€ì ì¸ í–‰ìœ„
     void Work() { cout << "Work" << endl; }
 };
 
 int main(void)
 {
-    // Person Å¸ÀÔÀÇ Æ÷ÀÎÅÍ·Î Student °´Ã¼¸¦ µ¿Àû ÇÒ´ç
+    // Person íƒ€ì…ì˜ í¬ì¸í„°ë¡œ Student ê°ì²´ë¥¼ ë™ì  í• ë‹¹
+    // Student *ptr0 = new Student(); 
+    // => ë™ì¼í•œ íƒ€ì…ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì›ì¹™, ë¶€ëª¨íƒ€ì…ì˜ ê°ì²´ í¬ì¸í„°ë¡œ ìì‹ ê°ì²´ë¥¼ ê°€ë¦¬í‚¬ìˆ˜ ìˆìŒ.
+    // => í•˜ì§€ë§Œ ìì‹íƒ€ì…ì˜ ê°ì²´ í¬ì¸í„°ë¡œ ë¶€ëª¨ ê°ì²´ëŠ” ê°€ë¦¬í‚¬ìˆ˜ ì—†ìŒ.
+    // => ê·¸ë¦¬ê³  ì ‘ê·¼ì€ ê°ì²´ í¬ì¸í„°ì˜ íƒ€ì…ì„ ë”°ë¦„
+
+
     Person* ptr1 = new Student();
-    // Person Å¸ÀÔÀÇ Æ÷ÀÎÅÍ·Î PartTimeStudent °´Ã¼¸¦ µ¿Àû ÇÒ´ç
+    // Person íƒ€ì…ì˜ í¬ì¸í„°ë¡œ PartTimeStudent ê°ì²´ë¥¼ ë™ì  í• ë‹¹
     Person* ptr2 = new PartTimeStudent();
-    // Student Å¸ÀÔÀÇ Æ÷ÀÎÅÍ·Î PartTimeStudent °´Ã¼¸¦ µ¿Àû ÇÒ´ç
+    // Student íƒ€ì…ì˜ í¬ì¸í„°ë¡œ PartTimeStudent ê°ì²´ë¥¼ ë™ì  í• ë‹¹
     Student* ptr3 = new PartTimeStudent();
 
-    // Person Å¬·¡½ºÀÇ Sleep ÇÔ¼ö È£Ãâ (Student, PartTimeStudent ¸ğµÎ Á¢±Ù °¡´É)
-    ptr1->Sleep(); // Ãâ·Â: Sleep
-    ptr2->Sleep(); // Ãâ·Â: Sleep
+    // Person í´ë˜ìŠ¤ì˜ Sleep í•¨ìˆ˜ í˜¸ì¶œ (Student, PartTimeStudent ëª¨ë‘ ì ‘ê·¼ ê°€ëŠ¥)
+    ptr1->Sleep(); // ì¶œë ¥: Sleep
+    ptr2->Sleep(); // ì¶œë ¥: Sleep
 
-    // Student Å¬·¡½ºÀÇ Study ÇÔ¼ö È£Ãâ (PartTimeStudent´Â Student¸¦ »ó¼Ó¹ŞÀ¸¹Ç·Î Á¢±Ù °¡´É)
-    ptr3->Study(); // Ãâ·Â: Study
+    // Student í´ë˜ìŠ¤ì˜ Study í•¨ìˆ˜ í˜¸ì¶œ (PartTimeStudentëŠ” Studentë¥¼ ìƒì†ë°›ìœ¼ë¯€ë¡œ ì ‘ê·¼ ê°€ëŠ¥)
+    ptr3->Study(); // ì¶œë ¥: Study
 
-    // µ¿Àû ÇÒ´çµÈ ¸Ş¸ğ¸® ÇØÁ¦
+    // ë™ì  í• ë‹¹ëœ ë©”ëª¨ë¦¬ í•´ì œ
     delete ptr1;
     delete ptr2;
     delete ptr3;
@@ -49,10 +55,10 @@ int main(void)
     return 0;
 }
 
-/* Ãß°¡ ¼³¸í
-1. Person Å¬·¡½º´Â ¸ğµç »ç¶÷ÀÌ °øÅëÀûÀ¸·Î ÇÒ ¼ö ÀÖ´Â Sleep ÇàÀ§¸¦ Á¤ÀÇ.
+/* ì¶”ê°€ ì„¤ëª…
+1. Person í´ë˜ìŠ¤ëŠ” ëª¨ë“  ì‚¬ëŒì´ ê³µí†µì ìœ¼ë¡œ í•  ìˆ˜ ìˆëŠ” Sleep í–‰ìœ„ë¥¼ ì •ì˜.
 
-2. Person Å¬·¡½º¸¦ »ó¼Ó¹ŞÀº Student Å¬·¡½º´Â ÇĞ»ıÀÌ Ãß°¡ÀûÀ¸·Î ÇÒ ¼ö ÀÖ´Â Study ÇàÀ§¸¦ Á¤ÀÇ.
+2. Person í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ Student í´ë˜ìŠ¤ëŠ” í•™ìƒì´ ì¶”ê°€ì ìœ¼ë¡œ í•  ìˆ˜ ìˆëŠ” Study í–‰ìœ„ë¥¼ ì •ì˜.
 
-3. Student Å¬·¡½º¸¦ ´Ù½Ã »ó¼Ó¹ŞÀº PartTimeStudent Å¬·¡½º´Â ÆÄÆ®Å¸ÀÓ ÇĞ»ıÀÌ Ãß°¡ÀûÀ¸·Î ÇÒ ¼ö ÀÖ´Â Work ÇàÀ§¸¦ Á¤ÀÇ
+3. Student í´ë˜ìŠ¤ë¥¼ ë‹¤ì‹œ ìƒì†ë°›ì€ PartTimeStudent í´ë˜ìŠ¤ëŠ” íŒŒíŠ¸íƒ€ì„ í•™ìƒì´ ì¶”ê°€ì ìœ¼ë¡œ í•  ìˆ˜ ìˆëŠ” Work í–‰ìœ„ë¥¼ ì •ì˜
 */

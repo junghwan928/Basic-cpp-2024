@@ -4,7 +4,7 @@ int main(void)
 {
 	int val1, val2;
 	int result=0;
-	std::cout<<"µÎ °³ÀÇ ¼ýÀÚÀÔ·Â: ";
+	std::cout<<"ë‘ ê°œì˜ ìˆ«ìžìž…ë ¥: ";
 	std::cin>>val1>>val2;
 
 	if(val1<val2)
@@ -18,6 +18,6 @@ int main(void)
 			result+=i;
 	}
 
-	std::cout<<"µÎ ¼ö »çÀÌÀÇ Á¤¼ö ÇÕ: "<<result<<std::endl;
+	std::cout<<"ë‘ ìˆ˜ ì‚¬ì´ì˜ ì •ìˆ˜ í•©: "<<result<<std::endl;
 	return 0;
 }
