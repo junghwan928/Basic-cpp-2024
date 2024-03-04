@@ -179,8 +179,8 @@ int main()
     Person copyp(p); // p 객체를 복사하여 새로운 객체 copyp 생성
     copyp.personInfo(); // 복사된 객체 copyp의 정보 출력
 
-    return 0;
-}```
+    return 0;```
+}
 	
 		- name 필드는 힙영역에 메모리를 할당하여 저장
 		- 자기 객체를 생성하고 객체 복사를 하시오
