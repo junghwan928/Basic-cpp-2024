@@ -1,51 +1,51 @@
 #include <iostream>
 using namespace std;
 
-// ºÎ¸ğ Å¬·¡½ºÀÎ First Á¤ÀÇ
+// ë¶€ëª¨ í´ë˜ìŠ¤ì¸ First ì •ì˜
 class First
 {
 public:
-    // FirstFunc() ¸â¹ö ÇÔ¼ö Á¤ÀÇ
+    // FirstFunc() ë©¤ë²„ í•¨ìˆ˜ ì •ì˜
     void FirstFunc()
     {
         cout << "FirstFunc()" << endl;
     }
 
-    // °¡»ó ÇÔ¼ö SimpleFunc() Á¤ÀÇ
+    // ê°€ìƒ í•¨ìˆ˜ SimpleFunc() ì •ì˜
     virtual void SimpleFunc()
     {
         cout << "First's SimpleFunc()" << endl;
     }
 };
 
-// First Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â Second Å¬·¡½º Á¤ÀÇ
+// First í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” Second í´ë˜ìŠ¤ ì •ì˜
 class Second : public First
 {
 public:
-    // SecondFunc() ¸â¹ö ÇÔ¼ö Á¤ÀÇ
+    // SecondFunc() ë©¤ë²„ í•¨ìˆ˜ ì •ì˜
     void SecondFunc()
     {
         cout << "SecondFunc()" << endl;
     }
 
-    // ºÎ¸ğ Å¬·¡½ºÀÇ °¡»ó ÇÔ¼ö¸¦ ÀçÁ¤ÀÇÇÑ SimpleFunc() Á¤ÀÇ
+    // ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ê°€ìƒ í•¨ìˆ˜ë¥¼ ì¬ì •ì˜í•œ SimpleFunc() ì •ì˜
     virtual void SimpleFunc()
     {
         cout << "Second's SimpleFunc()" << endl;
     }
 };
 
-// Second Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â Third Å¬·¡½º Á¤ÀÇ
+// Second í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” Third í´ë˜ìŠ¤ ì •ì˜
 class Third : public Second
 {
 public:
-    // ThirdFunc() ¸â¹ö ÇÔ¼ö Á¤ÀÇ
+    // ThirdFunc() ë©¤ë²„ í•¨ìˆ˜ ì •ì˜
     void ThirdFunc()
     {
         cout << "ThirdFunc()" << endl;
     }
 
-    // Second Å¬·¡½ºÀÇ °¡»ó ÇÔ¼ö¸¦ ÀçÁ¤ÀÇÇÑ SimpleFunc() Á¤ÀÇ
+    // Second í´ë˜ìŠ¤ì˜ ê°€ìƒ í•¨ìˆ˜ë¥¼ ì¬ì •ì˜í•œ SimpleFunc() ì •ì˜
     virtual void SimpleFunc()
     {
         cout << "Third's SimpleFunc()" << endl;
@@ -54,25 +54,25 @@ public:
 
 int main(void)
 {
-    // Third Å¬·¡½ºÀÇ °´Ã¼ obj »ı¼º
+    // Third í´ë˜ìŠ¤ì˜ ê°ì²´ obj ìƒì„±
     Third obj;
-    obj.FirstFunc();    // First Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    obj.SecondFunc();   // Second Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    obj.ThirdFunc();    // Third Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    obj.SimpleFunc();   // Third Å¬·¡½ºÀÇ SimpleFunc() È£Ãâ
+    obj.FirstFunc();    // First í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    obj.SecondFunc();   // Second í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    obj.ThirdFunc();    // Third í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    obj.SimpleFunc();   // Third í´ë˜ìŠ¤ì˜ SimpleFunc() í˜¸ì¶œ
     cout << endl;
 
-    // Second Å¬·¡½ºÀÇ ÂüÁ¶Çü º¯¼ö sref¸¦ ÀÌ¿ëÇÏ¿© objÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
+    // Second í´ë˜ìŠ¤ì˜ ì°¸ì¡°í˜• ë³€ìˆ˜ srefë¥¼ ì´ìš©í•˜ì—¬ objì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
     Second& sref = obj;
-    sref.FirstFunc();   // First Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    sref.SecondFunc();  // Second Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    sref.SimpleFunc();  // Third Å¬·¡½ºÀÇ SimpleFunc() È£Ãâ
+    sref.FirstFunc();   // First í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    sref.SecondFunc();  // Second í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    sref.SimpleFunc();  // Third í´ë˜ìŠ¤ì˜ SimpleFunc() í˜¸ì¶œ
     cout << endl;
 
-    // First Å¬·¡½ºÀÇ ÂüÁ¶Çü º¯¼ö fref¸¦ ÀÌ¿ëÇÏ¿© objÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
+    // First í´ë˜ìŠ¤ì˜ ì°¸ì¡°í˜• ë³€ìˆ˜ frefë¥¼ ì´ìš©í•˜ì—¬ objì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
     First& fref = obj;
-    fref.FirstFunc();   // First Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö È£Ãâ
-    fref.SimpleFunc();  // Third Å¬·¡½ºÀÇ SimpleFunc() È£Ãâ (´ÙÇü¼º)
+    fref.FirstFunc();   // First í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
+    fref.SimpleFunc();  // Third í´ë˜ìŠ¤ì˜ SimpleFunc() í˜¸ì¶œ (ë‹¤í˜•ì„±)
 
     return 0;
 }

@@ -1,34 +1,34 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º Data¸¦ Èä³»³½ ¿µ¿ª
+// í´ëž˜ìŠ¤ Dataë¥¼ í‰ë‚´ë‚¸ ì˜ì—­
 typedef struct Data
 {
-    int data; // µ¥ÀÌÅÍ ¸â¹ö º¯¼ö
-    void (*ShowData)(Data*); // µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö Æ÷ÀÎÅÍ
-    void (*Add)(Data*, int); // µ¥ÀÌÅÍ¸¦ ´õÇÏ´Â ÇÔ¼ö Æ÷ÀÎÅÍ
+    int data; // ë°ì´í„° ë©¤ë²„ ë³€ìˆ˜
+    void (*ShowData)(Data*); // ë°ì´í„°ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ í¬ì¸í„° = showdata ë©¤ë²„í•¨ìˆ˜ ì„ ì–¸
+    void (*Add)(Data*, int); // ë°ì´í„°ë¥¼ ë”í•˜ëŠ” í•¨ìˆ˜ í¬ì¸í„° = add ë©¤ë²„ í•¨ìˆ˜ ì„ ì–¸
 } Data;
 
-// µ¥ÀÌÅÍ Ãâ·Â ÇÔ¼ö
-void ShowData(Data* THIS)
+// ë°ì´í„° ì¶œë ¥ í•¨ìˆ˜
+void ShowData(Data* THIS) // showdata ë©¤ë²„í•¨ìˆ˜ ì •ì˜
 {
     cout << "Data: " << THIS->data << endl;
 }
 
-// µ¥ÀÌÅÍ ´õÇÏ´Â ÇÔ¼ö
+// ë°ì´í„° ë”í•˜ëŠ” í•¨ìˆ˜ add ë©¤ë²„ í•¨ìˆ˜ ì •ì˜
 void Add(Data* THIS, int num)
 {
     THIS->data += num;
 }
 
-// ÀûÀýÈ÷ º¯°æµÈ main ÇÔ¼ö
+// ì ì ˆížˆ ë³€ê²½ëœ main í•¨ìˆ˜
 int main(void)
 {
-    // Data ±¸Á¶Ã¼¸¦ ÀÌ¿ëÇÏ¿© °´Ã¼ »ý¼º ¹× ÃÊ±âÈ­
-    Data obj1 = { 15, ShowData, Add };
+    // Data êµ¬ì¡°ì²´ë¥¼ ì´ìš©í•˜ì—¬ ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+    Data obj1 = { 15, ShowData, Add }; // Data  êµ¬ì¡°ì²´ ë³€ìˆ˜ obj1 ì„ ì–¸ê³¼ ì´ˆê¸°í™” 
     Data obj2 = { 7, ShowData, Add };
 
-    // °´Ã¼ÀÇ µ¥ÀÌÅÍ Á¶ÀÛ ¹× Ãâ·Â
+    // ê°ì²´ì˜ ë°ì´í„° ì¡°ìž‘ ë° ì¶œë ¥
     obj1.Add(&obj1, 17);
     obj2.Add(&obj2, 9);
     obj1.ShowData(&obj1);
@@ -38,13 +38,13 @@ int main(void)
 };
 
 /*
-1. typedef struct Data¸¦ ÀÌ¿ëÇÏ¿© ±¸Á¶Ã¼¸¦ Á¤ÀÇÇÏ°í, ÇØ´ç ±¸Á¶Ã¼¸¦ Data¶ó´Â ÀÌ¸§À¸·Î typedefÇÏ¿© »ç¿ë.
+1. typedef struct Dataë¥¼ ì´ìš©í•˜ì—¬ êµ¬ì¡°ì²´ë¥¼ ì •ì˜í•˜ê³ , í•´ë‹¹ êµ¬ì¡°ì²´ë¥¼ Dataë¼ëŠ” ì´ë¦„ìœ¼ë¡œ typedefí•˜ì—¬ ì‚¬ìš©.
 
-2. Data ±¸Á¶Ã¼ ³»ºÎ¿¡´Â µ¥ÀÌÅÍ ¸â¹ö º¯¼ö data¿Í ÇÔ¼ö Æ÷ÀÎÅÍ µÎ °³(ShowData, Add)°¡ ¼±¾ð.
+2. Data êµ¬ì¡°ì²´ ë‚´ë¶€ì—ëŠ” ë°ì´í„° ë©¤ë²„ ë³€ìˆ˜ dataì™€ í•¨ìˆ˜ í¬ì¸í„° ë‘ ê°œ(ShowData, Add)ê°€ ì„ ì–¸.
 
-3. ShowData ÇÔ¼ö´Â °´Ã¼ÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö·Î, °´Ã¼ÀÇ ÁÖ¼Ò¸¦ ÀÎÀÚ·Î ¹ÞÀ½.
+3. ShowData í•¨ìˆ˜ëŠ” ê°ì²´ì˜ ë°ì´í„°ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ë¡œ, ê°ì²´ì˜ ì£¼ì†Œë¥¼ ì¸ìžë¡œ ë°›ìŒ.
 
-4. Add ÇÔ¼ö´Â °´Ã¼ÀÇ µ¥ÀÌÅÍ¸¦ ´õÇÏ´Â ÇÔ¼ö·Î, °´Ã¼ÀÇ ÁÖ¼Ò¿Í ´õÇÒ °ªÀ» ÀÎÀÚ·Î ¹ÞÀ½.
+4. Add í•¨ìˆ˜ëŠ” ê°ì²´ì˜ ë°ì´í„°ë¥¼ ë”í•˜ëŠ” í•¨ìˆ˜ë¡œ, ê°ì²´ì˜ ì£¼ì†Œì™€ ë”í•  ê°’ì„ ì¸ìžë¡œ ë°›ìŒ.
 
-5. main ÇÔ¼ö¿¡¼­´Â Data ±¸Á¶Ã¼¸¦ ÀÌ¿ëÇÏ¿© µÎ °³ÀÇ °´Ã¼(obj1, obj2)¸¦ »ý¼ºÇÏ°í ÃÊ±âÈ­. ÀÌÈÄ¿¡´Â ÇØ´ç °´Ã¼µéÀÇ µ¥ÀÌÅÍ¸¦ Á¶ÀÛÇÏ°í Ãâ·Â
+5. main í•¨ìˆ˜ì—ì„œëŠ” Data êµ¬ì¡°ì²´ë¥¼ ì´ìš©í•˜ì—¬ ë‘ ê°œì˜ ê°ì²´(obj1, obj2)ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”. ì´í›„ì—ëŠ” í•´ë‹¹ ê°ì²´ë“¤ì˜ ë°ì´í„°ë¥¼ ì¡°ìž‘í•˜ê³  ì¶œë ¥
 */
