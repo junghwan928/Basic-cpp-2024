@@ -8,18 +8,18 @@ private:
     int age;
 
 public:
-    // ì´ë¦„ê³¼ ë‚˜ì´ë¥¼ ì„¤ì •í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+    // ÀÌ¸§°ú ³ªÀÌ¸¦ ¼³Á¤ÇÏ´Â ¸â¹ö ÇÔ¼ö
     void setNameAge(const char* _name, int _age) {
-        strncpy_s(name, _name, sizeof(name)); // ë¬¸ìì—´ ë³µì‚¬ (_nameì˜ ê¸¸ì´ë¥¼ ì´ˆê³¼í•˜ë©´ ìë™ìœ¼ë¡œ NULL ë¬¸ì ì¶”ê°€)
+        strncpy_s(name, _name, sizeof(name)); // ¹®ÀÚ¿­ º¹»ç (_nameÀÇ ±æÀÌ¸¦ ÃÊ°úÇÏ¸é ÀÚµ¿À¸·Î NULL ¹®ÀÚ Ãß°¡)
         age = _age;
     }
 
-    // ì´ë¦„ì„ ë°˜í™˜í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+    // ÀÌ¸§À» ¹İÈ¯ÇÏ´Â ¸â¹ö ÇÔ¼ö
     const char* getName() const {
         return name;
     }
 
-    // ë‚˜ì´ë¥¼ ë°˜í™˜í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+    // ³ªÀÌ¸¦ ¹İÈ¯ÇÏ´Â ¸â¹ö ÇÔ¼ö
     int getAge() const {
         return age;
     }
@@ -27,35 +27,35 @@ public:
 
 class MyInfo : public Myclass {
 private:
-    char pNumber[20]; // ì „í™”ë²ˆí˜¸ë¥¼ ì €ì¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
+    char pNumber[20]; // ÀüÈ­¹øÈ£¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
 
 public:
-    // ì „í™”ë²ˆí˜¸ë¥¼ ì„¤ì •í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+    // ÀüÈ­¹øÈ£¸¦ ¼³Á¤ÇÏ´Â ¸â¹ö ÇÔ¼ö
     void setPhoneNumber(const char* _pNumber) {
-        strncpy_s(pNumber, _pNumber, sizeof(pNumber)); // ë¬¸ìì—´ ë³µì‚¬ (_pNumberì˜ ê¸¸ì´ë¥¼ ì´ˆê³¼í•˜ë©´ ìë™ìœ¼ë¡œ NULL ë¬¸ì ì¶”ê°€)
+        strncpy_s(pNumber, _pNumber, sizeof(pNumber)); // ¹®ÀÚ¿­ º¹»ç (_pNumberÀÇ ±æÀÌ¸¦ ÃÊ°úÇÏ¸é ÀÚµ¿À¸·Î NULL ¹®ÀÚ Ãß°¡)
     }
 
-    // ë‚˜ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+    // ³ªÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ¸â¹ö ÇÔ¼ö
     void printMyInfo() {
-        cout << "ë‚˜ì˜ ì´ë¦„ì€ " << getName() << "ì´ê³  ë‚˜ì´ëŠ” " << getAge() << "ì‚´ì´ë©° ì „í™”ë²ˆí˜¸ëŠ” " << pNumber << "ì…ë‹ˆë‹¤." << endl;
+        cout << "³ªÀÇ ÀÌ¸§Àº " << getName() << "ÀÌ°í ³ªÀÌ´Â " << getAge() << "»ìÀÌ¸ç ÀüÈ­¹øÈ£´Â " << pNumber << "ÀÔ´Ï´Ù." << endl;
     }
 };
 
 int main() {
-    MyInfo myInfoObj; // MyInfo ê°ì²´ ìƒì„±
+    MyInfo myInfoObj; // MyInfo °´Ã¼ »ı¼º
 
-    myInfoObj.setNameAge("í™ê¸¸ë™", 30); // ì´ë¦„ê³¼ ë‚˜ì´ ì„¤ì •
-    myInfoObj.setPhoneNumber("010-1234-5678"); // ì „í™”ë²ˆí˜¸ ì„¤ì •
-    myInfoObj.printMyInfo(); // ì •ë³´ ì¶œë ¥
+    myInfoObj.setNameAge("LEE", 28); // ÀÌ¸§°ú ³ªÀÌ ¼³Á¤
+    myInfoObj.setPhoneNumber("010-5888-9280"); // ÀüÈ­¹øÈ£ ¼³Á¤
+    myInfoObj.printMyInfo(); // Á¤º¸ Ãâ·Â
 
     return 0;
 }
 
-/* ì¶”ê°€ ì„¤ëª…
-1. Myclass: ì´ë¦„ê³¼ ë‚˜ì´ë¥¼ ì €ì¥í•˜ëŠ” í´ë˜ìŠ¤. 
-    -> setNameAge í•¨ìˆ˜ë¡œ ì´ë¦„ê³¼ ë‚˜ì´ë¥¼ ì„¤ì •í•˜ê³ , getNameê³¼ getAge í•¨ìˆ˜ë¡œ ì´ë¦„ê³¼ ë‚˜ì´ë¥¼ ë°˜í™˜.
+/* Ãß°¡ ¼³¸í
+1. Myclass: ÀÌ¸§°ú ³ªÀÌ¸¦ ÀúÀåÇÏ´Â Å¬·¡½º. 
+    -> setNameAge ÇÔ¼ö·Î ÀÌ¸§°ú ³ªÀÌ¸¦ ¼³Á¤ÇÏ°í, getName°ú getAge ÇÔ¼ö·Î ÀÌ¸§°ú ³ªÀÌ¸¦ ¹İÈ¯.
 
-2. MyInfo: Myclassë¥¼ ìƒì†ë°›ì€ í´ë˜ìŠ¤ë¡œ, ì „í™”ë²ˆí˜¸ë¥¼ ì¶”ê°€ë¡œ ì €ì¥í•˜ëŠ” í´ë˜ìŠ¤. 
-    -> setPhoneNumber í•¨ìˆ˜ë¡œ ì „í™”ë²ˆí˜¸ë¥¼ ì„¤ì •í•˜ê³ , printMyInfo í•¨ìˆ˜ë¡œ ì´ë¦„, ë‚˜ì´, ì „í™”ë²ˆí˜¸ë¥¼ ì¶œë ¥.
+2. MyInfo: Myclass¸¦ »ó¼Ó¹ŞÀº Å¬·¡½º·Î, ÀüÈ­¹øÈ£¸¦ Ãß°¡·Î ÀúÀåÇÏ´Â Å¬·¡½º. 
+    -> setPhoneNumber ÇÔ¼ö·Î ÀüÈ­¹øÈ£¸¦ ¼³Á¤ÇÏ°í, printMyInfo ÇÔ¼ö·Î ÀÌ¸§, ³ªÀÌ, ÀüÈ­¹øÈ£¸¦ Ãâ·Â.
 
 */
