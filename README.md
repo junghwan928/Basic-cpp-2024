@@ -165,7 +165,7 @@ SoSimple *ptrArr = new SoSimple[10]
 - C++ 에서의 Static
 
 ## 7일차
-```c++
+```c
 Person class
 	char *name; // 이름을 저장하는 동적 할당된 문자열 포인터
 	int age; // 나이를 저장하는 정수
