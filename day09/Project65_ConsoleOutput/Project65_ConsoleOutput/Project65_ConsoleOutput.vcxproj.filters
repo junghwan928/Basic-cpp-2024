@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang63_PointMultiOperation.cpp">
+    <ClCompile Include="clang65_ConsoleOutput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

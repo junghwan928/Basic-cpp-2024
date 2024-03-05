@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{98e6eca8-9f73-4c23-b67a-6e6ee8e565c4}</ProjectGuid>
-    <RootNamespace>Project63PointMultipleOperation</RootNamespace>
+    <ProjectGuid>{cbfc60a5-eaa1-465a-bd96-64833190d70a}</ProjectGuid>
+    <RootNamespace>Project65ConsoleOutput</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clang63_PointMultiOperation.cpp" />
+    <ClCompile Include="clang65_ConsoleOutput.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
