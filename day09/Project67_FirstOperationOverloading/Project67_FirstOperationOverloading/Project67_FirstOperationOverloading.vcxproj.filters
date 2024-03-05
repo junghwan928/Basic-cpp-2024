@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang66_lterateConsoleOutput.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="clang66_overloading.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1.cpp">
+    <ClCompile Include="clang67_FirstOperationOverloading.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
