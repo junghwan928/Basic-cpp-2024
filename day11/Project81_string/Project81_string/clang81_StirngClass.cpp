@@ -5,142 +5,142 @@ using namespace std;
 class String
 {
 private:
-    int len;    // ¹®ÀÚ¿­ ±æÀÌ¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
-    char* str;  // ¹®ÀÚ¿­À» ÀúÀåÇÏ´Â Æ÷ÀÎÅÍ
+    int len;    // ë¬¸ìì—´ ê¸¸ì´ë¥¼ ì €ì¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
+    char* str;  // ë¬¸ìì—´ì„ ì €ì¥í•˜ëŠ” í¬ì¸í„°
 
 public:
-    // »ı¼ºÀÚ
+    // ìƒì„±ì
     String();
     String(const char* s);
     String(const String& s);
-    // ¼Ò¸êÀÚ
+    // ì†Œë©¸ì
     ~String();
-    // ´ëÀÔ ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ëŒ€ì… ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     String& operator= (const String& s);
-    // º¹ÇÕ ´ëÀÔ ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ë³µí•© ëŒ€ì… ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     String& operator+= (const String& s);
-    // µ¿µî ºñ±³ ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ë™ë“± ë¹„êµ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     bool operator== (const String& s);
-    // ¹®ÀÚ¿­ ¿¬°á ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ë¬¸ìì—´ ì—°ê²° ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     String operator+ (const String& s);
 
-    // Ãâ·Â ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ì¶œë ¥ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     friend ostream& operator<< (ostream& os, const String& s);
-    // ÀÔ·Â ¿¬»êÀÚ ¿À¹ö·Îµù
+    // ì…ë ¥ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
     friend istream& operator>> (istream& is, String& s);
 };
 
-// ±âº» »ı¼ºÀÚ ±¸Çö
+// ê¸°ë³¸ ìƒì„±ì êµ¬í˜„
 String::String()
 {
     len = 0;
-    str = nullptr; // Æ÷ÀÎÅÍ¸¦ ÃÊ±âÈ­
+    str = nullptr; // í¬ì¸í„°ë¥¼ ì´ˆê¸°í™”
 }
 
-// ¹®ÀÚ¿­À» ¹Ş¾Æ¼­ ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ ±¸Çö
+// ë¬¸ìì—´ì„ ë°›ì•„ì„œ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ì êµ¬í˜„
 String::String(const char* s)
 {
-    len = strlen(s) + 1; // ³Î Á¾´Ü ¹®ÀÚ±îÁö °í·ÁÇÏ¿© ¹®ÀÚ¿­ ±æÀÌ °è»ê
-    str = new char[len]; // µ¿ÀûÀ¸·Î ¸Ş¸ğ¸® ÇÒ´ç
-    strcpy_s(str, len, s); // ¹®ÀÚ¿­ º¹»ç
+    len = strlen(s) + 1; // ë„ ì¢…ë‹¨ ë¬¸ìê¹Œì§€ ê³ ë ¤í•˜ì—¬ ë¬¸ìì—´ ê¸¸ì´ ê³„ì‚°
+    str = new char[len]; // ë™ì ìœ¼ë¡œ ë©”ëª¨ë¦¬ í• ë‹¹
+    strcpy_s(str, len, s); // ë¬¸ìì—´ ë³µì‚¬
 }
 
-// º¹»ç »ı¼ºÀÚ ±¸Çö
+// ë³µì‚¬ ìƒì„±ì êµ¬í˜„
 String::String(const String& s)
 {
     len = s.len;
     str = new char[len];
-    strcpy_s(str, len, s.str); // ¹®ÀÚ¿­ º¹»ç
+    strcpy_s(str, len, s.str); // ë¬¸ìì—´ ë³µì‚¬
 }
 
-// ¼Ò¸êÀÚ ±¸Çö
+// ì†Œë©¸ì êµ¬í˜„
 String::~String()
 {
     if (str != nullptr)
-        delete[] str; // µ¿ÀûÀ¸·Î ÇÒ´çµÈ ¸Ş¸ğ¸® ÇØÁ¦
+        delete[] str; // ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ í•´ì œ
 }
 
-// ´ëÀÔ ¿¬»êÀÚ ¿À¹ö·Îµù
+// ëŒ€ì… ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 String& String::operator= (const String& s)
 {
     if (str != nullptr)
-        delete[] str; // ÀÌÀü ¸Ş¸ğ¸® ÇØÁ¦
+        delete[] str; // ì´ì „ ë©”ëª¨ë¦¬ í•´ì œ
 
     len = s.len;
     str = new char[len];
-    strcpy_s(str, len, s.str); // ¹®ÀÚ¿­ º¹»ç
+    strcpy_s(str, len, s.str); // ë¬¸ìì—´ ë³µì‚¬
 
     return *this;
 }
 
-// º¹ÇÕ ´ëÀÔ ¿¬»êÀÚ ¿À¹ö·Îµù
+// ë³µí•© ëŒ€ì… ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 String& String::operator+= (const String& s)
 {
-    len += (s.len - 1); // ÇöÀç ¹®ÀÚ¿­ ±æÀÌ¿¡ Ãß°¡ÇÒ ¹®ÀÚ¿­ ±æÀÌ¸¸Å­ ´õÇÔ
+    len += (s.len - 1); // í˜„ì¬ ë¬¸ìì—´ ê¸¸ì´ì— ì¶”ê°€í•  ë¬¸ìì—´ ê¸¸ì´ë§Œí¼ ë”í•¨
     char* tempstr = new char[len];
-    strcpy_s(tempstr, len, str); // ÀÌÀü ¹®ÀÚ¿­ º¹»ç
-    strcat_s(tempstr, len, s.str); // ÀÌÈÄ ¹®ÀÚ¿­ Ãß°¡
+    strcpy_s(tempstr, len, str); // ì´ì „ ë¬¸ìì—´ ë³µì‚¬
+    strcat_s(tempstr, len, s.str); // ì´í›„ ë¬¸ìì—´ ì¶”ê°€
 
     if (str != nullptr)
-        delete[] str; // ÀÌÀü ¸Ş¸ğ¸® ÇØÁ¦
+        delete[] str; // ì´ì „ ë©”ëª¨ë¦¬ í•´ì œ
 
-    str = tempstr; // Æ÷ÀÎÅÍ °»½Å
+    str = tempstr; // í¬ì¸í„° ê°±ì‹ 
     return *this;
 }
 
-// µ¿µî ºñ±³ ¿¬»êÀÚ ¿À¹ö·Îµù
+// ë™ë“± ë¹„êµ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 bool String::operator== (const String& s)
 {
-    return strcmp(str, s.str) == 0; // strcmp ÇÔ¼ö °á°ú¿¡ µû¶ó true ¶Ç´Â false ¹İÈ¯
+    return strcmp(str, s.str) == 0; // strcmp í•¨ìˆ˜ ê²°ê³¼ì— ë”°ë¼ true ë˜ëŠ” false ë°˜í™˜
 }
 
-// ¹®ÀÚ¿­ ¿¬°á ¿¬»êÀÚ ¿À¹ö·Îµù
+// ë¬¸ìì—´ ì—°ê²° ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 String String::operator+ (const String& s)
 {
     char* tempstr = new char[len + s.len - 1];
-    strcpy_s(tempstr, len + s.len - 1, str); // Ã¹ ¹øÂ° ¹®ÀÚ¿­ º¹»ç
-    strcat_s(tempstr, len + s.len - 1, s.str); // µÎ ¹øÂ° ¹®ÀÚ¿­ Ãß°¡
+    strcpy_s(tempstr, len + s.len - 1, str); // ì²« ë²ˆì§¸ ë¬¸ìì—´ ë³µì‚¬
+    strcat_s(tempstr, len + s.len - 1, s.str); // ë‘ ë²ˆì§¸ ë¬¸ìì—´ ì¶”ê°€
 
-    String temp(tempstr); // »õ·Î¿î String °´Ã¼ »ı¼º
-    delete[] tempstr; // µ¿ÀûÀ¸·Î ÇÒ´çµÈ ¸Ş¸ğ¸® ÇØÁ¦
-    return temp; // »õ·Î¿î °´Ã¼ ¹İÈ¯
+    String temp(tempstr); // ìƒˆë¡œìš´ String ê°ì²´ ìƒì„±
+    delete[] tempstr; // ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ í•´ì œ
+    return temp; // ìƒˆë¡œìš´ ê°ì²´ ë°˜í™˜
 }
 
-// Ãâ·Â ¿¬»êÀÚ ¿À¹ö·Îµù
+// ì¶œë ¥ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 ostream& operator<< (ostream& os, const String& s)
 {
-    os << s.str; // ¹®ÀÚ¿­ Ãâ·Â
-    return os; // ½ºÆ®¸² ¹İÈ¯
+    os << s.str; // ë¬¸ìì—´ ì¶œë ¥
+    return os; // ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
 }
 
-// ÀÔ·Â ¿¬»êÀÚ ¿À¹ö·Îµù
+// ì…ë ¥ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 istream& operator>> (istream& is, String& s)
 {
     char str[100];
-    is >> str; // ¹®ÀÚ¿­ ÀÔ·Â ¹Ş±â
-    s = String(str); // ÀÔ·Â ¹ŞÀº ¹®ÀÚ¿­·Î String °´Ã¼ ÃÊ±âÈ­
-    return is; // ½ºÆ®¸² ¹İÈ¯
+    is >> str; // ë¬¸ìì—´ ì…ë ¥ ë°›ê¸°
+    s = String(str); // ì…ë ¥ ë°›ì€ ë¬¸ìì—´ë¡œ String ê°ì²´ ì´ˆê¸°í™”
+    return is; // ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
 }
 
 int main(void)
 {
-    String str1 = "I like "; // String °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
-    String str2 = "string class"; // String °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
-    String str3 = str1 + str2; // µÎ ¹®ÀÚ¿­À» ¿¬°áÇÏ¿© »õ·Î¿î String °´Ã¼ »ı¼º
+    String str1 = "I like "; // String ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+    String str2 = "string class"; // String ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+    String str3 = str1 + str2; // ë‘ ë¬¸ìì—´ì„ ì—°ê²°í•˜ì—¬ ìƒˆë¡œìš´ String ê°ì²´ ìƒì„±
 
-    cout << str1 << endl; // ¹®ÀÚ¿­ Ãâ·Â
-    cout << str2 << endl; // ¹®ÀÚ¿­ Ãâ·Â
-    cout << str3 << endl; // ¹®ÀÚ¿­ Ãâ·Â
+    cout << str1 << endl; // ë¬¸ìì—´ ì¶œë ¥
+    cout << str2 << endl; // ë¬¸ìì—´ ì¶œë ¥
+    cout << str3 << endl; // ë¬¸ìì—´ ì¶œë ¥
 
-    str1 += str2; // ¹®ÀÚ¿­ ¿¬°áÇÏ¿© ±âÁ¸ °´Ã¼¿¡ ´ëÀÔ
-    if (str1 == str3) // ¹®ÀÚ¿­ µ¿µî ºñ±³
-        cout << "µ¿ÀÏ ¹®ÀÚ¿­!" << endl;
+    str1 += str2; // ë¬¸ìì—´ ì—°ê²°í•˜ì—¬ ê¸°ì¡´ ê°ì²´ì— ëŒ€ì…
+    if (str1 == str3) // ë¬¸ìì—´ ë™ë“± ë¹„êµ
+        cout << "ë™ì¼ ë¬¸ìì—´!" << endl;
     else
-        cout << "µ¿ÀÏÇÏÁö ¾ÊÀº ¹®ÀÚ¿­!" << endl;
+        cout << "ë™ì¼í•˜ì§€ ì•Šì€ ë¬¸ìì—´!" << endl;
 
-    String str4; // ºó ¹®ÀÚ¿­ °´Ã¼ »ı¼º
-    cout << "¹®ÀÚ¿­ ÀÔ·Â: ";
-    cin >> str4; // ¹®ÀÚ¿­ ÀÔ·Â ¹Ş±â
-    cout << "ÀÔ·ÂÇÑ ¹®ÀÚ¿­: " << str4 << endl; // ÀÔ·ÂÇÑ ¹®ÀÚ¿­ Ãâ·Â
+    String str4; // ë¹ˆ ë¬¸ìì—´ ê°ì²´ ìƒì„±
+    cout << "ë¬¸ìì—´ ì…ë ¥: ";
+    cin >> str4; // ë¬¸ìì—´ ì…ë ¥ ë°›ê¸°
+    cout << "ì…ë ¥í•œ ë¬¸ìì—´: " << str4 << endl; // ì…ë ¥í•œ ë¬¸ìì—´ ì¶œë ¥
     return 0;
 }

@@ -2,34 +2,34 @@
 #include <string>
 using namespace std;
 
-// ÇĞ»ı Á¤º¸¸¦ °ü¸®ÇÏ´Â Å¬·¡½º
+// í•™ìƒ ì •ë³´ë¥¼ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤
 class Student {
 private:
-    // ÇĞ»ıÀÇ ÀÌ¸§°ú ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö, ÃÑÁ¡, Æò±ÕÀ» ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
+    // í•™ìƒì˜ ì´ë¦„ê³¼ êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜, ì´ì , í‰ê· ì„ ì €ì¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
     string name;
     int kor, eng, math;
     int total;
     double average;
 
 public:
-    // »ı¼ºÀÚ: ¸â¹ö º¯¼öµéÀ» ÃÊ±âÈ­
+    // ìƒì„±ì: ë©¤ë²„ ë³€ìˆ˜ë“¤ì„ ì´ˆê¸°í™”
     Student() : name(""), kor(0), eng(0), math(0), total(0), average(0.0) {}
 
-    // »ç¿ëÀÚ·ÎºÎÅÍ ÇĞ»ı Á¤º¸ ÀÔ·Â ¹Ş´Â ¸â¹ö ÇÔ¼ö
+    // ì‚¬ìš©ìë¡œë¶€í„° í•™ìƒ ì •ë³´ ì…ë ¥ ë°›ëŠ” ë©¤ë²„ í•¨ìˆ˜
     void readData() {
-        cout << "ÀÌ¸§, ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
+        cout << "ì´ë¦„, êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
         cin >> name >> kor >> eng >> math;
-        calculateTotalAndAverage(); // ÀÔ·Â ¹ŞÀº ÈÄ ÃÑÁ¡°ú Æò±Õ °è»ê
+        calculateTotalAndAverage(); // ì…ë ¥ ë°›ì€ í›„ ì´ì ê³¼ í‰ê·  ê³„ì‚°
     }
 
-    // ÃÑÁ¡°ú Æò±ÕÀ» °è»êÇÏ´Â ¸â¹ö ÇÔ¼ö
+    // ì´ì ê³¼ í‰ê· ì„ ê³„ì‚°í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
     void calculateTotalAndAverage() {
         total = kor + eng + math;
         average = total / 3.0;
     }
 
-    // °ú¸ñº° ÃÑÁ¡°ú Æò±ÕÀ» °è»êÇÏ°í Ãâ·ÂÇÏ´Â Á¤Àû ¸â¹ö ÇÔ¼ö
-    // ÀÌ ÇÔ¼ö´Â Student °´Ã¼ ¹è¿­À» ÀÎÀÚ·Î ¹Ş¾Æ °¢ °ú¸ñº° ÃÑÁ¡°ú Æò±ÕÀ» °è»ê
+    // ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê· ì„ ê³„ì‚°í•˜ê³  ì¶œë ¥í•˜ëŠ” ì •ì  ë©¤ë²„ í•¨ìˆ˜
+    // ì´ í•¨ìˆ˜ëŠ” Student ê°ì²´ ë°°ì—´ì„ ì¸ìë¡œ ë°›ì•„ ê° ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê· ì„ ê³„ì‚°
     static void calculateAndPrintTotalsAndAverages(Student* students, int size) {
         int totalKor = 0, totalEng = 0, totalMath = 0;
         for (int i = 0; i < size; ++i) {
@@ -37,34 +37,34 @@ public:
             totalEng += students[i].eng;
             totalMath += students[i].math;
         }
-        cout << "±¹¾î ÃÑÁ¡: " << totalKor << ", Æò±Õ: " << (totalKor / (double)size) << endl;
-        cout << "¿µ¾î ÃÑÁ¡: " << totalEng << ", Æò±Õ: " << (totalEng / (double)size) << endl;
-        cout << "¼öÇĞ ÃÑÁ¡: " << totalMath << ", Æò±Õ: " << (totalMath / (double)size) << endl;
+        cout << "êµ­ì–´ ì´ì : " << totalKor << ", í‰ê· : " << (totalKor / (double)size) << endl;
+        cout << "ì˜ì–´ ì´ì : " << totalEng << ", í‰ê· : " << (totalEng / (double)size) << endl;
+        cout << "ìˆ˜í•™ ì´ì : " << totalMath << ", í‰ê· : " << (totalMath / (double)size) << endl;
     }
 
-    // ÇĞ»ıÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ¸â¹ö ÇÔ¼ö
+    // í•™ìƒì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
     void printData() const {
-        cout << "ÀÌ¸§: " << name << ", ÃÑÁ¡: " << total << ", Æò±Õ: " << average << endl;
+        cout << "ì´ë¦„: " << name << ", ì´ì : " << total << ", í‰ê· : " << average << endl;
     }
 };
 
 int main() {
-    const int SIZE = 5; // ÇĞ»ı ¼ö
-    Student students[SIZE]; // ÇĞ»ı °´Ã¼ ¹è¿­
+    const int SIZE = 5; // í•™ìƒ ìˆ˜
+    Student students[SIZE]; // í•™ìƒ ê°ì²´ ë°°ì—´
 
-    // °¢ ÇĞ»ıÀÇ Á¤º¸¸¦ ÀÔ·Â ¹ŞÀ½
+    // ê° í•™ìƒì˜ ì •ë³´ë¥¼ ì…ë ¥ ë°›ìŒ
     for (int i = 0; i < SIZE; ++i) {
         students[i].readData();
     }
 
-    cout << "°¢ ÇĞ»ıº° ÃÑÁ¡°ú Æò±Õ:" << endl;
-    // ÀÔ·Â¹ŞÀº ÇĞ»ı Á¤º¸(ÃÑÁ¡°ú Æò±Õ) Ãâ·Â
+    cout << "ê° í•™ìƒë³„ ì´ì ê³¼ í‰ê· :" << endl;
+    // ì…ë ¥ë°›ì€ í•™ìƒ ì •ë³´(ì´ì ê³¼ í‰ê· ) ì¶œë ¥
     for (int i = 0; i < SIZE; ++i) {
         students[i].printData();
     }
 
-    cout << "°ú¸ñº° ÃÑÁ¡°ú Æò±Õ:" << endl;
-    // °ú¸ñº° ÃÑÁ¡°ú Æò±Õ °è»ê ¹× Ãâ·Â
+    cout << "ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê· :" << endl;
+    // ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê·  ê³„ì‚° ë° ì¶œë ¥
     Student::calculateAndPrintTotalsAndAverages(students, SIZE);
 
     return 0;

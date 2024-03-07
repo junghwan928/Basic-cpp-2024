@@ -1,56 +1,56 @@
 #include <iostream>
 using namespace std;
 
-// ÅÛÇÃ¸´ ÇÔ¼ö Á¤ÀÇ
+// í…œí”Œë¦¿ í•¨ìˆ˜ ì •ì˜
 template <typename T>
 T Add(T num1, T num2)
 {
-    cout << "T Add(T num1, T num2)" << endl; // ÅÛÇÃ¸´ ÇÔ¼ö È£Ãâ ½Ã Ãâ·ÂµÇ´Â ¸Þ½ÃÁö
-    return num1 + num2; // µÎ ÀÎÀÚÀÇ ÇÕÀ» ¹ÝÈ¯
+    cout << "T Add(T num1, T num2)" << endl; // í…œí”Œë¦¿ í•¨ìˆ˜ í˜¸ì¶œ ì‹œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€
+    return num1 + num2; // ë‘ ì¸ìžì˜ í•©ì„ ë°˜í™˜
 }
 
-// Á¤¼öÇü µÎ °³¸¦ ¹Þ¾Æ µ¡¼ÀÀ» ¼öÇàÇÏ´Â ÇÔ¼ö Á¤ÀÇ
+// ì •ìˆ˜í˜• ë‘ ê°œë¥¼ ë°›ì•„ ë§ì…ˆì„ ìˆ˜í–‰í•˜ëŠ” í•¨ìˆ˜ ì •ì˜
 int Add(int num1, int num2)
 {
-    cout << "Add(int num1, int num2)" << endl; // Á¤¼öÇü ÇÔ¼ö È£Ãâ ½Ã Ãâ·ÂµÇ´Â ¸Þ½ÃÁö
-    return num1 + num2; // µÎ Á¤¼öÀÇ ÇÕÀ» ¹ÝÈ¯
+    cout << "Add(int num1, int num2)" << endl; // ì •ìˆ˜í˜• í•¨ìˆ˜ í˜¸ì¶œ ì‹œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€
+    return num1 + num2; // ë‘ ì •ìˆ˜ì˜ í•©ì„ ë°˜í™˜
 }
 
-// ½Ç¼öÇü µÎ °³¸¦ ¹Þ¾Æ µ¡¼ÀÀ» ¼öÇàÇÏ´Â ÇÔ¼ö Á¤ÀÇ
+// ì‹¤ìˆ˜í˜• ë‘ ê°œë¥¼ ë°›ì•„ ë§ì…ˆì„ ìˆ˜í–‰í•˜ëŠ” í•¨ìˆ˜ ì •ì˜
 double Add(double num1, double num2)
 {
-    cout << "Add(double num1, double num2)" << endl; // ½Ç¼öÇü ÇÔ¼ö È£Ãâ ½Ã Ãâ·ÂµÇ´Â ¸Þ½ÃÁö
-    return num1 + num2; // µÎ ½Ç¼öÀÇ ÇÕÀ» ¹ÝÈ¯
+    cout << "Add(double num1, double num2)" << endl; // ì‹¤ìˆ˜í˜• í•¨ìˆ˜ í˜¸ì¶œ ì‹œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€
+    return num1 + num2; // ë‘ ì‹¤ìˆ˜ì˜ í•©ì„ ë°˜í™˜
 }
 
 int main(void)
 {
-    cout << Add(5, 7) << endl; // Á¤¼öÇü ÇÔ¼ö È£Ãâ
-    cout << Add(3.7, 7.5) << endl; // ½Ç¼öÇü ÇÔ¼ö È£Ãâ
-    cout << Add<int>(5, 7) << endl; // ÅÛÇÃ¸´ ÇÔ¼ö È£Ãâ (Á¤¼öÇü)
-    cout << Add<double>(3.7, 7.5) << endl; // ÅÛÇÃ¸´ ÇÔ¼ö È£Ãâ (½Ç¼öÇü)
+    cout << Add(5, 7) << endl; // ì •ìˆ˜í˜• í•¨ìˆ˜ í˜¸ì¶œ
+    cout << Add(3.7, 7.5) << endl; // ì‹¤ìˆ˜í˜• í•¨ìˆ˜ í˜¸ì¶œ
+    cout << Add<int>(5, 7) << endl; // í…œí”Œë¦¿ í•¨ìˆ˜ í˜¸ì¶œ (ì •ìˆ˜í˜•)
+    cout << Add<double>(3.7, 7.5) << endl; // í…œí”Œë¦¿ í•¨ìˆ˜ í˜¸ì¶œ (ì‹¤ìˆ˜í˜•)
     return 0;
 }
 
 /*
 1. template <typename T> T Add(T num1, T num2): 
-    -> ÅÛÇÃ¸´ ÇÔ¼ö AddÀÇ Á¤ÀÇÀÓ. 
-        -> µ¿ÀÏÇÑ Å¸ÀÔÀÇ µÎ ¸Å°³º¯¼ö¸¦ ¹Þ¾Æ¼­ µ¡¼ÀÀ» ¼öÇàÇÏ¸ç, È£ÃâµÇ¾úÀ» ¶§ Ãâ·ÂµÇ´Â ¸Þ½ÃÁö°¡ Æ÷ÇÔ.
+    -> í…œí”Œë¦¿ í•¨ìˆ˜ Addì˜ ì •ì˜ìž„. 
+        -> ë™ì¼í•œ íƒ€ìž…ì˜ ë‘ ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ì•„ì„œ ë§ì…ˆì„ ìˆ˜í–‰í•˜ë©°, í˜¸ì¶œë˜ì—ˆì„ ë•Œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€ê°€ í¬í•¨.
 
 2. int Add(int num1, int num2): 
-    -> Á¤¼öÇü µÎ °³¸¦ ¹Þ¾Æ¼­ µ¡¼ÀÀ» ¼öÇàÇÏ´Â ÇÔ¼öÀÇ Á¤ÀÇÀÓ. 
-        -> È£ÃâµÇ¾úÀ» ¶§ Ãâ·ÂµÇ´Â ¸Þ½ÃÁö°¡ Æ÷ÇÔ.
+    -> ì •ìˆ˜í˜• ë‘ ê°œë¥¼ ë°›ì•„ì„œ ë§ì…ˆì„ ìˆ˜í–‰í•˜ëŠ” í•¨ìˆ˜ì˜ ì •ì˜ìž„. 
+        -> í˜¸ì¶œë˜ì—ˆì„ ë•Œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€ê°€ í¬í•¨.
 
 3. double Add(double num1, double num2): 
-    -> ½Ç¼öÇü µÎ °³¸¦ ¹Þ¾Æ¼­ µ¡¼ÀÀ» ¼öÇàÇÏ´Â ÇÔ¼öÀÇ Á¤ÀÇÀÓ. 
-        -> È£ÃâµÇ¾úÀ» ¶§ Ãâ·ÂµÇ´Â ¸Þ½ÃÁö°¡ Æ÷ÇÔ.
+    -> ì‹¤ìˆ˜í˜• ë‘ ê°œë¥¼ ë°›ì•„ì„œ ë§ì…ˆì„ ìˆ˜í–‰í•˜ëŠ” í•¨ìˆ˜ì˜ ì •ì˜ìž„. 
+        -> í˜¸ì¶œë˜ì—ˆì„ ë•Œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€ê°€ í¬í•¨.
 
 4. cout << Add(5, 7) << endl;: 
-    -> Á¤¼öÇü ÇÔ¼ö¸¦ È£ÃâÇÏ°í, ¹ÝÈ¯µÈ °á°ú¸¦ Ãâ·ÂÇÔ.
+    -> ì •ìˆ˜í˜• í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê³ , ë°˜í™˜ëœ ê²°ê³¼ë¥¼ ì¶œë ¥í•¨.
 
 5. cout << Add(3.7, 7.5) << endl;: 
-    -> ½Ç¼öÇü ÇÔ¼ö¸¦ È£ÃâÇÏ°í, ¹ÝÈ¯µÈ °á°ú¸¦ Ãâ·ÂÇÔ.
+    -> ì‹¤ìˆ˜í˜• í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê³ , ë°˜í™˜ëœ ê²°ê³¼ë¥¼ ì¶œë ¥í•¨.
 
 6. cout << Add<int>(5, 7) << endl;: 
-    -> ÅÛÇÃ¸´ ÇÔ¼ö¸¦ Á¤¼öÇüÀ¸·Î È£ÃâÇÏ°í, ¹ÝÈ¯µÈ °á°ú¸¦ Ãâ·ÂÇÔ.
+    -> í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ ì •ìˆ˜í˜•ìœ¼ë¡œ í˜¸ì¶œí•˜ê³ , ë°˜í™˜ëœ ê²°ê³¼ë¥¼ ì¶œë ¥í•¨.
 */

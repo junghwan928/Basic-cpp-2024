@@ -18,5 +18,17 @@
     <ClCompile Include="clang85_NeedSpecialFunctionTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="222.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="average.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="average23.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="average34.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

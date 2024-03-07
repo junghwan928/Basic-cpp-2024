@@ -1,44 +1,44 @@
 #include <iostream>
 using namespace std;
 
-// ÅÛÇÃ¸´ ÇÔ¼ö Á¤ÀÇ
+// í…œí”Œë¦¿ í•¨ìˆ˜ ì •ì˜
 template <class T1, class T2>
 void ShowData(double num)
 {
-    // ÀÎÀÚ·Î Àü´ÞµÈ numÀ» T1°ú T2 Å¸ÀÔÀ¸·Î º¯È¯ÇÏ¿© Ãâ·Â
+    // ì¸ìžë¡œ ì „ë‹¬ëœ numì„ T1ê³¼ T2 íƒ€ìž…ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì¶œë ¥
     cout << (T1)num << ", " << (T2)num << endl;
 }
 
 int main(void)
 {
-    // ShowData ÇÔ¼ö È£Ãâ ¹× ÀÎÀÚ Àü´Þ
-    ShowData<char, int>(65);        // ¹®ÀÚ 'A'(ASCII 65), Á¤¼ö 65 Ãâ·Â
-    ShowData<char, int>(67);        // ¹®ÀÚ 'C'(ASCII 67), Á¤¼ö 67 Ãâ·Â
-    ShowData<char, double>(68.9);   // ¹®ÀÚ 'D'(ASCII 68), ½Ç¼ö 68.9 Ãâ·Â
-    ShowData<short, double>(69.2);  // Á¤¼ö 69, ½Ç¼ö 69.2 Ãâ·Â
-    ShowData<short, double>(70.4);  // Á¤¼ö 70, ½Ç¼ö 70.4 Ãâ·Â
+    // ShowData í•¨ìˆ˜ í˜¸ì¶œ ë° ì¸ìž ì „ë‹¬
+    ShowData<char, int>(65);        // ë¬¸ìž 'A'(ASCII 65), ì •ìˆ˜ 65 ì¶œë ¥
+    ShowData<char, int>(67);        // ë¬¸ìž 'C'(ASCII 67), ì •ìˆ˜ 67 ì¶œë ¥
+    ShowData<char, double>(68.9);   // ë¬¸ìž 'D'(ASCII 68), ì‹¤ìˆ˜ 68.9 ì¶œë ¥
+    ShowData<short, double>(69.2);  // ì •ìˆ˜ 69, ì‹¤ìˆ˜ 69.2 ì¶œë ¥
+    ShowData<short, double>(70.4);  // ì •ìˆ˜ 70, ì‹¤ìˆ˜ 70.4 ì¶œë ¥
     return 0;
 }
 
 /*
 1. template <class T1, class T2> void ShowData(double num): 
-    -> ÅÛÇÃ¸´ ÇÔ¼ö ShowDataÀÇ Á¤ÀÇµÊ. T1°ú T2 µÎ °¡Áö Å¸ÀÔÀ» ¹Þ¾Æ¼­, 
-        -> ÀÎÀÚ·Î Àü´ÞµÈ numÀ» ÇØ´ç Å¸ÀÔÀ¸·Î Çüº¯È¯ÇÏ¿© Ãâ·ÂµÊ.
+    -> í…œí”Œë¦¿ í•¨ìˆ˜ ShowDataì˜ ì •ì˜ë¨. T1ê³¼ T2 ë‘ ê°€ì§€ íƒ€ìž…ì„ ë°›ì•„ì„œ, 
+        -> ì¸ìžë¡œ ì „ë‹¬ëœ numì„ í•´ë‹¹ íƒ€ìž…ìœ¼ë¡œ í˜•ë³€í™˜í•˜ì—¬ ì¶œë ¥ë¨.
 
 2. ShowData<char, int>(65);: 
-    -> ÅÛÇÃ¸´ ÇÔ¼ö¸¦ È£ÃâÇÏ°í, Ã¹ ¹øÂ° ÅÛÇÃ¸´ ÀÎÀÚ·Î charÀ», µÎ ¹øÂ° ÅÛÇÃ¸´ ÀÎÀÚ·Î int¸¦ Àü´ÞÇÏ¿© ÇÔ¼ö¸¦ È£ÃâµÊ. 
-        -> 65°¡ double Å¸ÀÔÀ¸·Î Àü´ÞµÇ¾î ¹®ÀÚ 'A'(ASCII 65)¿Í Á¤¼ö 65°¡ Ãâ·ÂµÊ.
+    -> í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê³ , ì²« ë²ˆì§¸ í…œí”Œë¦¿ ì¸ìžë¡œ charì„, ë‘ ë²ˆì§¸ í…œí”Œë¦¿ ì¸ìžë¡œ intë¥¼ ì „ë‹¬í•˜ì—¬ í•¨ìˆ˜ë¥¼ í˜¸ì¶œë¨. 
+        -> 65ê°€ double íƒ€ìž…ìœ¼ë¡œ ì „ë‹¬ë˜ì–´ ë¬¸ìž 'A'(ASCII 65)ì™€ ì •ìˆ˜ 65ê°€ ì¶œë ¥ë¨.
 
 3. ShowData<char, int>(67);: 
-    -> À§¿Í µ¿ÀÏÇÑ ¹æ½ÄÀ¸·Î ÇÔ¼ö¸¦ È£ÃâÇÏ°í, 
-        -> 67ÀÌ double Å¸ÀÔÀ¸·Î Àü´ÞµÇ¾î ¹®ÀÚ 'C'(ASCII 67)¿Í Á¤¼ö 67ÀÌ Ãâ·ÂµÊ.
+    -> ìœ„ì™€ ë™ì¼í•œ ë°©ì‹ìœ¼ë¡œ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê³ , 
+        -> 67ì´ double íƒ€ìž…ìœ¼ë¡œ ì „ë‹¬ë˜ì–´ ë¬¸ìž 'C'(ASCII 67)ì™€ ì •ìˆ˜ 67ì´ ì¶œë ¥ë¨.
 
 4. ShowData<char, double>(68.9);: 
-    -> 68.9°¡ double Å¸ÀÔÀ¸·Î Àü´ÞµÇ¾î ¹®ÀÚ 'D'(ASCII 68)¿Í ½Ç¼ö 68.9°¡ Ãâ·ÂµÊ.
+    -> 68.9ê°€ double íƒ€ìž…ìœ¼ë¡œ ì „ë‹¬ë˜ì–´ ë¬¸ìž 'D'(ASCII 68)ì™€ ì‹¤ìˆ˜ 68.9ê°€ ì¶œë ¥ë¨.
 
 5. ShowData<short, double>(69.2);: 
-    -> 69.2°¡ double Å¸ÀÔÀ¸·Î Àü´ÞµÇ¾î Á¤¼ö 69°ú ½Ç¼ö 69.2°¡ Ãâ·ÂµÊ.
+    -> 69.2ê°€ double íƒ€ìž…ìœ¼ë¡œ ì „ë‹¬ë˜ì–´ ì •ìˆ˜ 69ê³¼ ì‹¤ìˆ˜ 69.2ê°€ ì¶œë ¥ë¨.
 
 6. ShowData<short, double>(70.4);: 
-    -> 70.4°¡ double Å¸ÀÔÀ¸·Î Àü´ÞµÇ¾î Á¤¼ö 70°ú ½Ç¼ö 70.4°¡ Ãâ·ÂµÊ
+    -> 70.4ê°€ double íƒ€ìž…ìœ¼ë¡œ ì „ë‹¬ë˜ì–´ ì •ìˆ˜ 70ê³¼ ì‹¤ìˆ˜ 70.4ê°€ ì¶œë ¥ë¨
 */
