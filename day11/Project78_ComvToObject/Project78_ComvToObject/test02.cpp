@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-// ÇĞ»ı Á¤º¸¸¦ °ü¸®ÇÏ´Â Å¬·¡½º
+// í•™ìƒ ì •ë³´ë¥¼ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤
 class Student {
 private:
     string name;
@@ -15,7 +15,7 @@ public:
     Student() : name(""), kor(0), eng(0), math(0), total(0), average(0.0) {}
 
     void readData() {
-        cout << "ÀÌ¸§, ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
+        cout << "ì´ë¦„, êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
         cin >> name >> kor >> eng >> math;
         calculateTotalAndAverage();
     }
@@ -32,37 +32,37 @@ public:
             totalEng += students[i]->eng;
             totalMath += students[i]->math;
         }
-        cout << "±¹¾î ÃÑÁ¡: " << totalKor << ", Æò±Õ: " << (totalKor / (double)size) << endl;
-        cout << "¿µ¾î ÃÑÁ¡: " << totalEng << ", Æò±Õ: " << (totalEng / (double)size) << endl;
-        cout << "¼öÇĞ ÃÑÁ¡: " << totalMath << ", Æò±Õ: " << (totalMath / (double)size) << endl;
+        cout << "êµ­ì–´ ì´ì : " << totalKor << ", í‰ê· : " << (totalKor / (double)size) << endl;
+        cout << "ì˜ì–´ ì´ì : " << totalEng << ", í‰ê· : " << (totalEng / (double)size) << endl;
+        cout << "ìˆ˜í•™ ì´ì : " << totalMath << ", í‰ê· : " << (totalMath / (double)size) << endl;
     }
 
     void printData() const {
-        cout << "ÀÌ¸§: " << name << ", ÃÑÁ¡: " << total << ", Æò±Õ: " << average << endl;
+        cout << "ì´ë¦„: " << name << ", ì´ì : " << total << ", í‰ê· : " << average << endl;
     }
 };
 
 int main() {
     const int SIZE = 5;
-    // Æ÷ÀÎÅÍ ¹è¿­À» »ç¿ëÇÏ¿© ÇĞ»ı °´Ã¼µéÀ» µ¿ÀûÀ¸·Î °ü¸®
+    // í¬ì¸í„° ë°°ì—´ì„ ì‚¬ìš©í•˜ì—¬ í•™ìƒ ê°ì²´ë“¤ì„ ë™ì ìœ¼ë¡œ ê´€ë¦¬
     Student* students[SIZE];
 
-    // °¢ ÇĞ»ı Á¤º¸¸¦ µ¿ÀûÀ¸·Î »ı¼ºÇÏ°í µ¥ÀÌÅÍ ÀÔ·Â
+    // ê° í•™ìƒ ì •ë³´ë¥¼ ë™ì ìœ¼ë¡œ ìƒì„±í•˜ê³  ë°ì´í„° ì…ë ¥
     for (int i = 0; i < SIZE; ++i) {
-        students[i] = new Student(); // µ¿Àû ÇÒ´ç
+        students[i] = new Student(); // ë™ì  í• ë‹¹
         students[i]->readData();
     }
 
-    cout << "°¢ ÇĞ»ıº° ÃÑÁ¡°ú Æò±Õ:" << endl;
+    cout << "ê° í•™ìƒë³„ ì´ì ê³¼ í‰ê· :" << endl;
     for (int i = 0; i < SIZE; ++i) {
         students[i]->printData();
     }
 
-    cout << "°ú¸ñº° ÃÑÁ¡°ú Æò±Õ:" << endl;
-    // Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÏ¿© Á¤Àû ¸â¹ö ÇÔ¼ö È£Ãâ
+    cout << "ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê· :" << endl;
+    // í¬ì¸í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ ì •ì  ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
     Student::calculateAndPrintTotalsAndAverages(students, SIZE);
 
-    // ÇÒ´çµÈ ¸Ş¸ğ¸® ÇØÁ¦
+    // í• ë‹¹ëœ ë©”ëª¨ë¦¬ í•´ì œ
     for (int i = 0; i < SIZE; ++i) {
         delete students[i];
     }
