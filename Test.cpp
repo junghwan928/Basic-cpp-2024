@@ -44,7 +44,7 @@ public:
         : Product(_id, _price, _producer), ISBN(_ISBN), title(_title) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Book: ID - " << getId() << ", ISBN - " << ISBN << ", Title - " << title << ", Price - $" << getPrice() << ", Producer - " << getProducer() << endl;
+        cout << "Book: ID => " << getId() << ", ISBN : " << ISBN << ", Title : " << title << ", Price :" << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
@@ -59,7 +59,7 @@ public:
         : Product(_id, _price, _producer), model(_model), RAM(_RAM) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Handphone: ID - " << getId() << ", Model - " << model << ", RAM - " << RAM << "GB, Price - $" << getPrice() << ", Producer - " << getProducer() << endl;
+        cout << "Handphone: ID => " << getId() << ", Model : " << model << ", RAM : " << RAM << "GB, Price :" << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
@@ -75,7 +75,7 @@ public:
         : Product(_id, _price, _producer), model(_model), cpu(_cpu), RAM(_RAM) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Computer: ID - " << getId() << ", Model - " << model << ", CPU - " << cpu << ", RAM - " << RAM << "GB, Price - $" << getPrice() << ", Producer - " << getProducer() << endl;
+        cout << "Computer: ID => " << getId() << ", Model : " << model << ", CPU : " << cpu << ", RAM : " << RAM << "GB, Price : " << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
