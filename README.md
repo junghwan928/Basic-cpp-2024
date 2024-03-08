@@ -239,8 +239,19 @@ int main()
 ## 11일차 
 - Person p = p1; //복사
 - p = p1; //대입
+	```c++
+		string str1 = "I like ";
+		string str2 = "string class";
+	```
 - 문자열 처리 클래스 정의
+- 표준 String 클래스 분석
+- String 클래스의 완성
 - 템플릿
 	- 둘 이상의 형(Type)
-	- 함수 템플릿
+	- 함수 템플릿 정의
+	- 함수 템플릿의 특수화
 	
+## 12일차
+- NeedSpecialFunctionTemplate => 이어서...
+- SpecialFunctionTemplate
+- 클래스 템플릿(Class Template)
