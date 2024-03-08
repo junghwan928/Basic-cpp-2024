@@ -246,7 +246,7 @@ int main()
 - 문자열 처리 클래스 정의
 - 표준 String 클래스 분석
 - String 클래스의 완성
-- 템플릿
+- 템플릿 I 
 	- 둘 이상의 형(Type)
 	- 함수 템플릿 정의
 	- 함수 템플릿의 특수화
@@ -255,3 +255,5 @@ int main()
 - NeedSpecialFunctionTemplate => 이어서...
 - SpecialFunctionTemplate
 - 클래스 템플릿(Class Template)
+- 배열 클래스의 템플릿화
+- 템플릿 II
