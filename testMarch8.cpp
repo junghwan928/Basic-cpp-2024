@@ -9,20 +9,26 @@ private:
     double price;
     string producer;
 public:
+    
     // 생성자
     Product(int _id, double _price, string _producer) : id(_id), price(_price), producer(_producer) {}
+    
     // 가격 반환
     double getPrice() const {
         return price;
     }
+    
     // 가격 설정
     void setPrice(double _price) {
         price = _price;
     }
+    
     // 가격 출력
     virtual void print() const = 0; // 순수 가상 함수
+    
     // 가상 소멸자 추가
     virtual ~Product() {}
+    
     // ID 반환
     int getId() const {
         return id;
@@ -38,13 +44,14 @@ class Book : public Product {
 private:
     string ISBN;
     string title;
+
 public:
     // 생성자
     Book(int _id, double _price, string _producer, string _ISBN, string _title)
         : Product(_id, _price, _producer), ISBN(_ISBN), title(_title) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Book: ID => " << getId() << ", ISBN : " << ISBN << ", Title : " << title << ", Price :" << getPrice() << ", Producer : " << getProducer() << endl;
+        cout << "Book ID : " << getId() << ", ISBN : " << ISBN << ", Title : " << title << ", Price :" << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
@@ -59,7 +66,7 @@ public:
         : Product(_id, _price, _producer), model(_model), RAM(_RAM) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Handphone: ID => " << getId() << ", Model : " << model << ", RAM : " << RAM << "GB, Price :" << getPrice() << ", Producer : " << getProducer() << endl;
+        cout << "Handphone ID: " << getId() << ", Model : " << model << ", RAM : " << RAM << "GB, Price :" << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
@@ -75,7 +82,7 @@ public:
         : Product(_id, _price, _producer), model(_model), cpu(_cpu), RAM(_RAM) {}
     // 상품 정보 출력
     virtual void print() const override {
-        cout << "Computer: ID => " << getId() << ", Model : " << model << ", CPU : " << cpu << ", RAM : " << RAM << "GB, Price : " << getPrice() << ", Producer : " << getProducer() << endl;
+        cout << "Computer ID :x " << getId() << ", Model : " << model << ", CPU : " << cpu << ", RAM : " << RAM << "GB, Price : " << getPrice() << ", Producer : " << getProducer() << endl;
     }
 };
 
